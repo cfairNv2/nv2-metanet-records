@@ -32,6 +32,8 @@ a { text-decoration: none; }
 .page-shell { width: min(1180px, calc(100% - 48px)); margin: 0 auto; }
 .site-header { min-height: 84px; display: flex; align-items: center; justify-content: space-between; gap: 24px; border-bottom: 1px solid var(--line); }
 .site-title { margin: 0; font-size: 32px; line-height: 1.25; font-weight: 400; }
+.site-title a:hover { text-decoration: underline; text-underline-offset: 4px; }
+.site-title a:focus-visible { outline: 2px solid var(--ink); outline-offset: 4px; }
 .level-toggle { display: flex; border: 1px solid var(--ink); }
 .level-toggle button { min-height: 44px; padding: 8px 16px; border: 0; background: transparent; font-size: 16px; }
 .level-toggle button + button { border-left: 1px solid var(--ink); }
