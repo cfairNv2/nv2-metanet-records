@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#aaaaaa">
+  <meta name="description" content="NV2 level leaderboards.">
+  <title>Nv2 Leaderboards</title>
+  <link rel="stylesheet" href="styles.css?v=player-level-pages">
+  <script src="app.js?v=metanet-level-names" defer></script>
+</head>
+<body data-page="leaderboard">
+  <div class="page-shell">
+    <header class="site-header">
+      <h1 class="site-title">Nv2 Leaderboards</h1>
+      <div class="level-toggle" role="group" aria-label="Level type">
+        <button type="button" data-levelset="metanet" aria-pressed="true">Metanet levels</button>
+        <button type="button" data-levelset="user" aria-pressed="false">User levels</button>
+      </div>
+    </header>
+
+    <nav class="leaderboard-nav" aria-label="Leaderboards" role="tablist">
+      <button type="button" role="tab" data-board="zeroes" aria-selected="true">0ths</button>
+      <button type="button" role="tab" data-board="boards" aria-selected="false">Total Boards</button>
+      <button type="button" role="tab" data-board="points" aria-selected="false">Points</button>
+      <button type="button" role="tab" data-board="average" aria-selected="false">Average Place</button>
+    </nav>
+
+    <main id="leaderboard-view">
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col" class="place-column">Place</th>
+              <th scope="col">Player</th>
+              <th scope="col" class="numeric-column" id="metric-heading">0ths</th>
+              <th scope="col" class="numeric-column" id="boards-heading" hidden>Total Boards</th>
+            </tr>
+          </thead>
+          <tbody id="leaderboard-body"></tbody>
+        </table>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
