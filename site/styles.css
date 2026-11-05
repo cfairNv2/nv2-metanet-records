@@ -98,12 +98,19 @@ tbody tr:hover { background: rgba(255, 255, 255, .35); }
 .place-histogram { margin-top: 24px; }
 .place-histogram h3 { margin: 0 0 8px; color: var(--muted); font-size: 18px; font-weight: 400; }
 .place-histogram-scroll { overflow-x: auto; border-bottom: 1px solid var(--line); }
-.place-histogram-chart { display: block; width: 100%; min-width: 850px; height: auto; overflow: visible; }
+.place-histogram-chart { display: block; width: 100%; height: auto; overflow: visible; }
 .histogram-gridline { stroke: var(--line); stroke-width: 1; opacity: .45; }
 .histogram-baseline { stroke: var(--ink); stroke-width: 1.5; }
 .histogram-bar { fill: var(--ink); shape-rendering: crispEdges; }
-.histogram-value, .histogram-place { fill: var(--ink); font-family: "uni0553", monospace; font-size: 14px; }
+.histogram-value, .histogram-place { fill: var(--ink); font-family: "uni0553", monospace; font-size: 18px; }
 .histogram-place { fill: var(--muted); }
+
+@media (max-width: 850px) {
+  .profile-stats-6 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .profile-stats-6 .profile-stat { min-height: 116px; }
+  .profile-stats-6 .profile-stat:nth-child(even) { border-right: 0; }
+  .profile-stats-6 .profile-stat:nth-child(-n+4) { border-bottom: 1px solid var(--line); }
+}
 
 @media (max-width: 620px) {
   .page-shell { width: calc(100% - 32px); }
