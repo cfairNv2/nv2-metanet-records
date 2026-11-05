@@ -14,6 +14,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 
 import requests
+from update_site_metadata import update_last_updated
 
 
 FIRST_LEVEL = 1
@@ -21,6 +22,7 @@ LAST_LEVEL = 600
 LEADERBOARD_LIMIT = 10
 DEFAULT_OUTPUT = Path(__file__).with_name("metanet_leaderboards.csv")
 SITE_OUTPUT = Path(__file__).with_name("site") / "metanet_leaderboards.csv"
+SITE_METADATA_OUTPUT = Path(__file__).with_name("site") / "site_metadata.json"
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)",
     "Cache-Control": "no-cache",
@@ -121,7 +123,10 @@ def rows_for_level(
 def publish_updated_csv(output_path: Path) -> bool:
     """Commit updated CSV files and push them so GitHub Pages can redeploy."""
     project_dir = Path(__file__).resolve().parent
-    files_to_publish = [SITE_OUTPUT.resolve().relative_to(project_dir).as_posix()]
+    files_to_publish = [
+        SITE_OUTPUT.resolve().relative_to(project_dir).as_posix(),
+        SITE_METADATA_OUTPUT.resolve().relative_to(project_dir).as_posix(),
+    ]
 
     try:
         output_relative = output_path.resolve().relative_to(project_dir).as_posix()
@@ -244,6 +249,8 @@ def main() -> int:
         SITE_OUTPUT.parent.mkdir(parents=True, exist_ok=True)
         if args.output.resolve() != SITE_OUTPUT.resolve():
             shutil.copyfile(args.output, SITE_OUTPUT)
+        last_updated = update_last_updated(SITE_METADATA_OUTPUT)
+        print(f"Last updated: {last_updated}")
         print(f"Website data updated: {SITE_OUTPUT}")
         published = publish_updated_csv(args.output)
     else:

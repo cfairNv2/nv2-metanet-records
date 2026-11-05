@@ -4,16 +4,19 @@ from __future__ import annotations
 
 import json
 import math
+import subprocess
 from collections import Counter
 from pathlib import Path
 
 from openpyxl import load_workbook
+from update_site_metadata import update_last_updated
 
 
 ROOT = Path(__file__).resolve().parent
 WORKBOOK_PATH = ROOT / "Nv2 Stats.xlsx"
 OUTPUT_PATH = ROOT / "site" / "user_leaderboards.json"
 DETAILS_OUTPUT_PATH = ROOT / "site" / "user_level_details.json"
+METADATA_OUTPUT_PATH = ROOT / "site" / "site_metadata.json"
 SHEET_NAME = "Level Data"
 
 
@@ -33,7 +36,7 @@ def numeric_frame(value: object) -> int | float | None:
     return int(frame) if frame.is_integer() else frame
 
 
-def export() -> tuple[int, int, int, int]:
+def export() -> tuple[int, int, int, int, str]:
     workbook = load_workbook(WORKBOOK_PATH, read_only=True, data_only=True)
     stats: dict[str, dict[str, object]] = {}
     seen_levels: set[int] = set()
@@ -138,13 +141,59 @@ def export() -> tuple[int, int, int, int]:
     with DETAILS_OUTPUT_PATH.open("w", encoding="utf-8", newline="\n") as output_file:
         json.dump({"players": level_details}, output_file, ensure_ascii=False, separators=(",", ":"))
         output_file.write("\n")
+    last_updated = update_last_updated(METADATA_OUTPUT_PATH)
 
-    return len(seen_levels), len(players), duplicate_levels, len(level_details)
+    return len(seen_levels), len(players), duplicate_levels, len(level_details), last_updated
+
+
+def publish_user_data() -> bool:
+    """Commit only the generated site data and push it for GitHub Pages."""
+    files = [
+        path.resolve().relative_to(ROOT).as_posix()
+        for path in (OUTPUT_PATH, DETAILS_OUTPUT_PATH, METADATA_OUTPUT_PATH)
+    ]
+    try:
+        subprocess.run(
+            ["git", "rev-parse", "--is-inside-work-tree"],
+            cwd=ROOT,
+            check=True,
+            stdout=subprocess.DEVNULL,
+            stderr=subprocess.DEVNULL,
+        )
+        subprocess.run(["git", "add", "--", *files], cwd=ROOT, check=True)
+    except (OSError, subprocess.CalledProcessError) as exc:
+        print(f"Could not stage website data for publishing: {exc}")
+        return False
+
+    changed = subprocess.run(["git", "diff", "--cached", "--quiet", "--", *files], cwd=ROOT, check=False)
+    if changed.returncode == 1:
+        commit = subprocess.run(
+            ["git", "-c", "commit.gpgsign=false", "commit", "--only", "-m", "Refresh User Level leaderboard data", "--", *files],
+            cwd=ROOT,
+            check=False,
+        )
+        if commit.returncode != 0:
+            print("Could not create a Git commit for the updated user-level website data.")
+            return False
+    elif changed.returncode != 0:
+        print("Could not check whether the user-level website data changed.")
+        return False
+    else:
+        print("User-level summary files did not change; checking for pending commits to publish.")
+
+    push = subprocess.run(["git", "push"], cwd=ROOT, check=False)
+    if push.returncode != 0:
+        print("User-level data is updated locally, but GitHub did not accept the push.")
+        return False
+    print("GitHub Pages update requested. The site will refresh after the deployment workflow finishes.")
+    return True
 
 
 if __name__ == "__main__":
-    level_count, player_count, duplicate_count, detail_count = export()
+    level_count, player_count, duplicate_count, detail_count, last_updated = export()
     print(f"Saved {OUTPUT_PATH} and {DETAILS_OUTPUT_PATH}")
     print(f"User levels: {level_count:,}; players: {player_count:,}; duplicate level rows skipped: {duplicate_count:,}")
+    print(f"Last updated: {last_updated}")
     print(f"Summary size: {OUTPUT_PATH.stat().st_size:,} bytes")
     print(f"Players with level details: {detail_count:,}; level details size: {DETAILS_OUTPUT_PATH.stat().st_size:,} bytes")
+    raise SystemExit(0 if publish_user_data() else 1)
