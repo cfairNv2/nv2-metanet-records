@@ -60,6 +60,13 @@ a { text-decoration: none; }
 
 main { padding: 28px 0 64px; }
 .leaderboard-toolbar { min-height: 32px; display: flex; justify-content: flex-end; margin-bottom: 8px; }
+.average-filter-control { text-align: right; }
+.average-filter-toggle { display: inline-flex; border: 1px solid var(--ink); }
+.average-filter-toggle button { min-height: 32px; padding: 3px 10px; border: 0; background: transparent; font-size: 13px; }
+.average-filter-toggle button + button { border-left: 1px solid var(--ink); }
+.average-filter-toggle button[aria-pressed="true"] { background: var(--active); color: var(--background); }
+.average-filter-toggle button:hover { background-color: rgba(255, 255, 255, .18); }
+.average-filter-toggle button[aria-pressed="true"]:hover { background: #333; color: #eee; }
 .average-filter-note { margin: 4px 0 0; color: var(--muted); font-size: 12px; line-height: 1.2; }
 .table-scroll { overflow-x: auto; }
 table { width: 100%; border-collapse: collapse; text-align: left; }

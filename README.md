@@ -12,7 +12,7 @@ python .\scrape_metanet_leaderboards.py
 
 The script writes `metanet_leaderboards.csv` and copies a successful, complete pull to `site/metanet_leaderboards.csv`. When connected to this Git repository, it then commits and pushes both CSV files; GitHub Pages deploys the site from that update. Placement values are zero-based leaderboard row positions. Site metrics use usernames, level IDs, and positions only; they do not inspect scores or detect ties. The website counts each distinct level where a player appears in the server’s top ten as one board.
 
-The Metanet standings are 0ths, Total Boards, Points, and Average Place. User levels add Elite Levels and Lone Wolfs. Points award 10 through 1 for places 0 through 9. Average Place averages a player's listed zero-based places, ranks lower averages first, and uses total boards as the tiebreaker. Average Place hides players with fewer than 100 boards. Each leaderboard displays its top 1,000 players.
+The Metanet standings are 0ths, Total Boards, Points, and Average Place. Metanet Average Place has a Filtered/Unfiltered toggle; Filtered hides players with fewer than 20 boards. User levels add Elite Levels and Lone Wolfs, and User Average Place always hides players with fewer than 100 boards. Points award 10 through 1 for places 0 through 9. Average Place averages a player's listed zero-based places, ranks lower averages first, and uses total boards as the tiebreaker. Each leaderboard displays its top 1,000 players.
 
 ## Refresh user-level summaries
 

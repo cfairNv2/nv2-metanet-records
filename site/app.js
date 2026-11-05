@@ -2,7 +2,8 @@ const METANET_CSV_PATH = "metanet_leaderboards.csv";
 const USER_DATA_PATH = "user_leaderboards.json";
 const numberFormat = new Intl.NumberFormat("en-US");
 const averageFormat = new Intl.NumberFormat("en-US", { minimumFractionDigits: 3, maximumFractionDigits: 3 });
-const averageMinimumBoards = 100;
+const metanetAverageMinimumBoards = 20;
+const userAverageMinimumBoards = 100;
 const boards = {
   zeroes: { label: "0ths", metric: "zeroes" },
   boards: { label: "Total Boards", metric: "boards" },
@@ -139,6 +140,7 @@ function currentState() {
   return {
     levelset,
     board: availableBoards[levelset].includes(requestedBoard) ? requestedBoard : "zeroes",
+    averageFilter: levelset === "metanet" && params.get("average") === "unfiltered" ? "unfiltered" : "filtered",
   };
 }
 
@@ -150,6 +152,9 @@ function stateQuery(nextState, extra = {}) {
   const params = new URLSearchParams();
   if (nextState.levelset !== "metanet") params.set("levels", nextState.levelset);
   if (nextState.board !== "zeroes") params.set("board", nextState.board);
+  if (nextState.levelset === "metanet" && nextState.board === "average" && nextState.averageFilter === "unfiltered") {
+    params.set("average", "unfiltered");
+  }
   if (extra.id) params.set("id", extra.id);
   if (extra.list) params.set("list", extra.list);
   const query = params.toString();
@@ -173,7 +178,10 @@ function eligiblePlayers(profiles, board) {
   if (board === "zeroes" || board === "elite" || board === "loneWolfs") {
     return profiles.filter((player) => player[metric] > 0);
   }
-  if (board === "average") return profiles.filter((player) => player.boards >= averageMinimumBoards);
+  if (board === "average") {
+    if (state.levelset === "user") return profiles.filter((player) => player.boards >= userAverageMinimumBoards);
+    if (state.averageFilter === "filtered") return profiles.filter((player) => player.boards >= metanetAverageMinimumBoards);
+  }
   return profiles;
 }
 
@@ -197,7 +205,7 @@ function playerMetricRank(player, board) {
   if (board === "zeroes" && player.zeroes === 0) return "—";
   if (board === "elite" && player.eliteLevels === 0) return "—";
   if (board === "loneWolfs" && player.loneWolfs === 0) return "—";
-  if (board === "average" && player.boards < averageMinimumBoards) return "—";
+  if (board === "average" && !eligiblePlayers([player], board).length) return "—";
   const rankedPlayers = sortPlayers(eligiblePlayers(activeDataset(), board), board);
   const position = rankedPlayers.findIndex((item) => item.key === player.key);
   return position < 0 ? "—" : placeLabel(position);
@@ -214,8 +222,15 @@ function syncControls() {
   });
   const nav = document.querySelector(".leaderboard-nav");
   if (nav) nav.dataset.levelset = state.levelset;
+  const averageControl = document.getElementById("average-filter-control");
+  if (averageControl) averageControl.hidden = state.board !== "average" || state.levelset !== "metanet";
+  document.querySelectorAll("[data-average-filter]").forEach((button) => {
+    button.setAttribute("aria-pressed", String(button.dataset.averageFilter === state.averageFilter));
+  });
   const averageNote = document.getElementById("average-filter-note");
-  if (averageNote) averageNote.hidden = state.board !== "average";
+  if (averageNote) averageNote.hidden = state.board !== "average" || state.averageFilter !== "filtered";
+  const userAverageNote = document.getElementById("user-average-filter-note");
+  if (userAverageNote) userAverageNote.hidden = state.board !== "average" || state.levelset !== "user";
 }
 
 function renderLeaderboard() {
@@ -378,6 +393,13 @@ function changeBoard(board) {
   renderCurrentPage();
 }
 
+function changeAverageFilter(averageFilter) {
+  if (state.levelset !== "metanet" || state.board !== "average" || averageFilter === state.averageFilter) return;
+  state = { ...state, averageFilter };
+  window.history.pushState({}, "", indexUrl(state));
+  renderCurrentPage();
+}
+
 function searchMatches(query) {
   const normalized = query.toLocaleLowerCase();
   return [...activeDataset()]
@@ -441,6 +463,9 @@ function attachControls() {
   });
   document.querySelectorAll("[data-board]").forEach((button) => {
     button.addEventListener("click", () => changeBoard(button.dataset.board));
+  });
+  document.querySelectorAll("[data-average-filter]").forEach((button) => {
+    button.addEventListener("click", () => changeAverageFilter(button.dataset.averageFilter));
   });
   window.addEventListener("popstate", () => {
     state = currentState();

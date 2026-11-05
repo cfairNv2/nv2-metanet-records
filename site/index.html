@@ -6,8 +6,8 @@
   <meta name="theme-color" content="#aaaaaa">
   <meta name="description" content="NV2 level leaderboards.">
   <title>Nv2 Leaderboards</title>
-  <link rel="stylesheet" href="styles.css?v=user-leaderboards">
-  <script src="app.js?v=user-leaderboards" defer></script>
+  <link rel="stylesheet" href="styles.css?v=average-filter-restore">
+  <script src="app.js?v=average-filter-restore" defer></script>
 </head>
 <body data-page="leaderboard">
   <div class="page-shell">
@@ -40,7 +40,14 @@
 
     <main id="leaderboard-view">
       <div class="leaderboard-toolbar">
-        <p id="average-filter-note" class="average-filter-note" hidden>Players with fewer than 100 boards filtered out</p>
+        <div id="average-filter-control" class="average-filter-control" hidden>
+          <div class="average-filter-toggle" role="group" aria-label="Average Place filter">
+            <button type="button" data-average-filter="filtered" aria-pressed="true">Filtered</button>
+            <button type="button" data-average-filter="unfiltered" aria-pressed="false">Unfiltered</button>
+          </div>
+          <p id="average-filter-note" class="average-filter-note" hidden>Players with fewer than 20 boards filtered out</p>
+        </div>
+        <p id="user-average-filter-note" class="average-filter-note" hidden>Players with fewer than 100 boards filtered out</p>
       </div>
       <div class="table-scroll">
         <table>
