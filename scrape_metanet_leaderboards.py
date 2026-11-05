@@ -36,12 +36,13 @@ def level_to_path(level: int) -> str:
     return f"{level_id[0]}/{level_id[1:3]}/{level_id[3:6]}.txt"
 
 
-def decode_leaderboard_bytes(data: bytes) -> list[str]:
-    """Read player names and skip score and user ID fields."""
+def decode_leaderboard_bytes(data: bytes) -> list[tuple[str, int]]:
+    """Read player names and frame counts, skipping user IDs."""
     entries = []
     offset = 0
 
     while offset + 7 < len(data):
+        frames = int.from_bytes(data[offset:offset + 3], "big")
         offset += 7
 
         name_bytes = []
@@ -50,7 +51,7 @@ def decode_leaderboard_bytes(data: bytes) -> list[str]:
             offset += 1
 
         player = bytes(name_bytes).decode("utf-8", errors="replace")
-        entries.append(player)
+        entries.append((player, frames))
 
     return entries[:LEADERBOARD_LIMIT]
 
@@ -64,7 +65,7 @@ def get_session() -> requests.Session:
     return session
 
 
-def fetch_level(level: int, retries: int = 3) -> tuple[int, list[str], str]:
+def fetch_level(level: int, retries: int = 3) -> tuple[int, list[tuple[str, int]], str]:
     url = f"http://nserver.thewayoftheninja.org/highscores/{level_to_path(level)}"
     last_error = "request_error"
 
@@ -91,7 +92,7 @@ def fetch_level(level: int, retries: int = 3) -> tuple[int, list[str], str]:
 
 
 def rows_for_level(
-    level: int, entries: list[str], status: str
+    level: int, entries: list[tuple[str, int]], status: str
 ) -> list[dict[str, str | int]]:
     level_id = f"{level:06d}"
     if not entries:
@@ -99,16 +100,18 @@ def rows_for_level(
             "level_id": level_id,
             "rank": "",
             "player": "",
+            "frames": "",
             "is_0th": "false",
             "fetch_status": status,
         }]
 
     rows = []
-    for place_index, player in enumerate(entries):
+    for place_index, (player, frames) in enumerate(entries):
         rows.append({
             "level_id": level_id,
             "rank": place_index,
             "player": player,
+            "frames": frames,
             "is_0th": "true" if place_index == 0 else "false",
             "fetch_status": status,
         })
@@ -205,7 +208,7 @@ def main() -> int:
     if args.workers < 1:
         parser.error("--workers must be at least 1")
 
-    fetched: dict[int, tuple[list[str], str]] = {}
+    fetched: dict[int, tuple[list[tuple[str, int]], str]] = {}
     print(f"Fetching Metanet leaderboards for levels {FIRST_LEVEL:06d}-{LAST_LEVEL:06d}...")
 
     with ThreadPoolExecutor(max_workers=args.workers) as executor:
@@ -220,7 +223,7 @@ def main() -> int:
                 print(f"Fetched {completed}/{LAST_LEVEL} levels")
 
     args.output.parent.mkdir(parents=True, exist_ok=True)
-    fieldnames = ["level_id", "rank", "player", "is_0th", "fetch_status"]
+    fieldnames = ["level_id", "rank", "player", "frames", "is_0th", "fetch_status"]
     failed = 0
     empty = 0
     with args.output.open("w", newline="", encoding="utf-8-sig") as csv_file:

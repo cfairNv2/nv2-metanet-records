@@ -46,6 +46,9 @@ a { text-decoration: none; }
 .level-toggle button[aria-pressed="true"]:hover { background: #333; color: #eee; }
 
 main { padding: 28px 0 64px; }
+.leaderboard-toolbar { min-height: 32px; display: flex; justify-content: flex-end; margin-bottom: 8px; }
+.compact-toggle { min-height: 32px; padding: 3px 10px; border: 1px solid var(--ink); background: transparent; font-size: 13px; }
+.compact-toggle:hover { background: rgba(255, 255, 255, .24); }
 .table-scroll { overflow-x: auto; }
 table { width: 100%; border-collapse: collapse; text-align: left; }
 thead { border-bottom: 1px solid var(--line); }
@@ -71,10 +74,7 @@ tbody tr:hover { background: rgba(255, 255, 255, .35); }
 .stat-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; color: var(--muted); }
 .metric-rank { flex: 0 0 auto; font-size: 12px; }
 .profile-stat strong { display: block; margin-top: 8px; font-size: 24px; font-weight: 400; }
-.level-list { max-width: 640px; margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--line); }
-.level-list li { display: flex; justify-content: space-between; gap: 16px; padding: 10px 16px; border-bottom: 1px solid var(--line); }
-.level-list li:nth-child(even) { background: rgba(255, 255, 255, .16); }
-.level-place { color: var(--muted); }
+.level-list { min-width: 460px; border-top: 1px solid var(--line); }
 
 @media (max-width: 620px) {
   .page-shell { width: calc(100% - 32px); }

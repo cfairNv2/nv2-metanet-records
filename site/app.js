@@ -51,6 +51,7 @@ function parseCsv(text) {
 
 function buildDataset(rows) {
   const players = new Map();
+  levelRecords = new Map();
 
   for (const row of rows) {
     if (row.fetch_status !== "ok" || !row.player.trim()) continue;
@@ -66,9 +67,14 @@ function buildDataset(rows) {
     const place = Number(row.rank);
     if (!row.level_id || !Number.isFinite(place)) continue;
 
+    const frames = row.frames?.trim() ? Number(row.frames) : null;
+    const levelRows = levelRecords.get(row.level_id) || [];
+    levelRows.push({ playerKey: key, place, frames: Number.isFinite(frames) ? frames : null });
+    levelRecords.set(row.level_id, levelRows);
+
     const existing = player.levels.get(row.level_id);
     if (!existing || place < existing.place) {
-      player.levels.set(row.level_id, { levelId: row.level_id, place });
+      player.levels.set(row.level_id, { levelId: row.level_id, place, frames: Number.isFinite(frames) ? frames : null });
     }
   }
 
@@ -115,21 +121,30 @@ function displayLevelId(levelId) {
   return `${episodePrefix}${episodeSuffix}-${stage}`;
 }
 
+function formatSignedFrames(value) {
+  if (!Number.isFinite(value)) return "—";
+  if (value > 0) return `+${numberFormat.format(value)}`;
+  return numberFormat.format(value);
+}
+
 function currentState() {
   const params = new URLSearchParams(window.location.search);
   return {
     levelset: params.get("levels") === "user" ? "user" : "metanet",
     board: Object.hasOwn(boards, params.get("board")) ? params.get("board") : "zeroes",
+    averageFilter: params.get("average") === "unfiltered" ? "unfiltered" : "filtered",
   };
 }
 
 let state = currentState();
 let dataset = [];
+let levelRecords = new Map();
 
 function stateUrl(nextState) {
   const params = new URLSearchParams();
   if (nextState.levelset !== "metanet") params.set("levels", nextState.levelset);
   if (nextState.board !== "zeroes") params.set("board", nextState.board);
+  if (nextState.board === "average" && nextState.averageFilter === "unfiltered") params.set("average", "unfiltered");
   const query = params.toString();
   return `${window.location.pathname}${query ? `?${query}` : ""}`;
 }
@@ -181,6 +196,12 @@ function syncControls() {
   document.querySelectorAll("[data-board]").forEach((button) => {
     button.setAttribute("aria-selected", String(button.dataset.board === state.board));
   });
+  const averageToggle = document.getElementById("average-filter-toggle");
+  if (averageToggle) {
+    averageToggle.hidden = state.board !== "average";
+    averageToggle.textContent = state.averageFilter === "filtered" ? "Filtered" : "Unfiltered";
+    averageToggle.setAttribute("aria-pressed", String(state.averageFilter === "filtered"));
+  }
 }
 
 function render() {
@@ -193,7 +214,9 @@ function render() {
   const body = document.getElementById("leaderboard-body");
   const leaderboardPlayers = state.board === "zeroes"
     ? dataset.filter((player) => player.zeroes > 0)
-    : dataset;
+    : state.board === "average" && state.averageFilter === "filtered"
+      ? dataset.filter((player) => player.boards >= 20)
+      : dataset;
   const sorted = sortPlayers(leaderboardPlayers, state.board);
   document.getElementById("metric-heading").textContent = boards[state.board].label;
   document.getElementById("boards-heading").hidden = state.board !== "average";
@@ -262,16 +285,38 @@ function renderPlayerLevels() {
   const entries = player.entries
     .filter((entry) => !isZeroes || entry.place === 0)
     .sort((a, b) => Number(a.levelId) - Number(b.levelId));
+  const frameDifference = (entry) => {
+    const records = levelRecords.get(entry.levelId) || [];
+    const zeroFrames = records.find((record) => record.place === 0)?.frames;
+    if (isZeroes) {
+      const firstFrames = records.find((record) => record.place === 1)?.frames;
+      return Number.isFinite(zeroFrames) && Number.isFinite(firstFrames) ? zeroFrames - firstFrames : null;
+    }
+    return Number.isFinite(entry.frames) && Number.isFinite(zeroFrames) ? entry.frames - zeroFrames : null;
+  };
 
   root.hidden = false;
   document.title = `${title} — Nv2 Leaderboards`;
   root.innerHTML = `
     <a class="back-link" href="player.html?id=${encodeURIComponent(player.key)}&board=${encodeURIComponent(state.board)}">← ${escapeHtml(player.name)}</a>
     <h2 class="player-name">${escapeHtml(title)}</h2>
-    <ol class="level-list">
-      ${entries.map((entry) => `
-        <li><span>Level ${escapeHtml(displayLevelId(entry.levelId))}</span>${isZeroes ? "" : `<span class="level-place">${placeLabel(entry.place)}</span>`}</li>`).join("")}
-    </ol>`;
+    <div class="table-scroll">
+      <table class="level-list">
+        <thead><tr>
+          <th scope="col">Level</th>
+          ${isZeroes ? '<th scope="col" class="numeric-column">Frames ahead</th>' : '<th scope="col" class="numeric-column">Place</th><th scope="col" class="numeric-column">Frames behind 0th</th>'}
+        </tr></thead>
+        <tbody>
+          ${entries.map((entry) => `
+            <tr>
+              <td>Level ${escapeHtml(displayLevelId(entry.levelId))}</td>
+              ${isZeroes
+                ? `<td class="numeric-cell">${formatSignedFrames(frameDifference(entry))}</td>`
+                : `<td class="numeric-cell">${placeLabel(entry.place)}</td><td class="numeric-cell">${formatSignedFrames(frameDifference(entry))}</td>`}
+            </tr>`).join("")}
+        </tbody>
+      </table>
+    </div>`;
 }
 
 function attachControls() {
@@ -280,6 +325,11 @@ function attachControls() {
   });
   document.querySelectorAll("[data-board]").forEach((button) => {
     button.addEventListener("click", () => selectState({ ...state, board: button.dataset.board }));
+  });
+  document.getElementById("average-filter-toggle")?.addEventListener("click", () => {
+    state = { ...state, averageFilter: state.averageFilter === "filtered" ? "unfiltered" : "filtered" };
+    window.history.pushState({}, "", stateUrl(state));
+    render();
   });
   window.addEventListener("popstate", () => {
     state = currentState();
