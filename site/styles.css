@@ -95,6 +95,12 @@ tbody tr:hover { background: rgba(255, 255, 255, .35); }
 .metric-rank { flex: 0 0 auto; font-size: 12px; }
 .profile-stat strong { display: block; margin-top: 8px; font-size: 24px; font-weight: 400; }
 .level-list { min-width: 460px; border-top: 1px solid var(--line); }
+.place-counts-scroll { margin-top: 24px; }
+.place-counts-table { min-width: 900px; border-top: 1px solid var(--line); }
+.place-counts-table caption { padding: 0 16px 8px; color: var(--muted); font-size: 18px; text-align: left; }
+.place-counts-table th, .place-counts-table td { height: 42px; padding-inline: 10px; white-space: nowrap; }
+.place-counts-table .numeric-column, .place-counts-table .numeric-cell { width: 78px; }
+.place-counts-table th:first-child { width: 100px; }
 
 @media (max-width: 620px) {
   .page-shell { width: calc(100% - 32px); }
@@ -117,5 +123,5 @@ tbody tr:hover { background: rgba(255, 255, 255, .35); }
   .profile-stats-6 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .profile-stat { min-height: 116px; }
   .profile-stat:nth-child(even) { border-right: 0; }
-  .profile-stat:nth-child(-n+4) { border-bottom: 1px solid var(--line); }
+  .profile-stats-4 .profile-stat:nth-child(-n+2), .profile-stats-6 .profile-stat:nth-child(-n+4) { border-bottom: 1px solid var(--line); }
 }

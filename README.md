@@ -22,7 +22,7 @@ Run from this folder after updating `Nv2 Stats.xlsx`:
 python .\build_user_leaderboards.py
 ```
 
-The builder reads only the `Level Data` sheet and writes `site/user_leaderboards.json`. It keeps player-level totals and rankings data, not each level's leaderboard. It uses the player-name columns for positions, checks only whether column S is blank for Elite Levels, and checks whether column D is blank for Lone Wolfs. It ignores numeric scores.
+The builder reads only the `Level Data` sheet and writes player summaries to `site/user_leaderboards.json`. It writes level IDs, places, and frame gaps for Elite Levels and Lone Wolfs separately to `site/user_level_details.json`; the site loads that larger file only on those detail pages. It uses the player-name columns for places, checks whether column S is blank for Elite Levels, and checks whether column D is blank for Lone Wolfs. Numeric scores are used only to calculate the requested frames-behind-0th values.
 
 ## Preview locally
 

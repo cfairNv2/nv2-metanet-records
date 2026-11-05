@@ -147,6 +147,7 @@ function currentState() {
 let state = currentState();
 let datasets = { metanet: [], user: [] };
 let levelRecords = new Map();
+let userLevelDetails = {};
 
 function stateQuery(nextState, extra = {}) {
   const params = new URLSearchParams();
@@ -273,17 +274,28 @@ function renderPlayer() {
   }
 
   const metricKeys = state.levelset === "user"
-    ? ["zeroes", "boards", "points", "average", "elite", "loneWolfs"]
+    ? ["zeroes", "boards", "points", "elite", "loneWolfs", "average"]
     : ["zeroes", "boards", "points", "average"];
   const statCard = (board) => {
-    const metric = boards[board].metric;
     const body = `<span class="stat-heading"><span>${boards[board].label}</span><span class="metric-rank">${playerMetricRank(player, board)}</span></span><strong>${formatMetric(player, board)}</strong>`;
     if (state.levelset === "metanet" && (board === "zeroes" || board === "boards")) {
       const list = board === "zeroes" ? "zeroes" : "boards";
       return `<a class="profile-stat" href="player-levels.html${stateQuery(state, { id: player.key, list })}">${body}</a>`;
     }
+    if (state.levelset === "user" && (board === "elite" || board === "loneWolfs") && player[boards[board].metric] > 0) {
+      return `<a class="profile-stat" href="player-levels.html${stateQuery(state, { id: player.key, list: board })}">${body}</a>`;
+    }
     return `<div class="profile-stat">${body}</div>`;
   };
+  const placeCounts = state.levelset === "user"
+    ? `<div class="table-scroll place-counts-scroll">
+        <table class="place-counts-table">
+          <caption>Boards by place</caption>
+          <thead><tr><th scope="col">Place</th>${Array.from({ length: 10 }, (_, place) => `<th scope="col" class="numeric-column">${placeLabel(place)}</th>`).join("")}</tr></thead>
+          <tbody><tr><th scope="row">Boards</th>${player.placeCounts.map((count) => `<td class="numeric-cell">${numberFormat.format(count)}</td>`).join("")}</tr></tbody>
+        </table>
+      </div>`
+    : "";
 
   root.hidden = false;
   document.title = `${player.name} — Nv2 Leaderboards`;
@@ -292,23 +304,58 @@ function renderPlayer() {
     <h2 class="player-name">${escapeHtml(player.name)}</h2>
     <section class="profile-stats profile-stats-${metricKeys.length}" aria-label="Player statistics">
       ${metricKeys.map(statCard).join("")}
-    </section>`;
+    </section>
+    ${placeCounts}`;
 }
 
 function renderPlayerLevels() {
   const params = new URLSearchParams(window.location.search);
-  if (state.levelset === "user") {
-    window.location.replace(playerUrl({ key: params.get("id") || "" }, state));
-    return;
-  }
-
-  const player = datasets.metanet.find((item) => item.key === (params.get("id") || ""));
   const root = document.getElementById("player-levels-view");
   const main = document.getElementById("leaderboard-view");
   const playerRoot = document.getElementById("player-view");
   if (main) main.hidden = true;
   if (playerRoot) playerRoot.hidden = true;
 
+  if (state.levelset === "user") {
+    const listType = params.get("list");
+    if (listType !== "elite" && listType !== "loneWolfs") {
+      window.location.replace(playerUrl({ key: params.get("id") || "" }, state));
+      return;
+    }
+
+    const player = datasets.user.find((item) => item.key === (params.get("id") || "").toLocaleLowerCase());
+    if (!player) {
+      root.hidden = false;
+      root.innerHTML = '<p class="table-state">Player not found in this level set.</p>';
+      return;
+    }
+
+    const isElite = listType === "elite";
+    const title = `${player.name} ${isElite ? "Elite Levels" : "Lone Wolf Levels"}`;
+    const details = userLevelDetails[player.key] || {};
+    const entries = isElite ? (details.elite || []) : (details.wolves || []);
+    const rows = isElite
+      ? entries.map(([levelId, place, framesBehindZero]) => `<tr><td>Level ${numberFormat.format(levelId)}</td><td class="numeric-cell">${placeLabel(place)}</td><td class="numeric-cell">${formatSignedFrames(framesBehindZero)}</td></tr>`).join("")
+      : entries.map((levelId) => `<tr><td>Level ${numberFormat.format(levelId)}</td></tr>`).join("");
+
+    root.hidden = false;
+    document.title = `${title} — Nv2 Leaderboards`;
+    root.innerHTML = `
+      <a class="back-link" href="player.html${stateQuery(state, { id: player.key })}">← ${escapeHtml(player.name)}</a>
+      <h2 class="player-name">${escapeHtml(title)}</h2>
+      <div class="table-scroll">
+        <table class="level-list">
+          <thead><tr>
+            <th scope="col">Level</th>
+            ${isElite ? '<th scope="col" class="numeric-column">Place</th><th scope="col" class="numeric-column">Frames behind 0th</th>' : ""}
+          </tr></thead>
+          <tbody>${rows}</tbody>
+        </table>
+      </div>`;
+    return;
+  }
+
+  const player = datasets.metanet.find((item) => item.key === (params.get("id") || ""));
   if (!player) {
     root.hidden = false;
     root.innerHTML = '<p class="table-state">Player not found in this level set.</p>';
@@ -488,6 +535,14 @@ async function start() {
     datasets.metanet = metanetData.profiles;
     levelRecords = metanetData.levelRecords;
     datasets.user = Array.isArray(userPayload.players) ? userPayload.players : [];
+    const listType = new URLSearchParams(window.location.search).get("list");
+    if (document.body.dataset.page === "player-levels" && state.levelset === "user"
+      && (listType === "elite" || listType === "loneWolfs")) {
+      const detailsResponse = await fetch("user_level_details.json", { cache: "no-store" });
+      if (!detailsResponse.ok) throw new Error(`The user-level detail data returned ${detailsResponse.status}.`);
+      const detailsPayload = await detailsResponse.json();
+      userLevelDetails = detailsPayload.players || {};
+    }
     renderCurrentPage();
   } catch (error) {
     const body = document.getElementById("leaderboard-body");
