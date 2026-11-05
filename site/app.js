@@ -509,7 +509,7 @@ function renderLevel() {
   }).join("");
   const imagePanel = level.image
     ? `<aside class="level-image-panel">
-        <img class="level-image" src="${escapeHtml(level.image)}" referrerpolicy="no-referrer" alt="${escapeHtml(title)} level image">
+        <img class="level-image" src="${escapeHtml(level.image)}" alt="${escapeHtml(title)} level image">
         ${level.imageSource ? `<p class="level-image-credit">Image from the <a href="${escapeHtml(level.imageSource)}" target="_blank" rel="noreferrer">Nv2 Wiki</a></p>` : ""}
       </aside>`
     : "";
