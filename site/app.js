@@ -196,12 +196,13 @@ function syncControls() {
   document.querySelectorAll("[data-board]").forEach((button) => {
     button.setAttribute("aria-selected", String(button.dataset.board === state.board));
   });
-  const averageToggle = document.getElementById("average-filter-toggle");
-  if (averageToggle) {
-    averageToggle.hidden = state.board !== "average";
-    averageToggle.textContent = state.averageFilter === "filtered" ? "Filtered" : "Unfiltered";
-    averageToggle.setAttribute("aria-pressed", String(state.averageFilter === "filtered"));
-  }
+  const averageControl = document.getElementById("average-filter-control");
+  if (averageControl) averageControl.hidden = state.board !== "average";
+  document.querySelectorAll("[data-average-filter]").forEach((button) => {
+    button.setAttribute("aria-pressed", String(button.dataset.averageFilter === state.averageFilter));
+  });
+  const averageNote = document.getElementById("average-filter-note");
+  if (averageNote) averageNote.hidden = state.averageFilter !== "filtered";
 }
 
 function render() {
@@ -326,10 +327,13 @@ function attachControls() {
   document.querySelectorAll("[data-board]").forEach((button) => {
     button.addEventListener("click", () => selectState({ ...state, board: button.dataset.board }));
   });
-  document.getElementById("average-filter-toggle")?.addEventListener("click", () => {
-    state = { ...state, averageFilter: state.averageFilter === "filtered" ? "unfiltered" : "filtered" };
-    window.history.pushState({}, "", stateUrl(state));
-    render();
+  document.querySelectorAll("[data-average-filter]").forEach((button) => {
+    button.addEventListener("click", () => {
+      if (button.dataset.averageFilter === state.averageFilter) return;
+      state = { ...state, averageFilter: button.dataset.averageFilter };
+      window.history.pushState({}, "", stateUrl(state));
+      render();
+    });
   });
   window.addEventListener("popstate", () => {
     state = currentState();
