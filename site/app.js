@@ -212,6 +212,48 @@ function playerMetricRank(player, board) {
   return position < 0 ? "—" : placeLabel(position);
 }
 
+function renderPlaceHistogram(counts) {
+  const places = Array.isArray(counts) ? counts : Array(10).fill(0);
+  const chartWidth = 1000;
+  const baseline = 238;
+  const maxBarHeight = 162;
+  const plotLeft = 24;
+  const slotWidth = 95;
+  const barWidth = 52;
+  const maxCount = Math.max(1, ...places.map((count) => Number(count) || 0));
+  const description = places.map((count, place) => `${placeLabel(place)}: ${numberFormat.format(count)} boards`).join("; ");
+  const gridLines = [0.25, 0.5, 0.75, 1].map((fraction) => {
+    const y = baseline - maxBarHeight * fraction;
+    return `<line class="histogram-gridline" x1="20" y1="${y}" x2="980" y2="${y}" />`;
+  }).join("");
+  const bars = places.map((rawCount, place) => {
+    const count = Number(rawCount) || 0;
+    const height = count > 0 ? Math.max(2, (count / maxCount) * maxBarHeight) : 0;
+    const x = plotLeft + place * slotWidth + (slotWidth - barWidth) / 2;
+    const y = baseline - height;
+    const labelY = Math.max(44, y - 11);
+    const center = x + barWidth / 2;
+    return `<g class="histogram-bar-group">
+      <rect class="histogram-bar" x="${x}" y="${y}" width="${barWidth}" height="${height}" />
+      <text class="histogram-value" x="${center}" y="${labelY}" text-anchor="middle">${numberFormat.format(count)}</text>
+      <text class="histogram-place" x="${center}" y="274" text-anchor="middle">${placeLabel(place)}</text>
+    </g>`;
+  }).join("");
+
+  return `<section class="place-histogram" aria-labelledby="place-histogram-heading">
+    <h3 id="place-histogram-heading">Boards by place</h3>
+    <div class="place-histogram-scroll">
+      <svg class="place-histogram-chart" viewBox="0 0 ${chartWidth} 300" role="img" aria-labelledby="place-histogram-title place-histogram-description">
+        <title id="place-histogram-title">Boards by place</title>
+        <desc id="place-histogram-description">${escapeHtml(description)}</desc>
+        ${gridLines}
+        <line class="histogram-baseline" x1="20" y1="${baseline}" x2="980" y2="${baseline}" />
+        ${bars}
+      </svg>
+    </div>
+  </section>`;
+}
+
 function syncControls() {
   document.querySelectorAll("[data-levelset]").forEach((button) => {
     button.setAttribute("aria-pressed", String(button.dataset.levelset === state.levelset));
@@ -287,15 +329,7 @@ function renderPlayer() {
     }
     return `<div class="profile-stat">${body}</div>`;
   };
-  const placeCounts = state.levelset === "user"
-    ? `<div class="table-scroll place-counts-scroll">
-        <table class="place-counts-table">
-          <caption>Boards by place</caption>
-          <thead><tr><th scope="col">Place</th>${Array.from({ length: 10 }, (_, place) => `<th scope="col" class="numeric-column">${placeLabel(place)}</th>`).join("")}</tr></thead>
-          <tbody><tr><th scope="row">Boards</th>${player.placeCounts.map((count) => `<td class="numeric-cell">${numberFormat.format(count)}</td>`).join("")}</tr></tbody>
-        </table>
-      </div>`
-    : "";
+  const placeCounts = state.levelset === "user" ? renderPlaceHistogram(player.placeCounts) : "";
 
   root.hidden = false;
   document.title = `${player.name} — Nv2 Leaderboards`;

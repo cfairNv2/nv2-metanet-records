@@ -95,12 +95,15 @@ tbody tr:hover { background: rgba(255, 255, 255, .35); }
 .metric-rank { flex: 0 0 auto; font-size: 12px; }
 .profile-stat strong { display: block; margin-top: 8px; font-size: 24px; font-weight: 400; }
 .level-list { min-width: 460px; border-top: 1px solid var(--line); }
-.place-counts-scroll { margin-top: 24px; }
-.place-counts-table { min-width: 900px; border-top: 1px solid var(--line); }
-.place-counts-table caption { padding: 0 16px 8px; color: var(--muted); font-size: 18px; text-align: left; }
-.place-counts-table th, .place-counts-table td { height: 42px; padding-inline: 10px; white-space: nowrap; }
-.place-counts-table .numeric-column, .place-counts-table .numeric-cell { width: 78px; }
-.place-counts-table th:first-child { width: 100px; }
+.place-histogram { margin-top: 24px; }
+.place-histogram h3 { margin: 0 0 8px; color: var(--muted); font-size: 18px; font-weight: 400; }
+.place-histogram-scroll { overflow-x: auto; border-bottom: 1px solid var(--line); }
+.place-histogram-chart { display: block; width: 100%; min-width: 850px; height: auto; overflow: visible; }
+.histogram-gridline { stroke: var(--line); stroke-width: 1; opacity: .45; }
+.histogram-baseline { stroke: var(--ink); stroke-width: 1.5; }
+.histogram-bar { fill: var(--ink); shape-rendering: crispEdges; }
+.histogram-value, .histogram-place { fill: var(--ink); font-family: "uni0553", monospace; font-size: 14px; }
+.histogram-place { fill: var(--muted); }
 
 @media (max-width: 620px) {
   .page-shell { width: calc(100% - 32px); }
