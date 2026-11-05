@@ -4,5 +4,3599 @@
     "image": "images/00-0.webp",
     "wiki": "https://nv2.fandom.com/wiki/00-0",
     "imageSource": "https://nv2.fandom.com/wiki/File:00-0.png"
+  },
+  "000002": {
+    "name": "tutorial: jumping, long",
+    "image": "images/00-1.webp",
+    "wiki": "https://nv2.fandom.com/wiki/00-1",
+    "imageSource": "https://nv2.fandom.com/wiki/File:00-1.png"
+  },
+  "000003": {
+    "name": "hold it",
+    "image": "images/00-2.webp",
+    "wiki": "https://nv2.fandom.com/wiki/00-2",
+    "imageSource": "https://nv2.fandom.com/wiki/File:00-2.png"
+  },
+  "000004": {
+    "name": "lovely",
+    "image": "images/00-3.webp",
+    "wiki": "https://nv2.fandom.com/wiki/00-3",
+    "imageSource": "https://nv2.fandom.com/wiki/File:00-3.png"
+  },
+  "000005": {
+    "name": "breathing room",
+    "image": "images/00-4.webp",
+    "wiki": "https://nv2.fandom.com/wiki/00-4",
+    "imageSource": "https://nv2.fandom.com/wiki/File:00-4.png"
+  },
+  "000006": {
+    "name": "crop rectangles",
+    "image": "images/01-0.webp",
+    "wiki": "https://nv2.fandom.com/wiki/01-0",
+    "imageSource": "https://nv2.fandom.com/wiki/File:01-0.png"
+  },
+  "000007": {
+    "name": "suspension bridge",
+    "image": "images/01-1.webp",
+    "wiki": "https://nv2.fandom.com/wiki/01-1",
+    "imageSource": "https://nv2.fandom.com/wiki/File:01-1.png"
+  },
+  "000008": {
+    "name": "come back zinc!",
+    "image": "images/01-2.webp",
+    "wiki": "https://nv2.fandom.com/wiki/01-2",
+    "imageSource": "https://nv2.fandom.com/wiki/File:01-2.png"
+  },
+  "000009": {
+    "name": "comfort level",
+    "image": "images/01-3.webp",
+    "wiki": "https://nv2.fandom.com/wiki/01-3",
+    "imageSource": "https://nv2.fandom.com/wiki/File:01-3.png"
+  },
+  "000010": {
+    "name": "fifth column",
+    "image": "images/01-4.webp",
+    "wiki": "https://nv2.fandom.com/wiki/01-4",
+    "imageSource": "https://nv2.fandom.com/wiki/File:01-4.png"
+  },
+  "000011": {
+    "name": "tutorial: inertia/slopes",
+    "image": "images/02-0.webp",
+    "wiki": "https://nv2.fandom.com/wiki/02-0",
+    "imageSource": "https://nv2.fandom.com/wiki/File:02-0.png"
+  },
+  "000012": {
+    "name": "vernacular",
+    "image": "images/02-1.webp",
+    "wiki": "https://nv2.fandom.com/wiki/02-1",
+    "imageSource": "https://nv2.fandom.com/wiki/File:02-1.png"
+  },
+  "000013": {
+    "name": "gator back",
+    "image": "images/02-2.webp",
+    "wiki": "https://nv2.fandom.com/wiki/02-2",
+    "imageSource": "https://nv2.fandom.com/wiki/File:02-2.png"
+  },
+  "000014": {
+    "name": "peaking",
+    "image": "images/02-3.webp",
+    "wiki": "https://nv2.fandom.com/wiki/02-3",
+    "imageSource": "https://nv2.fandom.com/wiki/File:02-3.png"
+  },
+  "000015": {
+    "name": "i have a bad feeling about this",
+    "image": "images/02-4.webp",
+    "wiki": "https://nv2.fandom.com/wiki/02-4",
+    "imageSource": "https://nv2.fandom.com/wiki/File:02-4.png"
+  },
+  "000016": {
+    "name": "ka-razy",
+    "image": "images/03-0.webp",
+    "wiki": "https://nv2.fandom.com/wiki/03-0",
+    "imageSource": "https://nv2.fandom.com/wiki/File:03-0.png"
+  },
+  "000017": {
+    "name": "rooted",
+    "image": "images/03-1.webp",
+    "wiki": "https://nv2.fandom.com/wiki/03-1",
+    "imageSource": "https://nv2.fandom.com/wiki/File:03-1.png"
+  },
+  "000018": {
+    "name": "10ish",
+    "image": "images/03-2.webp",
+    "wiki": "https://nv2.fandom.com/wiki/03-2",
+    "imageSource": "https://nv2.fandom.com/wiki/File:03-2.png"
+  },
+  "000019": {
+    "name": "hug the corners",
+    "image": "images/03-3.webp",
+    "wiki": "https://nv2.fandom.com/wiki/03-3",
+    "imageSource": "https://nv2.fandom.com/wiki/File:03-3.png"
+  },
+  "000020": {
+    "name": "jumpettes",
+    "image": "images/03-4.webp",
+    "wiki": "https://nv2.fandom.com/wiki/03-4",
+    "imageSource": "https://nv2.fandom.com/wiki/File:03-4.png"
+  },
+  "000021": {
+    "name": "acrophobe",
+    "image": "images/04-0.webp",
+    "wiki": "https://nv2.fandom.com/wiki/04-0",
+    "imageSource": "https://nv2.fandom.com/wiki/File:04-0.png"
+  },
+  "000022": {
+    "name": "kohoku",
+    "image": "images/04-1.webp",
+    "wiki": "https://nv2.fandom.com/wiki/04-1",
+    "imageSource": "https://nv2.fandom.com/wiki/File:04-1.png"
+  },
+  "000023": {
+    "name": "moebius stripe",
+    "image": "images/04-2.webp",
+    "wiki": "https://nv2.fandom.com/wiki/04-2",
+    "imageSource": "https://nv2.fandom.com/wiki/File:04-2.png"
+  },
+  "000024": {
+    "name": "leap of faith",
+    "image": "images/04-3.webp",
+    "wiki": "https://nv2.fandom.com/wiki/04-3",
+    "imageSource": "https://nv2.fandom.com/wiki/File:04-3.png"
+  },
+  "000025": {
+    "name": "a fine-toothed comb-over",
+    "image": "images/04-4.webp",
+    "wiki": "https://nv2.fandom.com/wiki/04-4",
+    "imageSource": "https://nv2.fandom.com/wiki/File:04-4.png"
+  },
+  "000026": {
+    "name": "matrix splitting techniques",
+    "image": "images/05-0.webp",
+    "wiki": "https://nv2.fandom.com/wiki/05-0",
+    "imageSource": "https://nv2.fandom.com/wiki/File:05-0.png"
+  },
+  "000027": {
+    "name": "platforming",
+    "image": "images/05-1.webp",
+    "wiki": "https://nv2.fandom.com/wiki/05-1",
+    "imageSource": "https://nv2.fandom.com/wiki/File:05-1.png"
+  },
+  "000028": {
+    "name": "level with no name",
+    "image": "images/05-2.webp",
+    "wiki": "https://nv2.fandom.com/wiki/05-2",
+    "imageSource": "https://nv2.fandom.com/wiki/File:05-2.png"
+  },
+  "000029": {
+    "name": "gaps",
+    "image": "images/05-3.webp",
+    "wiki": "https://nv2.fandom.com/wiki/05-3",
+    "imageSource": "https://nv2.fandom.com/wiki/File:05-3.png"
+  },
+  "000030": {
+    "name": "electric avenue",
+    "image": "images/05-4.webp",
+    "wiki": "https://nv2.fandom.com/wiki/05-4",
+    "imageSource": "https://nv2.fandom.com/wiki/File:05-4.png"
+  },
+  "000031": {
+    "name": "mrs. dash",
+    "image": "images/06-0.webp",
+    "wiki": "https://nv2.fandom.com/wiki/06-0",
+    "imageSource": "https://nv2.fandom.com/wiki/File:06-0.png"
+  },
+  "000032": {
+    "name": "rage-o-hol",
+    "image": "images/06-1.webp",
+    "wiki": "https://nv2.fandom.com/wiki/06-1",
+    "imageSource": "https://nv2.fandom.com/wiki/File:06-1.png"
+  },
+  "000033": {
+    "name": "full speed ahead",
+    "image": "images/06-2.webp",
+    "wiki": "https://nv2.fandom.com/wiki/06-2",
+    "imageSource": "https://nv2.fandom.com/wiki/File:06-2.png"
+  },
+  "000034": {
+    "name": "puppy love",
+    "image": "images/06-3.webp",
+    "wiki": "https://nv2.fandom.com/wiki/06-3",
+    "imageSource": "https://nv2.fandom.com/wiki/File:06-3.png"
+  },
+  "000035": {
+    "name": "ender",
+    "image": "images/06-4.webp",
+    "wiki": "https://nv2.fandom.com/wiki/06-4",
+    "imageSource": "https://nv2.fandom.com/wiki/File:06-4.png"
+  },
+  "000036": {
+    "name": "oubliette",
+    "image": "images/07-0.webp",
+    "wiki": "https://nv2.fandom.com/wiki/07-0",
+    "imageSource": "https://nv2.fandom.com/wiki/File:07-0.png"
+  },
+  "000037": {
+    "name": "rampart",
+    "image": "images/07-1.webp",
+    "wiki": "https://nv2.fandom.com/wiki/07-1",
+    "imageSource": "https://nv2.fandom.com/wiki/File:07-1.png"
+  },
+  "000038": {
+    "name": "shimmy shakes",
+    "image": "images/07-2.webp",
+    "wiki": "https://nv2.fandom.com/wiki/07-2",
+    "imageSource": "https://nv2.fandom.com/wiki/File:07-2.png"
+  },
+  "000039": {
+    "name": "energico",
+    "image": "images/07-3.webp",
+    "wiki": "https://nv2.fandom.com/wiki/07-3",
+    "imageSource": "https://nv2.fandom.com/wiki/File:07-3.png"
+  },
+  "000040": {
+    "name": "a bang and a whimper",
+    "image": "images/07-4.webp",
+    "wiki": "https://nv2.fandom.com/wiki/07-4",
+    "imageSource": "https://nv2.fandom.com/wiki/File:07-4.png"
+  },
+  "000041": {
+    "name": "picturesque",
+    "image": "images/08-0.webp",
+    "wiki": "https://nv2.fandom.com/wiki/08-0",
+    "imageSource": "https://nv2.fandom.com/wiki/File:08-0.png"
+  },
+  "000042": {
+    "name": "silverfish",
+    "image": "images/08-1.webp",
+    "wiki": "https://nv2.fandom.com/wiki/08-1",
+    "imageSource": "https://nv2.fandom.com/wiki/File:08-1.png"
+  },
+  "000043": {
+    "name": "assembly line",
+    "image": "images/08-2.webp",
+    "wiki": "https://nv2.fandom.com/wiki/08-2",
+    "imageSource": "https://nv2.fandom.com/wiki/File:08-2.png"
+  },
+  "000044": {
+    "name": "exit strategy D",
+    "image": "images/08-3.webp",
+    "wiki": "https://nv2.fandom.com/wiki/08-3",
+    "imageSource": "https://nv2.fandom.com/wiki/File:08-3.png"
+  },
+  "000045": {
+    "name": "caseless edit",
+    "image": "images/08-4.webp",
+    "wiki": "https://nv2.fandom.com/wiki/08-4",
+    "imageSource": "https://nv2.fandom.com/wiki/File:08-4.png"
+  },
+  "000046": {
+    "name": "pokeyman",
+    "image": "images/09-0.webp",
+    "wiki": "https://nv2.fandom.com/wiki/09-0",
+    "imageSource": "https://nv2.fandom.com/wiki/File:09-0.png"
+  },
+  "000047": {
+    "name": "eye beam",
+    "image": "images/09-1.webp",
+    "wiki": "https://nv2.fandom.com/wiki/09-1",
+    "imageSource": "https://nv2.fandom.com/wiki/File:09-1.png"
+  },
+  "000048": {
+    "name": "back and forth",
+    "image": "images/09-2.webp",
+    "wiki": "https://nv2.fandom.com/wiki/09-2",
+    "imageSource": "https://nv2.fandom.com/wiki/File:09-2.png"
+  },
+  "000049": {
+    "name": "against the flow",
+    "image": "images/09-3.webp",
+    "wiki": "https://nv2.fandom.com/wiki/09-3",
+    "imageSource": "https://nv2.fandom.com/wiki/File:09-3.png"
+  },
+  "000050": {
+    "name": "lemming run",
+    "image": "images/09-4.webp",
+    "wiki": "https://nv2.fandom.com/wiki/09-4",
+    "imageSource": "https://nv2.fandom.com/wiki/File:09-4.png"
+  },
+  "000051": {
+    "name": "the long and winding tunnel",
+    "image": "images/10-0.webp",
+    "wiki": "https://nv2.fandom.com/wiki/10-0",
+    "imageSource": "https://nv2.fandom.com/wiki/File:10-0.png"
+  },
+  "000052": {
+    "name": "people can fly",
+    "image": "images/10-1.webp",
+    "wiki": "https://nv2.fandom.com/wiki/10-1",
+    "imageSource": "https://nv2.fandom.com/wiki/File:10-1.png"
+  },
+  "000053": {
+    "name": "bloops",
+    "image": "images/10-2.webp",
+    "wiki": "https://nv2.fandom.com/wiki/10-2",
+    "imageSource": "https://nv2.fandom.com/wiki/File:10-2.png"
+  },
+  "000054": {
+    "name": "close quarters",
+    "image": "images/10-3.webp",
+    "wiki": "https://nv2.fandom.com/wiki/10-3",
+    "imageSource": "https://nv2.fandom.com/wiki/File:10-3.png"
+  },
+  "000055": {
+    "name": "target",
+    "image": "images/10-4.webp",
+    "wiki": "https://nv2.fandom.com/wiki/10-4",
+    "imageSource": "https://nv2.fandom.com/wiki/File:10-4.png"
+  },
+  "000056": {
+    "name": "chunky stripe",
+    "image": "images/11-0.webp",
+    "wiki": "https://nv2.fandom.com/wiki/11-0",
+    "imageSource": "https://nv2.fandom.com/wiki/File:11-0.png"
+  },
+  "000057": {
+    "name": "hallway to heck",
+    "image": "images/11-1.webp",
+    "wiki": "https://nv2.fandom.com/wiki/11-1",
+    "imageSource": "https://nv2.fandom.com/wiki/File:11-1.png"
+  },
+  "000058": {
+    "name": "butterfeet",
+    "image": "images/11-2.webp",
+    "wiki": "https://nv2.fandom.com/wiki/11-2",
+    "imageSource": "https://nv2.fandom.com/wiki/File:11-2.png"
+  },
+  "000059": {
+    "name": "robot dance party",
+    "image": "images/11-3.webp",
+    "wiki": "https://nv2.fandom.com/wiki/11-3",
+    "imageSource": "https://nv2.fandom.com/wiki/File:11-3.png"
+  },
+  "000060": {
+    "name": "the perfectra",
+    "image": "images/11-4.webp",
+    "wiki": "https://nv2.fandom.com/wiki/11-4",
+    "imageSource": "https://nv2.fandom.com/wiki/File:11-4.png"
+  },
+  "000061": {
+    "name": "dr. wave",
+    "image": "images/12-0.webp",
+    "wiki": "https://nv2.fandom.com/wiki/12-0",
+    "imageSource": "https://nv2.fandom.com/wiki/File:12-0.png"
+  },
+  "000062": {
+    "name": "escape velocity",
+    "image": "images/12-1.webp",
+    "wiki": "https://nv2.fandom.com/wiki/12-1",
+    "imageSource": "https://nv2.fandom.com/wiki/File:12-1.png"
+  },
+  "000063": {
+    "name": "technicality",
+    "image": "images/12-2.webp",
+    "wiki": "https://nv2.fandom.com/wiki/12-2",
+    "imageSource": "https://nv2.fandom.com/wiki/File:12-2.png"
+  },
+  "000064": {
+    "name": "dead end",
+    "image": "images/12-3.webp",
+    "wiki": "https://nv2.fandom.com/wiki/12-3",
+    "imageSource": "https://nv2.fandom.com/wiki/File:12-3.png"
+  },
+  "000065": {
+    "name": "tooth skin",
+    "image": "images/12-4.webp",
+    "wiki": "https://nv2.fandom.com/wiki/12-4",
+    "imageSource": "https://nv2.fandom.com/wiki/File:12-4.png"
+  },
+  "000066": {
+    "name": "cavern and shirley",
+    "image": "images/13-0.webp",
+    "wiki": "https://nv2.fandom.com/wiki/13-0",
+    "imageSource": "https://nv2.fandom.com/wiki/File:13-0.png"
+  },
+  "000067": {
+    "name": "d-sisive",
+    "image": "images/13-1.webp",
+    "wiki": "https://nv2.fandom.com/wiki/13-1",
+    "imageSource": "https://nv2.fandom.com/wiki/File:13-1.png"
+  },
+  "000068": {
+    "name": "straight to the top",
+    "image": "images/13-2.webp",
+    "wiki": "https://nv2.fandom.com/wiki/13-2",
+    "imageSource": "https://nv2.fandom.com/wiki/File:13-2.png"
+  },
+  "000069": {
+    "name": "blue screens of death",
+    "image": "images/13-3.webp",
+    "wiki": "https://nv2.fandom.com/wiki/13-3",
+    "imageSource": "https://nv2.fandom.com/wiki/File:13-3.png"
+  },
+  "000070": {
+    "name": "zipler",
+    "image": "images/13-4.webp",
+    "wiki": "https://nv2.fandom.com/wiki/13-4",
+    "imageSource": "https://nv2.fandom.com/wiki/File:13-4.png"
+  },
+  "000071": {
+    "name": "apres you",
+    "image": "images/14-0.webp",
+    "wiki": "https://nv2.fandom.com/wiki/14-0",
+    "imageSource": "https://nv2.fandom.com/wiki/File:14-0.png"
+  },
+  "000072": {
+    "name": "spelunking",
+    "image": "images/14-1.webp",
+    "wiki": "https://nv2.fandom.com/wiki/14-1",
+    "imageSource": "https://nv2.fandom.com/wiki/File:14-1.png"
+  },
+  "000073": {
+    "name": "an opening act of unspeakable evil",
+    "image": "images/14-2.webp",
+    "wiki": "https://nv2.fandom.com/wiki/14-2",
+    "imageSource": "https://nv2.fandom.com/wiki/File:14-2.png"
+  },
+  "000074": {
+    "name": "whomping",
+    "image": "images/14-3.webp",
+    "wiki": "https://nv2.fandom.com/wiki/14-3",
+    "imageSource": "https://nv2.fandom.com/wiki/File:14-3.png"
+  },
+  "000075": {
+    "name": "forcey",
+    "image": "images/14-4.webp",
+    "wiki": "https://nv2.fandom.com/wiki/14-4",
+    "imageSource": "https://nv2.fandom.com/wiki/File:14-4.png"
+  },
+  "000076": {
+    "name": "all about thwumps",
+    "image": "images/15-0.webp",
+    "wiki": "https://nv2.fandom.com/wiki/15-0",
+    "imageSource": "https://nv2.fandom.com/wiki/File:15-0.png"
+  },
+  "000077": {
+    "name": "simplicity itself",
+    "image": "images/15-1.webp",
+    "wiki": "https://nv2.fandom.com/wiki/15-1",
+    "imageSource": "https://nv2.fandom.com/wiki/File:15-1.png"
+  },
+  "000078": {
+    "name": "fire eater",
+    "image": "images/15-2.webp",
+    "wiki": "https://nv2.fandom.com/wiki/15-2",
+    "imageSource": "https://nv2.fandom.com/wiki/File:15-2.png"
+  },
+  "000079": {
+    "name": "smismar",
+    "image": "images/15-3.webp",
+    "wiki": "https://nv2.fandom.com/wiki/15-3",
+    "imageSource": "https://nv2.fandom.com/wiki/File:15-3.png"
+  },
+  "000080": {
+    "name": "circulater",
+    "image": "images/15-4.webp",
+    "wiki": "https://nv2.fandom.com/wiki/15-4",
+    "imageSource": "https://nv2.fandom.com/wiki/File:15-4.png"
+  },
+  "000081": {
+    "name": "the underside",
+    "image": "images/16-0.webp",
+    "wiki": "https://nv2.fandom.com/wiki/16-0",
+    "imageSource": "https://nv2.fandom.com/wiki/File:16-0.png"
+  },
+  "000082": {
+    "name": "scrappy",
+    "image": "images/16-1.webp",
+    "wiki": "https://nv2.fandom.com/wiki/16-1",
+    "imageSource": "https://nv2.fandom.com/wiki/File:16-1.png"
+  },
+  "000083": {
+    "name": "deathwich",
+    "image": "images/16-2.webp",
+    "wiki": "https://nv2.fandom.com/wiki/16-2",
+    "imageSource": "https://nv2.fandom.com/wiki/File:16-2.png"
+  },
+  "000084": {
+    "name": "racearoni",
+    "image": "images/16-3.webp",
+    "wiki": "https://nv2.fandom.com/wiki/16-3",
+    "imageSource": "https://nv2.fandom.com/wiki/File:16-3.png"
+  },
+  "000085": {
+    "name": "arterial spray",
+    "image": "images/16-4.webp",
+    "wiki": "https://nv2.fandom.com/wiki/16-4",
+    "imageSource": "https://nv2.fandom.com/wiki/File:16-4.png"
+  },
+  "000086": {
+    "name": "unfinished business",
+    "image": "images/17-0.webp",
+    "wiki": "https://nv2.fandom.com/wiki/17-0",
+    "imageSource": "https://nv2.fandom.com/wiki/File:17-0.png"
+  },
+  "000087": {
+    "name": "grinder",
+    "image": "images/17-1.webp",
+    "wiki": "https://nv2.fandom.com/wiki/17-1",
+    "imageSource": "https://nv2.fandom.com/wiki/File:17-1.png"
+  },
+  "000088": {
+    "name": "spassable",
+    "image": "images/17-2.webp",
+    "wiki": "https://nv2.fandom.com/wiki/17-2",
+    "imageSource": "https://nv2.fandom.com/wiki/File:17-2.png"
+  },
+  "000089": {
+    "name": "fodder redux",
+    "image": "images/17-3.webp",
+    "wiki": "https://nv2.fandom.com/wiki/17-3",
+    "imageSource": "https://nv2.fandom.com/wiki/File:17-3.png"
+  },
+  "000090": {
+    "name": "drop-in edit",
+    "image": "images/17-4.webp",
+    "wiki": "https://nv2.fandom.com/wiki/17-4",
+    "imageSource": "https://nv2.fandom.com/wiki/File:17-4.png"
+  },
+  "000091": {
+    "name": "the final countup",
+    "image": "images/18-0.webp",
+    "wiki": "https://nv2.fandom.com/wiki/18-0",
+    "imageSource": "https://nv2.fandom.com/wiki/File:18-0.png"
+  },
+  "000092": {
+    "name": "haikumar",
+    "image": "images/18-1.webp",
+    "wiki": "https://nv2.fandom.com/wiki/18-1",
+    "imageSource": "https://nv2.fandom.com/wiki/File:18-1.png"
+  },
+  "000093": {
+    "name": "clockwork",
+    "image": "images/18-2.webp",
+    "wiki": "https://nv2.fandom.com/wiki/18-2",
+    "imageSource": "https://nv2.fandom.com/wiki/File:18-2.png"
+  },
+  "000094": {
+    "name": "i am the cancer",
+    "image": "images/18-3.webp",
+    "wiki": "https://nv2.fandom.com/wiki/18-3",
+    "imageSource": "https://nv2.fandom.com/wiki/File:18-3.png"
+  },
+  "000095": {
+    "name": "zenith",
+    "image": "images/18-4.webp",
+    "wiki": "https://nv2.fandom.com/wiki/18-4",
+    "imageSource": "https://nv2.fandom.com/wiki/File:18-4.png"
+  },
+  "000096": {
+    "name": "teeth",
+    "image": "images/19-0.webp",
+    "wiki": "https://nv2.fandom.com/wiki/19-0",
+    "imageSource": "https://nv2.fandom.com/wiki/File:19-0.png"
+  },
+  "000097": {
+    "name": "infiltrate",
+    "image": "images/19-1.webp",
+    "wiki": "https://nv2.fandom.com/wiki/19-1",
+    "imageSource": "https://nv2.fandom.com/wiki/File:19-1.png"
+  },
+  "000098": {
+    "name": "dance",
+    "image": "images/19-2.webp",
+    "wiki": "https://nv2.fandom.com/wiki/19-2",
+    "imageSource": "https://nv2.fandom.com/wiki/File:19-2.png"
+  },
+  "000099": {
+    "name": "over the top",
+    "image": "images/19-3.webp",
+    "wiki": "https://nv2.fandom.com/wiki/19-3",
+    "imageSource": "https://nv2.fandom.com/wiki/File:19-3.png"
+  },
+  "000100": {
+    "name": "heavenly s-word",
+    "image": "images/19-4.webp",
+    "wiki": "https://nv2.fandom.com/wiki/19-4",
+    "imageSource": "https://nv2.fandom.com/wiki/File:19-4.png"
+  },
+  "000101": {
+    "name": "splatform",
+    "image": "images/20-0.webp",
+    "wiki": "https://nv2.fandom.com/wiki/20-0",
+    "imageSource": "https://nv2.fandom.com/wiki/File:20-0.png"
+  },
+  "000102": {
+    "name": "hammer-on",
+    "image": "images/20-1.webp",
+    "wiki": "https://nv2.fandom.com/wiki/20-1",
+    "imageSource": "https://nv2.fandom.com/wiki/File:20-1.png"
+  },
+  "000103": {
+    "name": "cavern",
+    "image": "images/20-2.webp",
+    "wiki": "https://nv2.fandom.com/wiki/20-2",
+    "imageSource": "https://nv2.fandom.com/wiki/File:20-2.png"
+  },
+  "000104": {
+    "name": "megamine",
+    "image": "images/20-3.webp",
+    "wiki": "https://nv2.fandom.com/wiki/20-3",
+    "imageSource": "https://nv2.fandom.com/wiki/File:20-3.png"
+  },
+  "000105": {
+    "name": "dead ends",
+    "image": "images/20-4.webp",
+    "wiki": "https://nv2.fandom.com/wiki/20-4",
+    "imageSource": "https://nv2.fandom.com/wiki/File:20-4.png"
+  },
+  "000106": {
+    "name": "track",
+    "image": "images/21-0.webp",
+    "wiki": "https://nv2.fandom.com/wiki/21-0",
+    "imageSource": "https://nv2.fandom.com/wiki/File:21-0.png"
+  },
+  "000107": {
+    "name": "eyed",
+    "image": "images/21-1.webp",
+    "wiki": "https://nv2.fandom.com/wiki/21-1",
+    "imageSource": "https://nv2.fandom.com/wiki/File:21-1.png"
+  },
+  "000108": {
+    "name": "improve your station",
+    "image": "images/21-2.webp",
+    "wiki": "https://nv2.fandom.com/wiki/21-2",
+    "imageSource": "https://nv2.fandom.com/wiki/File:21-2.png"
+  },
+  "000109": {
+    "name": "deku",
+    "image": "images/21-3.webp",
+    "wiki": "https://nv2.fandom.com/wiki/21-3",
+    "imageSource": "https://nv2.fandom.com/wiki/File:21-3.png"
+  },
+  "000110": {
+    "name": "manimal lust",
+    "image": "images/21-4.webp",
+    "wiki": "https://nv2.fandom.com/wiki/21-4",
+    "imageSource": "https://nv2.fandom.com/wiki/File:21-4.png"
+  },
+  "000111": {
+    "name": "gronnick",
+    "image": "images/22-0.webp",
+    "wiki": "https://nv2.fandom.com/wiki/22-0",
+    "imageSource": "https://nv2.fandom.com/wiki/File:22-0.png"
+  },
+  "000112": {
+    "name": "meandering",
+    "image": "images/22-1.webp",
+    "wiki": "https://nv2.fandom.com/wiki/22-1",
+    "imageSource": "https://nv2.fandom.com/wiki/File:22-1.png"
+  },
+  "000113": {
+    "name": "hampered",
+    "image": "images/22-2.webp",
+    "wiki": "https://nv2.fandom.com/wiki/22-2",
+    "imageSource": "https://nv2.fandom.com/wiki/File:22-2.png"
+  },
+  "000114": {
+    "name": "left branch",
+    "image": "images/22-3.webp",
+    "wiki": "https://nv2.fandom.com/wiki/22-3",
+    "imageSource": "https://nv2.fandom.com/wiki/File:22-3.png"
+  },
+  "000115": {
+    "name": "serenity now",
+    "image": "images/22-4.webp",
+    "wiki": "https://nv2.fandom.com/wiki/22-4",
+    "imageSource": "https://nv2.fandom.com/wiki/File:22-4.png"
+  },
+  "000116": {
+    "name": "n-tropy",
+    "image": "images/23-0.webp",
+    "wiki": "https://nv2.fandom.com/wiki/23-0",
+    "imageSource": "https://nv2.fandom.com/wiki/File:23-0.png"
+  },
+  "000117": {
+    "name": "descent",
+    "image": "images/23-1.webp",
+    "wiki": "https://nv2.fandom.com/wiki/23-1",
+    "imageSource": "https://nv2.fandom.com/wiki/File:23-1.png"
+  },
+  "000118": {
+    "name": "slipgate complex",
+    "image": "images/23-2.webp",
+    "wiki": "https://nv2.fandom.com/wiki/23-2",
+    "imageSource": "https://nv2.fandom.com/wiki/File:23-2.png"
+  },
+  "000119": {
+    "name": "gilded splinters",
+    "image": "images/23-3.webp",
+    "wiki": "https://nv2.fandom.com/wiki/23-3",
+    "imageSource": "https://nv2.fandom.com/wiki/File:23-3.png"
+  },
+  "000120": {
+    "name": "lest is more",
+    "image": "images/23-4.webp",
+    "wiki": "https://nv2.fandom.com/wiki/23-4",
+    "imageSource": "https://nv2.fandom.com/wiki/File:23-4.png"
+  },
+  "000121": {
+    "name": "tanked",
+    "image": "images/24-0.webp",
+    "wiki": "https://nv2.fandom.com/wiki/24-0",
+    "imageSource": "https://nv2.fandom.com/wiki/File:24-0.png"
+  },
+  "000122": {
+    "name": "deft punk",
+    "image": "images/24-1.webp",
+    "wiki": "https://nv2.fandom.com/wiki/24-1",
+    "imageSource": "https://nv2.fandom.com/wiki/File:24-1.png"
+  },
+  "000123": {
+    "name": "lithium-ionized",
+    "image": "images/24-2.webp",
+    "wiki": "https://nv2.fandom.com/wiki/24-2",
+    "imageSource": "https://nv2.fandom.com/wiki/File:24-2.png"
+  },
+  "000124": {
+    "name": "docking mechanism",
+    "image": "images/24-3.webp",
+    "wiki": "https://nv2.fandom.com/wiki/24-3",
+    "imageSource": "https://nv2.fandom.com/wiki/File:24-3.png"
+  },
+  "000125": {
+    "name": "methodical A",
+    "image": "images/24-4.webp",
+    "wiki": "https://nv2.fandom.com/wiki/24-4",
+    "imageSource": "https://nv2.fandom.com/wiki/File:24-4.png"
+  },
+  "000126": {
+    "name": "ups and downs",
+    "image": "images/25-0.webp",
+    "wiki": "https://nv2.fandom.com/wiki/25-0",
+    "imageSource": "https://nv2.fandom.com/wiki/File:25-0.png"
+  },
+  "000127": {
+    "name": "ndiana jones",
+    "image": "images/25-1.webp",
+    "wiki": "https://nv2.fandom.com/wiki/25-1",
+    "imageSource": "https://nv2.fandom.com/wiki/File:25-1.png"
+  },
+  "000128": {
+    "name": "mine field",
+    "image": "images/25-2.webp",
+    "wiki": "https://nv2.fandom.com/wiki/25-2",
+    "imageSource": "https://nv2.fandom.com/wiki/File:25-2.png"
+  },
+  "000129": {
+    "name": "mein lieben!",
+    "image": "images/25-3.webp",
+    "wiki": "https://nv2.fandom.com/wiki/25-3",
+    "imageSource": "https://nv2.fandom.com/wiki/File:25-3.png"
+  },
+  "000130": {
+    "name": "bifurcation",
+    "image": "images/25-4.webp",
+    "wiki": "https://nv2.fandom.com/wiki/25-4",
+    "imageSource": "https://nv2.fandom.com/wiki/File:25-4.png"
+  },
+  "000131": {
+    "name": "wispy",
+    "image": "images/26-0.webp",
+    "wiki": "https://nv2.fandom.com/wiki/26-0",
+    "imageSource": "https://nv2.fandom.com/wiki/File:26-0.png"
+  },
+  "000132": {
+    "name": "one who raids tombs",
+    "image": "images/26-1.webp",
+    "wiki": "https://nv2.fandom.com/wiki/26-1",
+    "imageSource": "https://nv2.fandom.com/wiki/File:26-1.png"
+  },
+  "000133": {
+    "name": "minimal surface area",
+    "image": "images/26-2.webp",
+    "wiki": "https://nv2.fandom.com/wiki/26-2",
+    "imageSource": "https://nv2.fandom.com/wiki/File:26-2.png"
+  },
+  "000134": {
+    "name": "neck tick",
+    "image": "images/26-3.webp",
+    "wiki": "https://nv2.fandom.com/wiki/26-3",
+    "imageSource": "https://nv2.fandom.com/wiki/File:26-3.png"
+  },
+  "000135": {
+    "name": "daredevil",
+    "image": "images/26-4.webp",
+    "wiki": "https://nv2.fandom.com/wiki/26-4",
+    "imageSource": "https://nv2.fandom.com/wiki/File:26-4.png"
+  },
+  "000136": {
+    "name": "within reach",
+    "image": "images/27-0.webp",
+    "wiki": "https://nv2.fandom.com/wiki/27-0",
+    "imageSource": "https://nv2.fandom.com/wiki/File:27-0.png"
+  },
+  "000137": {
+    "name": "pincer movement",
+    "image": "images/27-1.webp",
+    "wiki": "https://nv2.fandom.com/wiki/27-1",
+    "imageSource": "https://nv2.fandom.com/wiki/File:27-1.png"
+  },
+  "000138": {
+    "name": "pwny",
+    "image": "images/27-2.webp",
+    "wiki": "https://nv2.fandom.com/wiki/27-2",
+    "imageSource": "https://nv2.fandom.com/wiki/File:27-2.png"
+  },
+  "000139": {
+    "name": "path planner",
+    "image": "images/27-3.webp",
+    "wiki": "https://nv2.fandom.com/wiki/27-3",
+    "imageSource": "https://nv2.fandom.com/wiki/File:27-3.png"
+  },
+  "000140": {
+    "name": "good glord",
+    "image": "images/27-4.webp",
+    "wiki": "https://nv2.fandom.com/wiki/27-4",
+    "imageSource": "https://nv2.fandom.com/wiki/File:27-4.png"
+  },
+  "000141": {
+    "name": "subterranean homesick golds",
+    "image": "images/28-0.webp",
+    "wiki": "https://nv2.fandom.com/wiki/28-0",
+    "imageSource": "https://nv2.fandom.com/wiki/File:28-0.png"
+  },
+  "000142": {
+    "name": "put on your dancing shoes",
+    "image": "images/28-1.webp",
+    "wiki": "https://nv2.fandom.com/wiki/28-1",
+    "imageSource": "https://nv2.fandom.com/wiki/File:28-1.png"
+  },
+  "000143": {
+    "name": "(blown into) 5 easy pieces",
+    "image": "images/28-2.webp",
+    "wiki": "https://nv2.fandom.com/wiki/28-2",
+    "imageSource": "https://nv2.fandom.com/wiki/File:28-2.png"
+  },
+  "000144": {
+    "name": "reaktor",
+    "image": "images/28-3.webp",
+    "wiki": "https://nv2.fandom.com/wiki/28-3",
+    "imageSource": "https://nv2.fandom.com/wiki/File:28-3.png"
+  },
+  "000145": {
+    "name": "daunting",
+    "image": "images/28-4.webp",
+    "wiki": "https://nv2.fandom.com/wiki/28-4",
+    "imageSource": "https://nv2.fandom.com/wiki/File:28-4.png"
+  },
+  "000146": {
+    "name": "superliminal",
+    "image": "images/29-0.webp",
+    "wiki": "https://nv2.fandom.com/wiki/29-0",
+    "imageSource": "https://nv2.fandom.com/wiki/File:29-0.png"
+  },
+  "000147": {
+    "name": "deep breaths",
+    "image": "images/29-1.webp",
+    "wiki": "https://nv2.fandom.com/wiki/29-1",
+    "imageSource": "https://nv2.fandom.com/wiki/File:29-1.png"
+  },
+  "000148": {
+    "name": "say when",
+    "image": "images/29-2.webp",
+    "wiki": "https://nv2.fandom.com/wiki/29-2",
+    "imageSource": "https://nv2.fandom.com/wiki/File:29-2.png"
+  },
+  "000149": {
+    "name": "the reason you broke your keyboard",
+    "image": "images/29-3.webp",
+    "wiki": "https://nv2.fandom.com/wiki/29-3",
+    "imageSource": "https://nv2.fandom.com/wiki/File:29-3.png"
+  },
+  "000150": {
+    "name": "pinchy",
+    "image": "images/29-4.webp",
+    "wiki": "https://nv2.fandom.com/wiki/29-4",
+    "imageSource": "https://nv2.fandom.com/wiki/File:29-4.png"
+  },
+  "000151": {
+    "name": "orbital",
+    "image": "images/30-0.webp",
+    "wiki": "https://nv2.fandom.com/wiki/30-0",
+    "imageSource": "https://nv2.fandom.com/wiki/File:30-0.png"
+  },
+  "000152": {
+    "name": "chasey pt 2",
+    "image": "images/30-1.webp",
+    "wiki": "https://nv2.fandom.com/wiki/30-1",
+    "imageSource": "https://nv2.fandom.com/wiki/File:30-1.png"
+  },
+  "000153": {
+    "name": "strugs",
+    "image": "images/30-2.webp",
+    "wiki": "https://nv2.fandom.com/wiki/30-2",
+    "imageSource": "https://nv2.fandom.com/wiki/File:30-2.png"
+  },
+  "000154": {
+    "name": "hand solo",
+    "image": "images/30-3.webp",
+    "wiki": "https://nv2.fandom.com/wiki/30-3",
+    "imageSource": "https://nv2.fandom.com/wiki/File:30-3.png"
+  },
+  "000155": {
+    "name": "smattering",
+    "image": "images/30-4.webp",
+    "wiki": "https://nv2.fandom.com/wiki/30-4",
+    "imageSource": "https://nv2.fandom.com/wiki/File:30-4.png"
+  },
+  "000156": {
+    "name": "release my toaster waffle",
+    "image": "images/31-0.webp",
+    "wiki": "https://nv2.fandom.com/wiki/31-0",
+    "imageSource": "https://nv2.fandom.com/wiki/File:31-0.png"
+  },
+  "000157": {
+    "name": "spin-a-rama",
+    "image": "images/31-1.webp",
+    "wiki": "https://nv2.fandom.com/wiki/31-1",
+    "imageSource": "https://nv2.fandom.com/wiki/File:31-1.png"
+  },
+  "000158": {
+    "name": "stop and go traffic",
+    "image": "images/31-2.webp",
+    "wiki": "https://nv2.fandom.com/wiki/31-2",
+    "imageSource": "https://nv2.fandom.com/wiki/File:31-2.png"
+  },
+  "000159": {
+    "name": "What else is on my mind grapes?",
+    "image": "images/31-3.webp",
+    "wiki": "https://nv2.fandom.com/wiki/31-3",
+    "imageSource": "https://nv2.fandom.com/wiki/File:31-3.png"
+  },
+  "000160": {
+    "name": "stumbleine",
+    "image": "images/31-4.webp",
+    "wiki": "https://nv2.fandom.com/wiki/31-4",
+    "imageSource": "https://nv2.fandom.com/wiki/File:31-4.png"
+  },
+  "000161": {
+    "name": "yum",
+    "image": "images/32-0.webp",
+    "wiki": "https://nv2.fandom.com/wiki/32-0",
+    "imageSource": "https://nv2.fandom.com/wiki/File:32-0.png"
+  },
+  "000162": {
+    "name": "cracker time",
+    "image": "images/32-1.webp",
+    "wiki": "https://nv2.fandom.com/wiki/32-1",
+    "imageSource": "https://nv2.fandom.com/wiki/File:32-1.png"
+  },
+  "000163": {
+    "name": "tricksy",
+    "image": "images/32-2.webp",
+    "wiki": "https://nv2.fandom.com/wiki/32-2",
+    "imageSource": "https://nv2.fandom.com/wiki/File:32-2.png"
+  },
+  "000164": {
+    "name": "avantegardism",
+    "image": "images/32-3.webp",
+    "wiki": "https://nv2.fandom.com/wiki/32-3",
+    "imageSource": "https://nv2.fandom.com/wiki/File:32-3.png"
+  },
+  "000165": {
+    "name": "stressor",
+    "image": "images/32-4.webp",
+    "wiki": "https://nv2.fandom.com/wiki/32-4",
+    "imageSource": "https://nv2.fandom.com/wiki/File:32-4.png"
+  },
+  "000166": {
+    "name": "honey bomb",
+    "image": "images/33-0.webp",
+    "wiki": "https://nv2.fandom.com/wiki/33-0",
+    "imageSource": "https://nv2.fandom.com/wiki/File:33-0.png"
+  },
+  "000167": {
+    "name": "wafflish",
+    "image": "images/33-1.webp",
+    "wiki": "https://nv2.fandom.com/wiki/33-1",
+    "imageSource": "https://nv2.fandom.com/wiki/File:33-1.png"
+  },
+  "000168": {
+    "name": "uphill battle",
+    "image": "images/33-2.webp",
+    "wiki": "https://nv2.fandom.com/wiki/33-2",
+    "imageSource": "https://nv2.fandom.com/wiki/File:33-2.png"
+  },
+  "000169": {
+    "name": "artifactory",
+    "image": "images/33-3.webp",
+    "wiki": "https://nv2.fandom.com/wiki/33-3",
+    "imageSource": "https://nv2.fandom.com/wiki/File:33-3.png"
+  },
+  "000170": {
+    "name": "take the last train to thwumpville",
+    "image": "images/33-4.webp",
+    "wiki": "https://nv2.fandom.com/wiki/33-4",
+    "imageSource": "https://nv2.fandom.com/wiki/File:33-4.png"
+  },
+  "000171": {
+    "name": "creepy crossing",
+    "image": "images/34-0.webp",
+    "wiki": "https://nv2.fandom.com/wiki/34-0",
+    "imageSource": "https://nv2.fandom.com/wiki/File:34-0.png"
+  },
+  "000172": {
+    "name": "strive",
+    "image": "images/34-1.webp",
+    "wiki": "https://nv2.fandom.com/wiki/34-1",
+    "imageSource": "https://nv2.fandom.com/wiki/File:34-1.png"
+  },
+  "000173": {
+    "name": "the beginner's worm",
+    "image": "images/34-2.webp",
+    "wiki": "https://nv2.fandom.com/wiki/34-2",
+    "imageSource": "https://nv2.fandom.com/wiki/File:34-2.png"
+  },
+  "000174": {
+    "name": "the jeezster",
+    "image": "images/34-3.webp",
+    "wiki": "https://nv2.fandom.com/wiki/34-3",
+    "imageSource": "https://nv2.fandom.com/wiki/File:34-3.png"
+  },
+  "000175": {
+    "name": "skip it",
+    "image": "images/34-4.webp",
+    "wiki": "https://nv2.fandom.com/wiki/34-4",
+    "imageSource": "https://nv2.fandom.com/wiki/File:34-4.png"
+  },
+  "000176": {
+    "name": "la suisse deux",
+    "image": "images/35-0.webp",
+    "wiki": "https://nv2.fandom.com/wiki/35-0",
+    "imageSource": "https://nv2.fandom.com/wiki/File:35-0.png"
+  },
+  "000177": {
+    "name": "get busy",
+    "image": "images/35-1.webp",
+    "wiki": "https://nv2.fandom.com/wiki/35-1",
+    "imageSource": "https://nv2.fandom.com/wiki/File:35-1.png"
+  },
+  "000178": {
+    "name": "the increasingly inaccurately named diamond maze",
+    "image": "images/35-2.webp",
+    "wiki": "https://nv2.fandom.com/wiki/35-2",
+    "imageSource": "https://nv2.fandom.com/wiki/File:35-2.png"
+  },
+  "000179": {
+    "name": "Sakurajima",
+    "image": "images/35-3.webp",
+    "wiki": "https://nv2.fandom.com/wiki/35-3",
+    "imageSource": "https://nv2.fandom.com/wiki/File:35-3.png"
+  },
+  "000180": {
+    "name": "die trying",
+    "image": "images/35-4.webp",
+    "wiki": "https://nv2.fandom.com/wiki/35-4",
+    "imageSource": "https://nv2.fandom.com/wiki/File:35-4.png"
+  },
+  "000181": {
+    "name": "one heck of a trip",
+    "image": "images/36-0.webp",
+    "wiki": "https://nv2.fandom.com/wiki/36-0",
+    "imageSource": "https://nv2.fandom.com/wiki/File:36-0.png"
+  },
+  "000182": {
+    "name": "the long and winding road that leads to your death",
+    "image": "images/36-1.webp",
+    "wiki": "https://nv2.fandom.com/wiki/36-1",
+    "imageSource": "https://nv2.fandom.com/wiki/File:36-1.png"
+  },
+  "000183": {
+    "name": "the pit and the n-dulum",
+    "image": "images/36-2.webp",
+    "wiki": "https://nv2.fandom.com/wiki/36-2",
+    "imageSource": "https://nv2.fandom.com/wiki/File:36-2.png"
+  },
+  "000184": {
+    "name": "optik",
+    "image": "images/36-3.webp",
+    "wiki": "https://nv2.fandom.com/wiki/36-3",
+    "imageSource": "https://nv2.fandom.com/wiki/File:36-3.png"
+  },
+  "000185": {
+    "name": "fallout",
+    "image": "images/36-4.webp",
+    "wiki": "https://nv2.fandom.com/wiki/36-4",
+    "imageSource": "https://nv2.fandom.com/wiki/File:36-4.png"
+  },
+  "000186": {
+    "name": "jumpy",
+    "image": "images/37-0.webp",
+    "wiki": "https://nv2.fandom.com/wiki/37-0",
+    "imageSource": "https://nv2.fandom.com/wiki/File:37-0.png"
+  },
+  "000187": {
+    "name": "twotone",
+    "image": "images/37-1.webp",
+    "wiki": "https://nv2.fandom.com/wiki/37-1",
+    "imageSource": "https://nv2.fandom.com/wiki/File:37-1.png"
+  },
+  "000188": {
+    "name": "undercropping",
+    "image": "images/37-2.webp",
+    "wiki": "https://nv2.fandom.com/wiki/37-2",
+    "imageSource": "https://nv2.fandom.com/wiki/File:37-2.png"
+  },
+  "000189": {
+    "name": "nice climbers",
+    "image": "images/37-3.webp",
+    "wiki": "https://nv2.fandom.com/wiki/37-3",
+    "imageSource": "https://nv2.fandom.com/wiki/File:37-3.png"
+  },
+  "000190": {
+    "name": "a wash of diamonds",
+    "image": "images/37-4.webp",
+    "wiki": "https://nv2.fandom.com/wiki/37-4",
+    "imageSource": "https://nv2.fandom.com/wiki/File:37-4.png"
+  },
+  "000191": {
+    "name": "looooooooop",
+    "image": "images/38-0.webp",
+    "wiki": "https://nv2.fandom.com/wiki/38-0",
+    "imageSource": "https://nv2.fandom.com/wiki/File:38-0.png"
+  },
+  "000192": {
+    "name": "undersided",
+    "image": "images/38-1.webp",
+    "wiki": "https://nv2.fandom.com/wiki/38-1",
+    "imageSource": "https://nv2.fandom.com/wiki/File:38-1.png"
+  },
+  "000193": {
+    "name": "fear is the little-death",
+    "image": "images/38-2.webp",
+    "wiki": "https://nv2.fandom.com/wiki/38-2",
+    "imageSource": "https://nv2.fandom.com/wiki/File:38-2.png"
+  },
+  "000194": {
+    "name": "vaguely satanic chamber",
+    "image": "images/38-3.webp",
+    "wiki": "https://nv2.fandom.com/wiki/38-3",
+    "imageSource": "https://nv2.fandom.com/wiki/File:38-3.png"
+  },
+  "000195": {
+    "name": "pit of despair",
+    "image": "images/38-4.webp",
+    "wiki": "https://nv2.fandom.com/wiki/38-4",
+    "imageSource": "https://nv2.fandom.com/wiki/File:38-4.png"
+  },
+  "000196": {
+    "name": "killswatch",
+    "image": "images/39-0.webp",
+    "wiki": "https://nv2.fandom.com/wiki/39-0",
+    "imageSource": "https://nv2.fandom.com/wiki/File:39-0.png"
+  },
+  "000197": {
+    "name": "fear the reaper",
+    "image": "images/39-1.webp",
+    "wiki": "https://nv2.fandom.com/wiki/39-1",
+    "imageSource": "https://nv2.fandom.com/wiki/File:39-1.png"
+  },
+  "000198": {
+    "name": "secret twins club sandwich",
+    "image": "images/39-2.webp",
+    "wiki": "https://nv2.fandom.com/wiki/39-2",
+    "imageSource": "https://nv2.fandom.com/wiki/File:39-2.png"
+  },
+  "000199": {
+    "name": "frantic",
+    "image": "images/39-3.webp",
+    "wiki": "https://nv2.fandom.com/wiki/39-3",
+    "imageSource": "https://nv2.fandom.com/wiki/File:39-3.png"
+  },
+  "000200": {
+    "name": "systematic",
+    "image": "images/39-4.webp",
+    "wiki": "https://nv2.fandom.com/wiki/39-4",
+    "imageSource": "https://nv2.fandom.com/wiki/File:39-4.png"
+  },
+  "000201": {
+    "name": "arc",
+    "image": "images/40-0.webp",
+    "wiki": "https://nv2.fandom.com/wiki/40-0",
+    "imageSource": "https://nv2.fandom.com/wiki/File:40-0.png"
+  },
+  "000202": {
+    "name": "hip drop",
+    "image": "images/40-1.webp",
+    "wiki": "https://nv2.fandom.com/wiki/40-1",
+    "imageSource": "https://nv2.fandom.com/wiki/File:40-1.png"
+  },
+  "000203": {
+    "name": "porkchop sandwiches!",
+    "image": "images/40-2.webp",
+    "wiki": "https://nv2.fandom.com/wiki/40-2",
+    "imageSource": "https://nv2.fandom.com/wiki/File:40-2.png"
+  },
+  "000204": {
+    "name": "companion",
+    "image": "images/40-3.webp",
+    "wiki": "https://nv2.fandom.com/wiki/40-3",
+    "imageSource": "https://nv2.fandom.com/wiki/File:40-3.png"
+  },
+  "000205": {
+    "name": "overtake",
+    "image": "images/40-4.webp",
+    "wiki": "https://nv2.fandom.com/wiki/40-4",
+    "imageSource": "https://nv2.fandom.com/wiki/File:40-4.png"
+  },
+  "000206": {
+    "name": "the pits",
+    "image": "images/41-0.webp",
+    "wiki": "https://nv2.fandom.com/wiki/41-0",
+    "imageSource": "https://nv2.fandom.com/wiki/File:41-0.png"
+  },
+  "000207": {
+    "name": "risk vs reward",
+    "image": "images/41-1.webp",
+    "wiki": "https://nv2.fandom.com/wiki/41-1",
+    "imageSource": "https://nv2.fandom.com/wiki/File:41-1.png"
+  },
+  "000208": {
+    "name": "rhomba",
+    "image": "images/41-2.webp",
+    "wiki": "https://nv2.fandom.com/wiki/41-2",
+    "imageSource": "https://nv2.fandom.com/wiki/File:41-2.png"
+  },
+  "000209": {
+    "name": "prisons we choose to live inside",
+    "image": "images/41-3.webp",
+    "wiki": "https://nv2.fandom.com/wiki/41-3",
+    "imageSource": "https://nv2.fandom.com/wiki/File:41-3.png"
+  },
+  "000210": {
+    "name": "pure evil",
+    "image": "images/41-4.webp",
+    "wiki": "https://nv2.fandom.com/wiki/41-4",
+    "imageSource": "https://nv2.fandom.com/wiki/File:41-4.png"
+  },
+  "000211": {
+    "name": "speedo",
+    "image": "images/42-0.webp",
+    "wiki": "https://nv2.fandom.com/wiki/42-0",
+    "imageSource": "https://nv2.fandom.com/wiki/File:42-0.png"
+  },
+  "000212": {
+    "name": "jag",
+    "image": "images/42-1.webp",
+    "wiki": "https://nv2.fandom.com/wiki/42-1",
+    "imageSource": "https://nv2.fandom.com/wiki/File:42-1.png"
+  },
+  "000213": {
+    "name": "plasmoid",
+    "image": "images/42-2.webp",
+    "wiki": "https://nv2.fandom.com/wiki/42-2",
+    "imageSource": "https://nv2.fandom.com/wiki/File:42-2.png"
+  },
+  "000214": {
+    "name": "optical delusion",
+    "image": "images/42-3.webp",
+    "wiki": "https://nv2.fandom.com/wiki/42-3",
+    "imageSource": "https://nv2.fandom.com/wiki/File:42-3.png"
+  },
+  "000215": {
+    "name": "warped mined",
+    "image": "images/42-4.webp",
+    "wiki": "https://nv2.fandom.com/wiki/42-4",
+    "imageSource": "https://nv2.fandom.com/wiki/File:42-4.png"
+  },
+  "000216": {
+    "name": "inward",
+    "image": "images/43-0.webp",
+    "wiki": "https://nv2.fandom.com/wiki/43-0",
+    "imageSource": "https://nv2.fandom.com/wiki/File:43-0.png"
+  },
+  "000217": {
+    "name": "i'm going to marry a caret",
+    "image": "images/43-1.webp",
+    "wiki": "https://nv2.fandom.com/wiki/43-1",
+    "imageSource": "https://nv2.fandom.com/wiki/File:43-1.png"
+  },
+  "000218": {
+    "name": "plus mine-s",
+    "image": "images/43-2.webp",
+    "wiki": "https://nv2.fandom.com/wiki/43-2",
+    "imageSource": "https://nv2.fandom.com/wiki/File:43-2.png"
+  },
+  "000219": {
+    "name": "imperial elevator",
+    "image": "images/43-3.webp",
+    "wiki": "https://nv2.fandom.com/wiki/43-3",
+    "imageSource": "https://nv2.fandom.com/wiki/File:43-3.png"
+  },
+  "000220": {
+    "name": "the jaggies",
+    "image": "images/43-4.webp",
+    "wiki": "https://nv2.fandom.com/wiki/43-4",
+    "imageSource": "https://nv2.fandom.com/wiki/File:43-4.png"
+  },
+  "000221": {
+    "name": "self-inflicted",
+    "image": "images/44-0.webp",
+    "wiki": "https://nv2.fandom.com/wiki/44-0",
+    "imageSource": "https://nv2.fandom.com/wiki/File:44-0.png"
+  },
+  "000222": {
+    "name": "unsafe passage",
+    "image": "images/44-1.webp",
+    "wiki": "https://nv2.fandom.com/wiki/44-1",
+    "imageSource": "https://nv2.fandom.com/wiki/File:44-1.png"
+  },
+  "000223": {
+    "name": "hanger",
+    "image": "images/44-2.webp",
+    "wiki": "https://nv2.fandom.com/wiki/44-2",
+    "imageSource": "https://nv2.fandom.com/wiki/File:44-2.png"
+  },
+  "000224": {
+    "name": "hillock pillock",
+    "image": "images/44-3.webp",
+    "wiki": "https://nv2.fandom.com/wiki/44-3",
+    "imageSource": "https://nv2.fandom.com/wiki/File:44-3.png"
+  },
+  "000225": {
+    "name": "traffic jammed",
+    "image": "images/44-4.webp",
+    "wiki": "https://nv2.fandom.com/wiki/44-4",
+    "imageSource": "https://nv2.fandom.com/wiki/File:44-4.png"
+  },
+  "000226": {
+    "name": "runoff",
+    "image": "images/45-0.webp",
+    "wiki": "https://nv2.fandom.com/wiki/45-0",
+    "imageSource": "https://nv2.fandom.com/wiki/File:45-0.png"
+  },
+  "000227": {
+    "name": "halfway",
+    "image": "images/45-1.webp",
+    "wiki": "https://nv2.fandom.com/wiki/45-1",
+    "imageSource": "https://nv2.fandom.com/wiki/File:45-1.png"
+  },
+  "000228": {
+    "name": "the long mover, or the windy man",
+    "image": "images/45-2.webp",
+    "wiki": "https://nv2.fandom.com/wiki/45-2",
+    "imageSource": "https://nv2.fandom.com/wiki/File:45-2.png"
+  },
+  "000229": {
+    "name": "it's tricky",
+    "image": "images/45-3.webp",
+    "wiki": "https://nv2.fandom.com/wiki/45-3",
+    "imageSource": "https://nv2.fandom.com/wiki/File:45-3.png"
+  },
+  "000230": {
+    "name": "explosivo",
+    "image": "images/45-4.webp",
+    "wiki": "https://nv2.fandom.com/wiki/45-4",
+    "imageSource": "https://nv2.fandom.com/wiki/File:45-4.png"
+  },
+  "000231": {
+    "name": "ruination",
+    "image": "images/46-0.webp",
+    "wiki": "https://nv2.fandom.com/wiki/46-0",
+    "imageSource": "https://nv2.fandom.com/wiki/File:46-0.png"
+  },
+  "000232": {
+    "name": "stronghold",
+    "image": "images/46-1.webp",
+    "wiki": "https://nv2.fandom.com/wiki/46-1",
+    "imageSource": "https://nv2.fandom.com/wiki/File:46-1.png"
+  },
+  "000233": {
+    "name": "greedy optimization",
+    "image": "images/46-2.webp",
+    "wiki": "https://nv2.fandom.com/wiki/46-2",
+    "imageSource": "https://nv2.fandom.com/wiki/File:46-2.png"
+  },
+  "000234": {
+    "name": "tension",
+    "image": "images/46-3.webp",
+    "wiki": "https://nv2.fandom.com/wiki/46-3",
+    "imageSource": "https://nv2.fandom.com/wiki/File:46-3.png"
+  },
+  "000235": {
+    "name": "hazardous",
+    "image": "images/46-4.webp",
+    "wiki": "https://nv2.fandom.com/wiki/46-4",
+    "imageSource": "https://nv2.fandom.com/wiki/File:46-4.png"
+  },
+  "000236": {
+    "name": "T-Bone, T-Bone, T-Bone!",
+    "image": "images/47-0.webp",
+    "wiki": "https://nv2.fandom.com/wiki/47-0",
+    "imageSource": "https://nv2.fandom.com/wiki/File:47-0.png"
+  },
+  "000237": {
+    "name": "step lightly",
+    "image": "images/47-1.webp",
+    "wiki": "https://nv2.fandom.com/wiki/47-1",
+    "imageSource": "https://nv2.fandom.com/wiki/File:47-1.png"
+  },
+  "000238": {
+    "name": "red light red light",
+    "image": "images/47-2.webp",
+    "wiki": "https://nv2.fandom.com/wiki/47-2",
+    "imageSource": "https://nv2.fandom.com/wiki/File:47-2.png"
+  },
+  "000239": {
+    "name": "Stores of Hell",
+    "image": "images/47-3.webp",
+    "wiki": "https://nv2.fandom.com/wiki/47-3",
+    "imageSource": "https://nv2.fandom.com/wiki/File:47-3.png"
+  },
+  "000240": {
+    "name": "never ever",
+    "image": "images/47-4.webp",
+    "wiki": "https://nv2.fandom.com/wiki/47-4",
+    "imageSource": "https://nv2.fandom.com/wiki/File:47-4.png"
+  },
+  "000241": {
+    "name": "tempt job",
+    "image": "images/48-0.webp",
+    "wiki": "https://nv2.fandom.com/wiki/48-0",
+    "imageSource": "https://nv2.fandom.com/wiki/File:48-0.png"
+  },
+  "000242": {
+    "name": "stantasy",
+    "image": "images/48-1.webp",
+    "wiki": "https://nv2.fandom.com/wiki/48-1",
+    "imageSource": "https://nv2.fandom.com/wiki/File:48-1.png"
+  },
+  "000243": {
+    "name": "increnect",
+    "image": "images/48-2.webp",
+    "wiki": "https://nv2.fandom.com/wiki/48-2",
+    "imageSource": "https://nv2.fandom.com/wiki/File:48-2.png"
+  },
+  "000244": {
+    "name": "gazizza my dilsnoofus",
+    "image": "images/48-3.webp",
+    "wiki": "https://nv2.fandom.com/wiki/48-3",
+    "imageSource": "https://nv2.fandom.com/wiki/File:48-3.png"
+  },
+  "000245": {
+    "name": "treadmills",
+    "image": "images/48-4.webp",
+    "wiki": "https://nv2.fandom.com/wiki/48-4",
+    "imageSource": "https://nv2.fandom.com/wiki/File:48-4.png"
+  },
+  "000246": {
+    "name": "the big not-so-easy",
+    "image": "images/49-0.webp",
+    "wiki": "https://nv2.fandom.com/wiki/49-0",
+    "imageSource": "https://nv2.fandom.com/wiki/File:49-0.png"
+  },
+  "000247": {
+    "name": "into the lion's nest",
+    "image": "images/49-1.webp",
+    "wiki": "https://nv2.fandom.com/wiki/49-1",
+    "imageSource": "https://nv2.fandom.com/wiki/File:49-1.png"
+  },
+  "000248": {
+    "name": "squared",
+    "image": "images/49-2.webp",
+    "wiki": "https://nv2.fandom.com/wiki/49-2",
+    "imageSource": "https://nv2.fandom.com/wiki/File:49-2.png"
+  },
+  "000249": {
+    "name": "the ringer",
+    "image": "images/49-3.webp",
+    "wiki": "https://nv2.fandom.com/wiki/49-3",
+    "imageSource": "https://nv2.fandom.com/wiki/File:49-3.png"
+  },
+  "000250": {
+    "name": "iron butterfly",
+    "image": "images/49-4.webp",
+    "wiki": "https://nv2.fandom.com/wiki/49-4",
+    "imageSource": "https://nv2.fandom.com/wiki/File:49-4.png"
+  },
+  "000251": {
+    "name": "boom blocks",
+    "image": "images/50-0.webp",
+    "wiki": "https://nv2.fandom.com/wiki/50-0",
+    "imageSource": "https://nv2.fandom.com/wiki/File:50-0.png"
+  },
+  "000252": {
+    "name": "rubber room",
+    "image": "images/50-1.webp",
+    "wiki": "https://nv2.fandom.com/wiki/50-1",
+    "imageSource": "https://nv2.fandom.com/wiki/File:50-1.png"
+  },
+  "000253": {
+    "name": "tighten up tighter",
+    "image": "images/50-2.webp",
+    "wiki": "https://nv2.fandom.com/wiki/50-2",
+    "imageSource": "https://nv2.fandom.com/wiki/File:50-2.png"
+  },
+  "000254": {
+    "name": "vertebrae",
+    "image": "images/50-3.webp",
+    "wiki": "https://nv2.fandom.com/wiki/50-3",
+    "imageSource": "https://nv2.fandom.com/wiki/File:50-3.png"
+  },
+  "000255": {
+    "name": "saturation",
+    "image": "images/50-4.webp",
+    "wiki": "https://nv2.fandom.com/wiki/50-4",
+    "imageSource": "https://nv2.fandom.com/wiki/File:50-4.png"
+  },
+  "000256": {
+    "name": "shuffle demons",
+    "image": "images/51-0.webp",
+    "wiki": "https://nv2.fandom.com/wiki/51-0",
+    "imageSource": "https://nv2.fandom.com/wiki/File:51-0.png"
+  },
+  "000257": {
+    "name": "underground",
+    "image": "images/51-1.webp",
+    "wiki": "https://nv2.fandom.com/wiki/51-1",
+    "imageSource": "https://nv2.fandom.com/wiki/File:51-1.png"
+  },
+  "000258": {
+    "name": "honey tree",
+    "image": "images/51-2.webp",
+    "wiki": "https://nv2.fandom.com/wiki/51-2",
+    "imageSource": "https://nv2.fandom.com/wiki/File:51-2.png"
+  },
+  "000259": {
+    "name": "tiki party",
+    "image": "images/51-3.webp",
+    "wiki": "https://nv2.fandom.com/wiki/51-3",
+    "imageSource": "https://nv2.fandom.com/wiki/File:51-3.png"
+  },
+  "000260": {
+    "name": "G(old) turns to D(eath)",
+    "image": "images/51-4.webp",
+    "wiki": "https://nv2.fandom.com/wiki/51-4",
+    "imageSource": "https://nv2.fandom.com/wiki/File:51-4.png"
+  },
+  "000261": {
+    "name": "sigil",
+    "image": "images/52-0.webp",
+    "wiki": "https://nv2.fandom.com/wiki/52-0",
+    "imageSource": "https://nv2.fandom.com/wiki/File:52-0.png"
+  },
+  "000262": {
+    "name": "fool's gold",
+    "image": "images/52-1.webp",
+    "wiki": "https://nv2.fandom.com/wiki/52-1",
+    "imageSource": "https://nv2.fandom.com/wiki/File:52-1.png"
+  },
+  "000263": {
+    "name": "returned for spite",
+    "image": "images/52-2.webp",
+    "wiki": "https://nv2.fandom.com/wiki/52-2",
+    "imageSource": "https://nv2.fandom.com/wiki/File:52-2.png"
+  },
+  "000264": {
+    "name": "the squeeze",
+    "image": "images/52-3.webp",
+    "wiki": "https://nv2.fandom.com/wiki/52-3",
+    "imageSource": "https://nv2.fandom.com/wiki/File:52-3.png"
+  },
+  "000265": {
+    "name": "slitherin",
+    "image": "images/52-4.webp",
+    "wiki": "https://nv2.fandom.com/wiki/52-4",
+    "imageSource": "https://nv2.fandom.com/wiki/File:52-4.png"
+  },
+  "000266": {
+    "name": "extremely cross",
+    "image": "images/53-0.webp",
+    "wiki": "https://nv2.fandom.com/wiki/53-0",
+    "imageSource": "https://nv2.fandom.com/wiki/File:53-0.png"
+  },
+  "000267": {
+    "name": "quad laser",
+    "image": "images/53-1.webp",
+    "wiki": "https://nv2.fandom.com/wiki/53-1",
+    "imageSource": "https://nv2.fandom.com/wiki/File:53-1.png"
+  },
+  "000268": {
+    "name": "space waffle",
+    "image": "images/53-2.webp",
+    "wiki": "https://nv2.fandom.com/wiki/53-2",
+    "imageSource": "https://nv2.fandom.com/wiki/File:53-2.png"
+  },
+  "000269": {
+    "name": "factory",
+    "image": "images/53-3.webp",
+    "wiki": "https://nv2.fandom.com/wiki/53-3",
+    "imageSource": "https://nv2.fandom.com/wiki/File:53-3.png"
+  },
+  "000270": {
+    "name": "solaar",
+    "image": "images/53-4.webp",
+    "wiki": "https://nv2.fandom.com/wiki/53-4",
+    "imageSource": "https://nv2.fandom.com/wiki/File:53-4.png"
+  },
+  "000271": {
+    "name": "feathered",
+    "image": "images/54-0.webp",
+    "wiki": "https://nv2.fandom.com/wiki/54-0",
+    "imageSource": "https://nv2.fandom.com/wiki/File:54-0.png"
+  },
+  "000272": {
+    "name": "radioactive clover",
+    "image": "images/54-1.webp",
+    "wiki": "https://nv2.fandom.com/wiki/54-1",
+    "imageSource": "https://nv2.fandom.com/wiki/File:54-1.png"
+  },
+  "000273": {
+    "name": "so far away",
+    "image": "images/54-2.webp",
+    "wiki": "https://nv2.fandom.com/wiki/54-2",
+    "imageSource": "https://nv2.fandom.com/wiki/File:54-2.png"
+  },
+  "000274": {
+    "name": "slurmy slonka",
+    "image": "images/54-3.webp",
+    "wiki": "https://nv2.fandom.com/wiki/54-3",
+    "imageSource": "https://nv2.fandom.com/wiki/File:54-3.png"
+  },
+  "000275": {
+    "name": "tippled",
+    "image": "images/54-4.webp",
+    "wiki": "https://nv2.fandom.com/wiki/54-4",
+    "imageSource": "https://nv2.fandom.com/wiki/File:54-4.png"
+  },
+  "000276": {
+    "name": "drone surfing",
+    "image": "images/55-0.webp",
+    "wiki": "https://nv2.fandom.com/wiki/55-0",
+    "imageSource": "https://nv2.fandom.com/wiki/File:55-0.png"
+  },
+  "000277": {
+    "name": "sleestak 1",
+    "image": "images/55-1.webp",
+    "wiki": "https://nv2.fandom.com/wiki/55-1",
+    "imageSource": "https://nv2.fandom.com/wiki/File:55-1.png"
+  },
+  "000278": {
+    "name": "restricted access",
+    "image": "images/55-2.webp",
+    "wiki": "https://nv2.fandom.com/wiki/55-2",
+    "imageSource": "https://nv2.fandom.com/wiki/File:55-2.png"
+  },
+  "000279": {
+    "name": "foureyes",
+    "image": "images/55-3.webp",
+    "wiki": "https://nv2.fandom.com/wiki/55-3",
+    "imageSource": "https://nv2.fandom.com/wiki/File:55-3.png"
+  },
+  "000280": {
+    "name": "made muck of",
+    "image": "images/55-4.webp",
+    "wiki": "https://nv2.fandom.com/wiki/55-4",
+    "imageSource": "https://nv2.fandom.com/wiki/File:55-4.png"
+  },
+  "000281": {
+    "name": "degrees of freedom",
+    "image": "images/56-0.webp",
+    "wiki": "https://nv2.fandom.com/wiki/56-0",
+    "imageSource": "https://nv2.fandom.com/wiki/File:56-0.png"
+  },
+  "000282": {
+    "name": "sgruts",
+    "image": "images/56-1.webp",
+    "wiki": "https://nv2.fandom.com/wiki/56-1",
+    "imageSource": "https://nv2.fandom.com/wiki/File:56-1.png"
+  },
+  "000283": {
+    "name": "slinky wizard",
+    "image": "images/56-2.webp",
+    "wiki": "https://nv2.fandom.com/wiki/56-2",
+    "imageSource": "https://nv2.fandom.com/wiki/File:56-2.png"
+  },
+  "000284": {
+    "name": "junction",
+    "image": "images/56-3.webp",
+    "wiki": "https://nv2.fandom.com/wiki/56-3",
+    "imageSource": "https://nv2.fandom.com/wiki/File:56-3.png"
+  },
+  "000285": {
+    "name": "mo' loco",
+    "image": "images/56-4.webp",
+    "wiki": "https://nv2.fandom.com/wiki/56-4",
+    "imageSource": "https://nv2.fandom.com/wiki/File:56-4.png"
+  },
+  "000286": {
+    "name": "crooked",
+    "image": "images/57-0.webp",
+    "wiki": "https://nv2.fandom.com/wiki/57-0",
+    "imageSource": "https://nv2.fandom.com/wiki/File:57-0.png"
+  },
+  "000287": {
+    "name": "shake it madam",
+    "image": "images/57-1.webp",
+    "wiki": "https://nv2.fandom.com/wiki/57-1",
+    "imageSource": "https://nv2.fandom.com/wiki/File:57-1.png"
+  },
+  "000288": {
+    "name": "the many",
+    "image": "images/57-2.webp",
+    "wiki": "https://nv2.fandom.com/wiki/57-2",
+    "imageSource": "https://nv2.fandom.com/wiki/File:57-2.png"
+  },
+  "000289": {
+    "name": "mo' mentum",
+    "image": "images/57-3.webp",
+    "wiki": "https://nv2.fandom.com/wiki/57-3",
+    "imageSource": "https://nv2.fandom.com/wiki/File:57-3.png"
+  },
+  "000290": {
+    "name": "poem",
+    "image": "images/57-4.webp",
+    "wiki": "https://nv2.fandom.com/wiki/57-4",
+    "imageSource": "https://nv2.fandom.com/wiki/File:57-4.png"
+  },
+  "000291": {
+    "name": "the easy way",
+    "image": "images/58-0.webp",
+    "wiki": "https://nv2.fandom.com/wiki/58-0",
+    "imageSource": "https://nv2.fandom.com/wiki/File:58-0.png"
+  },
+  "000292": {
+    "name": "lockout",
+    "image": "images/58-1.webp",
+    "wiki": "https://nv2.fandom.com/wiki/58-1",
+    "imageSource": "https://nv2.fandom.com/wiki/File:58-1.png"
+  },
+  "000293": {
+    "name": "paroxysm redux",
+    "image": "images/58-2.webp",
+    "wiki": "https://nv2.fandom.com/wiki/58-2",
+    "imageSource": "https://nv2.fandom.com/wiki/File:58-2.png"
+  },
+  "000294": {
+    "name": "omegaman",
+    "image": "images/58-3.webp",
+    "wiki": "https://nv2.fandom.com/wiki/58-3",
+    "imageSource": "https://nv2.fandom.com/wiki/File:58-3.png"
+  },
+  "000295": {
+    "name": "scrumtrulescent",
+    "image": "images/58-4.webp",
+    "wiki": "https://nv2.fandom.com/wiki/58-4",
+    "imageSource": "https://nv2.fandom.com/wiki/File:58-4.png"
+  },
+  "000296": {
+    "name": "precision jumpspersonship",
+    "image": "images/59-0.webp",
+    "wiki": "https://nv2.fandom.com/wiki/59-0",
+    "imageSource": "https://nv2.fandom.com/wiki/File:59-0.png"
+  },
+  "000297": {
+    "name": "pitcher plant",
+    "image": "images/59-1.webp",
+    "wiki": "https://nv2.fandom.com/wiki/59-1",
+    "imageSource": "https://nv2.fandom.com/wiki/File:59-1.png"
+  },
+  "000298": {
+    "name": "like liquid peppermint",
+    "image": "images/59-2.webp",
+    "wiki": "https://nv2.fandom.com/wiki/59-2",
+    "imageSource": "https://nv2.fandom.com/wiki/File:59-2.png"
+  },
+  "000299": {
+    "name": "pop quiz, hotshot",
+    "image": "images/59-3.webp",
+    "wiki": "https://nv2.fandom.com/wiki/59-3",
+    "imageSource": "https://nv2.fandom.com/wiki/File:59-3.png"
+  },
+  "000300": {
+    "name": "skip to my queue edit",
+    "image": "images/59-4.webp",
+    "wiki": "https://nv2.fandom.com/wiki/59-4",
+    "imageSource": "https://nv2.fandom.com/wiki/File:59-4.png"
+  },
+  "000301": {
+    "name": "a slice of death",
+    "image": "images/60-0.webp",
+    "wiki": "https://nv2.fandom.com/wiki/60-0",
+    "imageSource": "https://nv2.fandom.com/wiki/File:60-0.png"
+  },
+  "000302": {
+    "name": "everything i long for",
+    "image": "images/60-1.webp",
+    "wiki": "https://nv2.fandom.com/wiki/60-1",
+    "imageSource": "https://nv2.fandom.com/wiki/File:60-1.png"
+  },
+  "000303": {
+    "name": "learning to fly",
+    "image": "images/60-2.webp",
+    "wiki": "https://nv2.fandom.com/wiki/60-2",
+    "imageSource": "https://nv2.fandom.com/wiki/File:60-2.png"
+  },
+  "000304": {
+    "name": "stock prices",
+    "image": "images/60-3.webp",
+    "wiki": "https://nv2.fandom.com/wiki/60-3",
+    "imageSource": "https://nv2.fandom.com/wiki/File:60-3.png"
+  },
+  "000305": {
+    "name": "crampon",
+    "image": "images/60-4.webp",
+    "wiki": "https://nv2.fandom.com/wiki/60-4",
+    "imageSource": "https://nv2.fandom.com/wiki/File:60-4.png"
+  },
+  "000306": {
+    "name": "sandtraps",
+    "image": "images/61-0.webp",
+    "wiki": "https://nv2.fandom.com/wiki/61-0",
+    "imageSource": "https://nv2.fandom.com/wiki/File:61-0.png"
+  },
+  "000307": {
+    "name": "ever inward",
+    "image": "images/61-1.webp",
+    "wiki": "https://nv2.fandom.com/wiki/61-1",
+    "imageSource": "https://nv2.fandom.com/wiki/File:61-1.png"
+  },
+  "000308": {
+    "name": "chev",
+    "image": "images/61-2.webp",
+    "wiki": "https://nv2.fandom.com/wiki/61-2",
+    "imageSource": "https://nv2.fandom.com/wiki/File:61-2.png"
+  },
+  "000309": {
+    "name": "sphere of existence",
+    "image": "images/61-3.webp",
+    "wiki": "https://nv2.fandom.com/wiki/61-3",
+    "imageSource": "https://nv2.fandom.com/wiki/File:61-3.png"
+  },
+  "000310": {
+    "name": "cracked",
+    "image": "images/61-4.webp",
+    "wiki": "https://nv2.fandom.com/wiki/61-4",
+    "imageSource": "https://nv2.fandom.com/wiki/File:61-4.png"
+  },
+  "000311": {
+    "name": "escarpment",
+    "image": "images/62-0.webp",
+    "wiki": "https://nv2.fandom.com/wiki/62-0",
+    "imageSource": "https://nv2.fandom.com/wiki/File:62-0.png"
+  },
+  "000312": {
+    "name": "burning chrome",
+    "image": "images/62-1.webp",
+    "wiki": "https://nv2.fandom.com/wiki/62-1",
+    "imageSource": "https://nv2.fandom.com/wiki/File:62-1.png"
+  },
+  "000313": {
+    "name": "blue-grey cross",
+    "image": "images/62-2.webp",
+    "wiki": "https://nv2.fandom.com/wiki/62-2",
+    "imageSource": "https://nv2.fandom.com/wiki/File:62-2.png"
+  },
+  "000314": {
+    "name": "chock full of crazy",
+    "image": "images/62-3.webp",
+    "wiki": "https://nv2.fandom.com/wiki/62-3",
+    "imageSource": "https://nv2.fandom.com/wiki/File:62-3.png"
+  },
+  "000315": {
+    "name": "methodical B",
+    "image": "images/62-4.webp",
+    "wiki": "https://nv2.fandom.com/wiki/62-4",
+    "imageSource": "https://nv2.fandom.com/wiki/File:62-4.png"
+  },
+  "000316": {
+    "name": "the skinny",
+    "image": "images/63-0.webp",
+    "wiki": "https://nv2.fandom.com/wiki/63-0",
+    "imageSource": "https://nv2.fandom.com/wiki/File:63-0.png"
+  },
+  "000317": {
+    "name": "closer encounters",
+    "image": "images/63-1.webp",
+    "wiki": "https://nv2.fandom.com/wiki/63-1",
+    "imageSource": "https://nv2.fandom.com/wiki/File:63-1.png"
+  },
+  "000318": {
+    "name": "ingress",
+    "image": "images/63-2.webp",
+    "wiki": "https://nv2.fandom.com/wiki/63-2",
+    "imageSource": "https://nv2.fandom.com/wiki/File:63-2.png"
+  },
+  "000319": {
+    "name": "blurbs",
+    "image": "images/63-3.webp",
+    "wiki": "https://nv2.fandom.com/wiki/63-3",
+    "imageSource": "https://nv2.fandom.com/wiki/File:63-3.png"
+  },
+  "000320": {
+    "name": "mazemerizing",
+    "image": "images/63-4.webp",
+    "wiki": "https://nv2.fandom.com/wiki/63-4",
+    "imageSource": "https://nv2.fandom.com/wiki/File:63-4.png"
+  },
+  "000321": {
+    "name": "daylight robbery",
+    "image": "images/64-0.webp",
+    "wiki": "https://nv2.fandom.com/wiki/64-0",
+    "imageSource": "https://nv2.fandom.com/wiki/File:64-0.png"
+  },
+  "000322": {
+    "name": "binary star",
+    "image": "images/64-1.webp",
+    "wiki": "https://nv2.fandom.com/wiki/64-1",
+    "imageSource": "https://nv2.fandom.com/wiki/File:64-1.png"
+  },
+  "000323": {
+    "name": "interference pattern",
+    "image": "images/64-2.webp",
+    "wiki": "https://nv2.fandom.com/wiki/64-2",
+    "imageSource": "https://nv2.fandom.com/wiki/File:64-2.png"
+  },
+  "000324": {
+    "name": "blame yourself",
+    "image": "images/64-3.webp",
+    "wiki": "https://nv2.fandom.com/wiki/64-3",
+    "imageSource": "https://nv2.fandom.com/wiki/File:64-3.png"
+  },
+  "000325": {
+    "name": "stratego",
+    "image": "images/64-4.webp",
+    "wiki": "https://nv2.fandom.com/wiki/64-4",
+    "imageSource": "https://nv2.fandom.com/wiki/File:64-4.png"
+  },
+  "000326": {
+    "name": "blatant danger",
+    "image": "images/65-0.webp",
+    "wiki": "https://nv2.fandom.com/wiki/65-0",
+    "imageSource": "https://nv2.fandom.com/wiki/File:65-0.png"
+  },
+  "000327": {
+    "name": "go for self",
+    "image": "images/65-1.webp",
+    "wiki": "https://nv2.fandom.com/wiki/65-1",
+    "imageSource": "https://nv2.fandom.com/wiki/File:65-1.png"
+  },
+  "000328": {
+    "name": "blockade runner A",
+    "image": "images/65-2.webp",
+    "wiki": "https://nv2.fandom.com/wiki/65-2",
+    "imageSource": "https://nv2.fandom.com/wiki/File:65-2.png"
+  },
+  "000329": {
+    "name": "i set my mind in motion",
+    "image": "images/65-3.webp",
+    "wiki": "https://nv2.fandom.com/wiki/65-3",
+    "imageSource": "https://nv2.fandom.com/wiki/File:65-3.png"
+  },
+  "000330": {
+    "name": "spy row die rah",
+    "image": "images/65-4.webp",
+    "wiki": "https://nv2.fandom.com/wiki/65-4",
+    "imageSource": "https://nv2.fandom.com/wiki/File:65-4.png"
+  },
+  "000331": {
+    "name": "anglers",
+    "image": "images/66-0.webp",
+    "wiki": "https://nv2.fandom.com/wiki/66-0",
+    "imageSource": "https://nv2.fandom.com/wiki/File:66-0.png"
+  },
+  "000332": {
+    "name": "freak out, give in",
+    "image": "images/66-1.webp",
+    "wiki": "https://nv2.fandom.com/wiki/66-1",
+    "imageSource": "https://nv2.fandom.com/wiki/File:66-1.png"
+  },
+  "000333": {
+    "name": "cakeholes",
+    "image": "images/66-2.webp",
+    "wiki": "https://nv2.fandom.com/wiki/66-2",
+    "imageSource": "https://nv2.fandom.com/wiki/File:66-2.png"
+  },
+  "000334": {
+    "name": "genius",
+    "image": "images/66-3.webp",
+    "wiki": "https://nv2.fandom.com/wiki/66-3",
+    "imageSource": "https://nv2.fandom.com/wiki/File:66-3.png"
+  },
+  "000335": {
+    "name": "race to the top",
+    "image": "images/66-4.webp",
+    "wiki": "https://nv2.fandom.com/wiki/66-4",
+    "imageSource": "https://nv2.fandom.com/wiki/File:66-4.png"
+  },
+  "000336": {
+    "name": "sands of time",
+    "image": "images/67-0.webp",
+    "wiki": "https://nv2.fandom.com/wiki/67-0",
+    "imageSource": "https://nv2.fandom.com/wiki/File:67-0.png"
+  },
+  "000337": {
+    "name": "en passant",
+    "image": "images/67-1.webp",
+    "wiki": "https://nv2.fandom.com/wiki/67-1",
+    "imageSource": "https://nv2.fandom.com/wiki/File:67-1.png"
+  },
+  "000338": {
+    "name": "rocket run",
+    "image": "images/67-2.webp",
+    "wiki": "https://nv2.fandom.com/wiki/67-2",
+    "imageSource": "https://nv2.fandom.com/wiki/File:67-2.png"
+  },
+  "000339": {
+    "name": "charlie grey",
+    "image": "images/67-3.webp",
+    "wiki": "https://nv2.fandom.com/wiki/67-3",
+    "imageSource": "https://nv2.fandom.com/wiki/File:67-3.png"
+  },
+  "000340": {
+    "name": "cascading deadlock",
+    "image": "images/67-4.webp",
+    "wiki": "https://nv2.fandom.com/wiki/67-4",
+    "imageSource": "https://nv2.fandom.com/wiki/File:67-4.png"
+  },
+  "000341": {
+    "name": "easy swirl",
+    "image": "images/68-0.webp",
+    "wiki": "https://nv2.fandom.com/wiki/68-0",
+    "imageSource": "https://nv2.fandom.com/wiki/File:68-0.png"
+  },
+  "000342": {
+    "name": "stunt demon",
+    "image": "images/68-1.webp",
+    "wiki": "https://nv2.fandom.com/wiki/68-1",
+    "imageSource": "https://nv2.fandom.com/wiki/File:68-1.png"
+  },
+  "000343": {
+    "name": "emergent patterns",
+    "image": "images/68-2.webp",
+    "wiki": "https://nv2.fandom.com/wiki/68-2",
+    "imageSource": "https://nv2.fandom.com/wiki/File:68-2.png"
+  },
+  "000344": {
+    "name": "river run",
+    "image": "images/68-3.webp",
+    "wiki": "https://nv2.fandom.com/wiki/68-3",
+    "imageSource": "https://nv2.fandom.com/wiki/File:68-3.png"
+  },
+  "000345": {
+    "name": "incomplete was your training",
+    "image": "images/68-4.webp",
+    "wiki": "https://nv2.fandom.com/wiki/68-4",
+    "imageSource": "https://nv2.fandom.com/wiki/File:68-4.png"
+  },
+  "000346": {
+    "name": "crazy legs",
+    "image": "images/69-0.webp",
+    "wiki": "https://nv2.fandom.com/wiki/69-0",
+    "imageSource": "https://nv2.fandom.com/wiki/File:69-0.png"
+  },
+  "000347": {
+    "name": "the creeper downer",
+    "image": "images/69-1.webp",
+    "wiki": "https://nv2.fandom.com/wiki/69-1",
+    "imageSource": "https://nv2.fandom.com/wiki/File:69-1.png"
+  },
+  "000348": {
+    "name": "embattled",
+    "image": "images/69-2.webp",
+    "wiki": "https://nv2.fandom.com/wiki/69-2",
+    "imageSource": "https://nv2.fandom.com/wiki/File:69-2.png"
+  },
+  "000349": {
+    "name": "test pattern 2",
+    "image": "images/69-3.webp",
+    "wiki": "https://nv2.fandom.com/wiki/69-3",
+    "imageSource": "https://nv2.fandom.com/wiki/File:69-3.png"
+  },
+  "000350": {
+    "name": "mazer",
+    "image": "images/69-4.webp",
+    "wiki": "https://nv2.fandom.com/wiki/69-4",
+    "imageSource": "https://nv2.fandom.com/wiki/File:69-4.png"
+  },
+  "000351": {
+    "name": "knackered",
+    "image": "images/70-0.webp",
+    "wiki": "https://nv2.fandom.com/wiki/70-0",
+    "imageSource": "https://nv2.fandom.com/wiki/File:70-0.png"
+  },
+  "000352": {
+    "name": "dixie flatline",
+    "image": "images/70-1.webp",
+    "wiki": "https://nv2.fandom.com/wiki/70-1",
+    "imageSource": "https://nv2.fandom.com/wiki/File:70-1.png"
+  },
+  "000353": {
+    "name": "sisu",
+    "image": "images/70-2.webp",
+    "wiki": "https://nv2.fandom.com/wiki/70-2",
+    "imageSource": "https://nv2.fandom.com/wiki/File:70-2.png"
+  },
+  "000354": {
+    "name": "hither and yon",
+    "image": "images/70-3.webp",
+    "wiki": "https://nv2.fandom.com/wiki/70-3",
+    "imageSource": "https://nv2.fandom.com/wiki/File:70-3.png"
+  },
+  "000355": {
+    "name": "coated",
+    "image": "images/70-4.webp",
+    "wiki": "https://nv2.fandom.com/wiki/70-4",
+    "imageSource": "https://nv2.fandom.com/wiki/File:70-4.png"
+  },
+  "000356": {
+    "name": "smoothstep",
+    "image": "images/71-0.webp",
+    "wiki": "https://nv2.fandom.com/wiki/71-0",
+    "imageSource": "https://nv2.fandom.com/wiki/File:71-0.png"
+  },
+  "000357": {
+    "name": "darth bedroom",
+    "image": "images/71-1.webp",
+    "wiki": "https://nv2.fandom.com/wiki/71-1",
+    "imageSource": "https://nv2.fandom.com/wiki/File:71-1.png"
+  },
+  "000358": {
+    "name": "concealed",
+    "image": "images/71-2.webp",
+    "wiki": "https://nv2.fandom.com/wiki/71-2",
+    "imageSource": "https://nv2.fandom.com/wiki/File:71-2.png"
+  },
+  "000359": {
+    "name": "zappa",
+    "image": "images/71-3.webp",
+    "wiki": "https://nv2.fandom.com/wiki/71-3",
+    "imageSource": "https://nv2.fandom.com/wiki/File:71-3.png"
+  },
+  "000360": {
+    "name": "control",
+    "image": "images/71-4.webp",
+    "wiki": "https://nv2.fandom.com/wiki/71-4",
+    "imageSource": "https://nv2.fandom.com/wiki/File:71-4.png"
+  },
+  "000361": {
+    "name": "nivoc",
+    "image": "images/72-0.webp",
+    "wiki": "https://nv2.fandom.com/wiki/72-0",
+    "imageSource": "https://nv2.fandom.com/wiki/File:72-0.png"
+  },
+  "000362": {
+    "name": "unsuperimpossible",
+    "image": "images/72-1.webp",
+    "wiki": "https://nv2.fandom.com/wiki/72-1",
+    "imageSource": "https://nv2.fandom.com/wiki/File:72-1.png"
+  },
+  "000363": {
+    "name": "blast ceiling",
+    "image": "images/72-2.webp",
+    "wiki": "https://nv2.fandom.com/wiki/72-2",
+    "imageSource": "https://nv2.fandom.com/wiki/File:72-2.png"
+  },
+  "000364": {
+    "name": "skyfires",
+    "image": "images/72-3.webp",
+    "wiki": "https://nv2.fandom.com/wiki/72-3",
+    "imageSource": "https://nv2.fandom.com/wiki/File:72-3.png"
+  },
+  "000365": {
+    "name": "tremors",
+    "image": "images/72-4.webp",
+    "wiki": "https://nv2.fandom.com/wiki/72-4",
+    "imageSource": "https://nv2.fandom.com/wiki/File:72-4.png"
+  },
+  "000366": {
+    "name": "candy dish",
+    "image": "images/73-0.webp",
+    "wiki": "https://nv2.fandom.com/wiki/73-0",
+    "imageSource": "https://nv2.fandom.com/wiki/File:73-0.png"
+  },
+  "000367": {
+    "name": "down to the future",
+    "image": "images/73-1.webp",
+    "wiki": "https://nv2.fandom.com/wiki/73-1",
+    "imageSource": "https://nv2.fandom.com/wiki/File:73-1.png"
+  },
+  "000368": {
+    "name": "disrecognized space",
+    "image": "images/73-2.webp",
+    "wiki": "https://nv2.fandom.com/wiki/73-2",
+    "imageSource": "https://nv2.fandom.com/wiki/File:73-2.png"
+  },
+  "000369": {
+    "name": "enclave",
+    "image": "images/73-3.webp",
+    "wiki": "https://nv2.fandom.com/wiki/73-3",
+    "imageSource": "https://nv2.fandom.com/wiki/File:73-3.png"
+  },
+  "000370": {
+    "name": "control",
+    "image": "images/73-4.webp",
+    "wiki": "https://nv2.fandom.com/wiki/73-4",
+    "imageSource": "https://nv2.fandom.com/wiki/File:73-4.png"
+  },
+  "000371": {
+    "name": "flown",
+    "image": "images/74-0.webp",
+    "wiki": "https://nv2.fandom.com/wiki/74-0",
+    "imageSource": "https://nv2.fandom.com/wiki/File:74-0.png"
+  },
+  "000372": {
+    "name": "core",
+    "image": "images/74-1.webp",
+    "wiki": "https://nv2.fandom.com/wiki/74-1",
+    "imageSource": "https://nv2.fandom.com/wiki/File:74-1.png"
+  },
+  "000373": {
+    "name": "sectioned",
+    "image": "images/74-2.webp",
+    "wiki": "https://nv2.fandom.com/wiki/74-2",
+    "imageSource": "https://nv2.fandom.com/wiki/File:74-2.png"
+  },
+  "000374": {
+    "name": "chupes",
+    "image": "images/74-3.webp",
+    "wiki": "https://nv2.fandom.com/wiki/74-3",
+    "imageSource": "https://nv2.fandom.com/wiki/File:74-3.png"
+  },
+  "000375": {
+    "name": "well wicked",
+    "image": "images/74-4.webp",
+    "wiki": "https://nv2.fandom.com/wiki/74-4",
+    "imageSource": "https://nv2.fandom.com/wiki/File:74-4.png"
+  },
+  "000376": {
+    "name": "dipper",
+    "image": "images/75-0.webp",
+    "wiki": "https://nv2.fandom.com/wiki/75-0",
+    "imageSource": "https://nv2.fandom.com/wiki/File:75-0.png"
+  },
+  "000377": {
+    "name": "confined",
+    "image": "images/75-1.webp",
+    "wiki": "https://nv2.fandom.com/wiki/75-1",
+    "imageSource": "https://nv2.fandom.com/wiki/File:75-1.png"
+  },
+  "000378": {
+    "name": "cinema studies",
+    "image": "images/75-2.webp",
+    "wiki": "https://nv2.fandom.com/wiki/75-2",
+    "imageSource": "https://nv2.fandom.com/wiki/File:75-2.png"
+  },
+  "000379": {
+    "name": "cliffhanger",
+    "image": "images/75-3.webp",
+    "wiki": "https://nv2.fandom.com/wiki/75-3",
+    "imageSource": "https://nv2.fandom.com/wiki/File:75-3.png"
+  },
+  "000380": {
+    "name": "danger dance A",
+    "image": "images/75-4.webp",
+    "wiki": "https://nv2.fandom.com/wiki/75-4",
+    "imageSource": "https://nv2.fandom.com/wiki/File:75-4.png"
+  },
+  "000381": {
+    "name": "chimney sweep",
+    "image": "images/76-0.webp",
+    "wiki": "https://nv2.fandom.com/wiki/76-0",
+    "imageSource": "https://nv2.fandom.com/wiki/File:76-0.png"
+  },
+  "000382": {
+    "name": "clambering",
+    "image": "images/76-1.webp",
+    "wiki": "https://nv2.fandom.com/wiki/76-1",
+    "imageSource": "https://nv2.fandom.com/wiki/File:76-1.png"
+  },
+  "000383": {
+    "name": "wrecked tangle",
+    "image": "images/76-2.webp",
+    "wiki": "https://nv2.fandom.com/wiki/76-2",
+    "imageSource": "https://nv2.fandom.com/wiki/File:76-2.png"
+  },
+  "000384": {
+    "name": "chomplor",
+    "image": "images/76-3.webp",
+    "wiki": "https://nv2.fandom.com/wiki/76-3",
+    "imageSource": "https://nv2.fandom.com/wiki/File:76-3.png"
+  },
+  "000385": {
+    "name": "wrong side of the road",
+    "image": "images/76-4.webp",
+    "wiki": "https://nv2.fandom.com/wiki/76-4",
+    "imageSource": "https://nv2.fandom.com/wiki/File:76-4.png"
+  },
+  "000386": {
+    "name": "simple cliff",
+    "image": "images/77-0.webp",
+    "wiki": "https://nv2.fandom.com/wiki/77-0",
+    "imageSource": "https://nv2.fandom.com/wiki/File:77-0.png"
+  },
+  "000387": {
+    "name": "dizzy spiel",
+    "image": "images/77-1.webp",
+    "wiki": "https://nv2.fandom.com/wiki/77-1",
+    "imageSource": "https://nv2.fandom.com/wiki/File:77-1.png"
+  },
+  "000388": {
+    "name": "electric sawblades",
+    "image": "images/77-2.webp",
+    "wiki": "https://nv2.fandom.com/wiki/77-2",
+    "imageSource": "https://nv2.fandom.com/wiki/File:77-2.png"
+  },
+  "000389": {
+    "name": "cagey",
+    "image": "images/77-3.webp",
+    "wiki": "https://nv2.fandom.com/wiki/77-3",
+    "imageSource": "https://nv2.fandom.com/wiki/File:77-3.png"
+  },
+  "000390": {
+    "name": "swarm weather",
+    "image": "images/77-4.webp",
+    "wiki": "https://nv2.fandom.com/wiki/77-4",
+    "imageSource": "https://nv2.fandom.com/wiki/File:77-4.png"
+  },
+  "000391": {
+    "name": "mux",
+    "image": "images/78-0.webp",
+    "wiki": "https://nv2.fandom.com/wiki/78-0",
+    "imageSource": "https://nv2.fandom.com/wiki/File:78-0.png"
+  },
+  "000392": {
+    "name": "fundulating walls",
+    "image": "images/78-1.webp",
+    "wiki": "https://nv2.fandom.com/wiki/78-1",
+    "imageSource": "https://nv2.fandom.com/wiki/File:78-1.png"
+  },
+  "000393": {
+    "name": "by one's own petard",
+    "image": "images/78-2.webp",
+    "wiki": "https://nv2.fandom.com/wiki/78-2",
+    "imageSource": "https://nv2.fandom.com/wiki/File:78-2.png"
+  },
+  "000394": {
+    "name": "gobias industries",
+    "image": "images/78-3.webp",
+    "wiki": "https://nv2.fandom.com/wiki/78-3",
+    "imageSource": "https://nv2.fandom.com/wiki/File:78-3.png"
+  },
+  "000395": {
+    "name": "t minus 1",
+    "image": "images/78-4.webp",
+    "wiki": "https://nv2.fandom.com/wiki/78-4",
+    "imageSource": "https://nv2.fandom.com/wiki/File:78-4.png"
+  },
+  "000396": {
+    "name": "the total perspective vortex",
+    "image": "images/79-0.webp",
+    "wiki": "https://nv2.fandom.com/wiki/79-0",
+    "imageSource": "https://nv2.fandom.com/wiki/File:79-0.png"
+  },
+  "000397": {
+    "name": "lab",
+    "image": "images/79-1.webp",
+    "wiki": "https://nv2.fandom.com/wiki/79-1",
+    "imageSource": "https://nv2.fandom.com/wiki/File:79-1.png"
+  },
+  "000398": {
+    "name": "bronchioli",
+    "image": "images/79-2.webp",
+    "wiki": "https://nv2.fandom.com/wiki/79-2",
+    "imageSource": "https://nv2.fandom.com/wiki/File:79-2.png"
+  },
+  "000399": {
+    "name": "invert sugar A",
+    "image": "images/79-3.webp",
+    "wiki": "https://nv2.fandom.com/wiki/79-3",
+    "imageSource": "https://nv2.fandom.com/wiki/File:79-3.png"
+  },
+  "000400": {
+    "name": "control yourself",
+    "image": "images/79-4.webp",
+    "wiki": "https://nv2.fandom.com/wiki/79-4",
+    "imageSource": "https://nv2.fandom.com/wiki/File:79-4.png"
+  },
+  "000401": {
+    "name": "undersampling",
+    "image": "images/80-0.webp",
+    "wiki": "https://nv2.fandom.com/wiki/80-0",
+    "imageSource": "https://nv2.fandom.com/wiki/File:80-0.png"
+  },
+  "000402": {
+    "name": "cyclic coordinate descent",
+    "image": "images/80-1.webp",
+    "wiki": "https://nv2.fandom.com/wiki/80-1",
+    "imageSource": "https://nv2.fandom.com/wiki/File:80-1.png"
+  },
+  "000403": {
+    "name": "skip list",
+    "image": "images/80-2.webp",
+    "wiki": "https://nv2.fandom.com/wiki/80-2",
+    "imageSource": "https://nv2.fandom.com/wiki/File:80-2.png"
+  },
+  "000404": {
+    "name": "cumulonimble",
+    "image": "images/80-3.webp",
+    "wiki": "https://nv2.fandom.com/wiki/80-3",
+    "imageSource": "https://nv2.fandom.com/wiki/File:80-3.png"
+  },
+  "000405": {
+    "name": "exciting opportunities for advancement",
+    "image": "images/80-4.webp",
+    "wiki": "https://nv2.fandom.com/wiki/80-4",
+    "imageSource": "https://nv2.fandom.com/wiki/File:80-4.png"
+  },
+  "000406": {
+    "name": "dubbly",
+    "image": "images/81-0.webp",
+    "wiki": "https://nv2.fandom.com/wiki/81-0",
+    "imageSource": "https://nv2.fandom.com/wiki/File:81-0.png"
+  },
+  "000407": {
+    "name": "flu",
+    "image": "images/81-1.webp",
+    "wiki": "https://nv2.fandom.com/wiki/81-1",
+    "imageSource": "https://nv2.fandom.com/wiki/File:81-1.png"
+  },
+  "000408": {
+    "name": "all-spark",
+    "image": "images/81-2.webp",
+    "wiki": "https://nv2.fandom.com/wiki/81-2",
+    "imageSource": "https://nv2.fandom.com/wiki/File:81-2.png"
+  },
+  "000409": {
+    "name": "vicious cycles",
+    "image": "images/81-3.webp",
+    "wiki": "https://nv2.fandom.com/wiki/81-3",
+    "imageSource": "https://nv2.fandom.com/wiki/File:81-3.png"
+  },
+  "000410": {
+    "name": "a deadly game of chesterfield",
+    "image": "images/81-4.webp",
+    "wiki": "https://nv2.fandom.com/wiki/81-4",
+    "imageSource": "https://nv2.fandom.com/wiki/File:81-4.png"
+  },
+  "000411": {
+    "name": "you'll die if you try",
+    "image": "images/82-0.webp",
+    "wiki": "https://nv2.fandom.com/wiki/82-0",
+    "imageSource": "https://nv2.fandom.com/wiki/File:82-0.png"
+  },
+  "000412": {
+    "name": "ladders are for wimps",
+    "image": "images/82-1.webp",
+    "wiki": "https://nv2.fandom.com/wiki/82-1",
+    "imageSource": "https://nv2.fandom.com/wiki/File:82-1.png"
+  },
+  "000413": {
+    "name": "fear of toast",
+    "image": "images/82-2.webp",
+    "wiki": "https://nv2.fandom.com/wiki/82-2",
+    "imageSource": "https://nv2.fandom.com/wiki/File:82-2.png"
+  },
+  "000414": {
+    "name": "expert textpert",
+    "image": "images/82-3.webp",
+    "wiki": "https://nv2.fandom.com/wiki/82-3",
+    "imageSource": "https://nv2.fandom.com/wiki/File:82-3.png"
+  },
+  "000415": {
+    "name": "exhilaration",
+    "image": "images/82-4.webp",
+    "wiki": "https://nv2.fandom.com/wiki/82-4",
+    "imageSource": "https://nv2.fandom.com/wiki/File:82-4.png"
+  },
+  "000416": {
+    "name": "coprocessor",
+    "image": "images/83-0.webp",
+    "wiki": "https://nv2.fandom.com/wiki/83-0",
+    "imageSource": "https://nv2.fandom.com/wiki/File:83-0.png"
+  },
+  "000417": {
+    "name": "leptons",
+    "image": "images/83-1.webp",
+    "wiki": "https://nv2.fandom.com/wiki/83-1",
+    "imageSource": "https://nv2.fandom.com/wiki/File:83-1.png"
+  },
+  "000418": {
+    "name": "jinx malloy",
+    "image": "images/83-2.webp",
+    "wiki": "https://nv2.fandom.com/wiki/83-2",
+    "imageSource": "https://nv2.fandom.com/wiki/File:83-2.png"
+  },
+  "000419": {
+    "name": "grand prix",
+    "image": "images/83-3.webp",
+    "wiki": "https://nv2.fandom.com/wiki/83-3",
+    "imageSource": "https://nv2.fandom.com/wiki/File:83-3.png"
+  },
+  "000420": {
+    "name": "claustro",
+    "image": "images/83-4.webp",
+    "wiki": "https://nv2.fandom.com/wiki/83-4",
+    "imageSource": "https://nv2.fandom.com/wiki/File:83-4.png"
+  },
+  "000421": {
+    "name": "dizzing",
+    "image": "images/84-0.webp",
+    "wiki": "https://nv2.fandom.com/wiki/84-0",
+    "imageSource": "https://nv2.fandom.com/wiki/File:84-0.png"
+  },
+  "000422": {
+    "name": "hot flannel edit",
+    "image": "images/84-1.webp",
+    "wiki": "https://nv2.fandom.com/wiki/84-1",
+    "imageSource": "https://nv2.fandom.com/wiki/File:84-1.png"
+  },
+  "000423": {
+    "name": "the thing that only eats losers",
+    "image": "images/84-2.webp",
+    "wiki": "https://nv2.fandom.com/wiki/84-2",
+    "imageSource": "https://nv2.fandom.com/wiki/File:84-2.png"
+  },
+  "000424": {
+    "name": "nowhere to run",
+    "image": "images/84-3.webp",
+    "wiki": "https://nv2.fandom.com/wiki/84-3",
+    "imageSource": "https://nv2.fandom.com/wiki/File:84-3.png"
+  },
+  "000425": {
+    "name": "moving sidewalk.. of death!",
+    "image": "images/84-4.webp",
+    "wiki": "https://nv2.fandom.com/wiki/84-4",
+    "imageSource": "https://nv2.fandom.com/wiki/File:84-4.png"
+  },
+  "000426": {
+    "name": "evac",
+    "image": "images/85-0.webp",
+    "wiki": "https://nv2.fandom.com/wiki/85-0",
+    "imageSource": "https://nv2.fandom.com/wiki/File:85-0.png"
+  },
+  "000427": {
+    "name": "slow gun",
+    "image": "images/85-1.webp",
+    "wiki": "https://nv2.fandom.com/wiki/85-1",
+    "imageSource": "https://nv2.fandom.com/wiki/File:85-1.png"
+  },
+  "000428": {
+    "name": "superliminal tiny",
+    "image": "images/85-2.webp",
+    "wiki": "https://nv2.fandom.com/wiki/85-2",
+    "imageSource": "https://nv2.fandom.com/wiki/File:85-2.png"
+  },
+  "000429": {
+    "name": "slow going",
+    "image": "images/85-3.webp",
+    "wiki": "https://nv2.fandom.com/wiki/85-3",
+    "imageSource": "https://nv2.fandom.com/wiki/File:85-3.png"
+  },
+  "000430": {
+    "name": "south central processing",
+    "image": "images/85-4.webp",
+    "wiki": "https://nv2.fandom.com/wiki/85-4",
+    "imageSource": "https://nv2.fandom.com/wiki/File:85-4.png"
+  },
+  "000431": {
+    "name": "bypass",
+    "image": "images/86-0.webp",
+    "wiki": "https://nv2.fandom.com/wiki/86-0",
+    "imageSource": "https://nv2.fandom.com/wiki/File:86-0.png"
+  },
+  "000432": {
+    "name": "the wiggle",
+    "image": "images/86-1.webp",
+    "wiki": "https://nv2.fandom.com/wiki/86-1",
+    "imageSource": "https://nv2.fandom.com/wiki/File:86-1.png"
+  },
+  "000433": {
+    "name": "the squigglies",
+    "image": "images/86-2.webp",
+    "wiki": "https://nv2.fandom.com/wiki/86-2",
+    "imageSource": "https://nv2.fandom.com/wiki/File:86-2.png"
+  },
+  "000434": {
+    "name": "astonishingly sane",
+    "image": "images/86-3.webp",
+    "wiki": "https://nv2.fandom.com/wiki/86-3",
+    "imageSource": "https://nv2.fandom.com/wiki/File:86-3.png"
+  },
+  "000435": {
+    "name": "superliminal 6",
+    "image": "images/86-4.webp",
+    "wiki": "https://nv2.fandom.com/wiki/86-4",
+    "imageSource": "https://nv2.fandom.com/wiki/File:86-4.png"
+  },
+  "000436": {
+    "name": "zeb rah",
+    "image": "images/87-0.webp",
+    "wiki": "https://nv2.fandom.com/wiki/87-0",
+    "imageSource": "https://nv2.fandom.com/wiki/File:87-0.png"
+  },
+  "000437": {
+    "name": "good as gold",
+    "image": "images/87-1.webp",
+    "wiki": "https://nv2.fandom.com/wiki/87-1",
+    "imageSource": "https://nv2.fandom.com/wiki/File:87-1.png"
+  },
+  "000438": {
+    "name": "stronghold",
+    "image": "images/87-2.webp",
+    "wiki": "https://nv2.fandom.com/wiki/87-2",
+    "imageSource": "https://nv2.fandom.com/wiki/File:87-2.png"
+  },
+  "000439": {
+    "name": "blern!",
+    "image": "images/87-3.webp",
+    "wiki": "https://nv2.fandom.com/wiki/87-3",
+    "imageSource": "https://nv2.fandom.com/wiki/File:87-3.png"
+  },
+  "000440": {
+    "name": "DO NOT WANT",
+    "image": "images/87-4.webp",
+    "wiki": "https://nv2.fandom.com/wiki/87-4",
+    "imageSource": "https://nv2.fandom.com/wiki/File:87-4.png"
+  },
+  "000441": {
+    "name": "stitch n bitch",
+    "image": "images/88-0.webp",
+    "wiki": "https://nv2.fandom.com/wiki/88-0",
+    "imageSource": "https://nv2.fandom.com/wiki/File:88-0.png"
+  },
+  "000442": {
+    "name": "soar",
+    "image": "images/88-1.webp",
+    "wiki": "https://nv2.fandom.com/wiki/88-1",
+    "imageSource": "https://nv2.fandom.com/wiki/File:88-1.png"
+  },
+  "000443": {
+    "name": "what does it mean if your spirit animal is a skeletal fish?",
+    "image": "images/88-2.webp",
+    "wiki": "https://nv2.fandom.com/wiki/88-2",
+    "imageSource": "https://nv2.fandom.com/wiki/File:88-2.png"
+  },
+  "000444": {
+    "name": "cache",
+    "image": "images/88-3.webp",
+    "wiki": "https://nv2.fandom.com/wiki/88-3",
+    "imageSource": "https://nv2.fandom.com/wiki/File:88-3.png"
+  },
+  "000445": {
+    "name": "t minus 2",
+    "image": "images/88-4.webp",
+    "wiki": "https://nv2.fandom.com/wiki/88-4",
+    "imageSource": "https://nv2.fandom.com/wiki/File:88-4.png"
+  },
+  "000446": {
+    "name": "trickety boom",
+    "image": "images/89-0.webp",
+    "wiki": "https://nv2.fandom.com/wiki/89-0",
+    "imageSource": "https://nv2.fandom.com/wiki/File:89-0.png"
+  },
+  "000447": {
+    "name": "biphase edit",
+    "image": "images/89-1.webp",
+    "wiki": "https://nv2.fandom.com/wiki/89-1",
+    "imageSource": "https://nv2.fandom.com/wiki/File:89-1.png"
+  },
+  "000448": {
+    "name": "snatch and grab",
+    "image": "images/89-2.webp",
+    "wiki": "https://nv2.fandom.com/wiki/89-2",
+    "imageSource": "https://nv2.fandom.com/wiki/File:89-2.png"
+  },
+  "000449": {
+    "name": "the guidelines",
+    "image": "images/89-3.webp",
+    "wiki": "https://nv2.fandom.com/wiki/89-3",
+    "imageSource": "https://nv2.fandom.com/wiki/File:89-3.png"
+  },
+  "000450": {
+    "name": "losing your mined",
+    "image": "images/89-4.webp",
+    "wiki": "https://nv2.fandom.com/wiki/89-4",
+    "imageSource": "https://nv2.fandom.com/wiki/File:89-4.png"
+  },
+  "000451": {
+    "name": "avoidance tactic",
+    "image": "images/90-0.webp",
+    "wiki": "https://nv2.fandom.com/wiki/90-0",
+    "imageSource": "https://nv2.fandom.com/wiki/File:90-0.png"
+  },
+  "000452": {
+    "name": "gotcha",
+    "image": "images/90-1.webp",
+    "wiki": "https://nv2.fandom.com/wiki/90-1",
+    "imageSource": "https://nv2.fandom.com/wiki/File:90-1.png"
+  },
+  "000453": {
+    "name": "elevation",
+    "image": "images/90-2.webp",
+    "wiki": "https://nv2.fandom.com/wiki/90-2",
+    "imageSource": "https://nv2.fandom.com/wiki/File:90-2.png"
+  },
+  "000454": {
+    "name": "meerschaum",
+    "image": "images/90-3.webp",
+    "wiki": "https://nv2.fandom.com/wiki/90-3",
+    "imageSource": "https://nv2.fandom.com/wiki/File:90-3.png"
+  },
+  "000455": {
+    "name": "mugent",
+    "image": "images/90-4.webp",
+    "wiki": "https://nv2.fandom.com/wiki/90-4",
+    "imageSource": "https://nv2.fandom.com/wiki/File:90-4.png"
+  },
+  "000456": {
+    "name": "golgi apparatchik",
+    "image": "images/91-0.webp",
+    "wiki": "https://nv2.fandom.com/wiki/91-0",
+    "imageSource": "https://nv2.fandom.com/wiki/File:91-0.png"
+  },
+  "000457": {
+    "name": "hanging gardens",
+    "image": "images/91-1.webp",
+    "wiki": "https://nv2.fandom.com/wiki/91-1",
+    "imageSource": "https://nv2.fandom.com/wiki/File:91-1.png"
+  },
+  "000458": {
+    "name": "O my",
+    "image": "images/91-2.webp",
+    "wiki": "https://nv2.fandom.com/wiki/91-2",
+    "imageSource": "https://nv2.fandom.com/wiki/File:91-2.png"
+  },
+  "000459": {
+    "name": "grudge match",
+    "image": "images/91-3.webp",
+    "wiki": "https://nv2.fandom.com/wiki/91-3",
+    "imageSource": "https://nv2.fandom.com/wiki/File:91-3.png"
+  },
+  "000460": {
+    "name": "exit strategy A",
+    "image": "images/91-4.webp",
+    "wiki": "https://nv2.fandom.com/wiki/91-4",
+    "imageSource": "https://nv2.fandom.com/wiki/File:91-4.png"
+  },
+  "000461": {
+    "name": "squarely",
+    "image": "images/92-0.webp",
+    "wiki": "https://nv2.fandom.com/wiki/92-0",
+    "imageSource": "https://nv2.fandom.com/wiki/File:92-0.png"
+  },
+  "000462": {
+    "name": "maas",
+    "image": "images/92-1.webp",
+    "wiki": "https://nv2.fandom.com/wiki/92-1",
+    "imageSource": "https://nv2.fandom.com/wiki/File:92-1.png"
+  },
+  "000463": {
+    "name": "like the circles that you find in the windmills of your mind",
+    "image": "images/92-2.webp",
+    "wiki": "https://nv2.fandom.com/wiki/92-2",
+    "imageSource": "https://nv2.fandom.com/wiki/File:92-2.png"
+  },
+  "000464": {
+    "name": "ninja turtle",
+    "image": "images/92-3.webp",
+    "wiki": "https://nv2.fandom.com/wiki/92-3",
+    "imageSource": "https://nv2.fandom.com/wiki/File:92-3.png"
+  },
+  "000465": {
+    "name": "mizzen master",
+    "image": "images/92-4.webp",
+    "wiki": "https://nv2.fandom.com/wiki/92-4",
+    "imageSource": "https://nv2.fandom.com/wiki/File:92-4.png"
+  },
+  "000466": {
+    "name": "steeple chaste",
+    "image": "images/93-0.webp",
+    "wiki": "https://nv2.fandom.com/wiki/93-0",
+    "imageSource": "https://nv2.fandom.com/wiki/File:93-0.png"
+  },
+  "000467": {
+    "name": "evac 2",
+    "image": "images/93-1.webp",
+    "wiki": "https://nv2.fandom.com/wiki/93-1",
+    "imageSource": "https://nv2.fandom.com/wiki/File:93-1.png"
+  },
+  "000468": {
+    "name": "future imperfect",
+    "image": "images/93-2.webp",
+    "wiki": "https://nv2.fandom.com/wiki/93-2",
+    "imageSource": "https://nv2.fandom.com/wiki/File:93-2.png"
+  },
+  "000469": {
+    "name": "enigma machine",
+    "image": "images/93-3.webp",
+    "wiki": "https://nv2.fandom.com/wiki/93-3",
+    "imageSource": "https://nv2.fandom.com/wiki/File:93-3.png"
+  },
+  "000470": {
+    "name": "chaos practice",
+    "image": "images/93-4.webp",
+    "wiki": "https://nv2.fandom.com/wiki/93-4",
+    "imageSource": "https://nv2.fandom.com/wiki/File:93-4.png"
+  },
+  "000471": {
+    "name": "room full of gold",
+    "image": "images/94-0.webp",
+    "wiki": "https://nv2.fandom.com/wiki/94-0",
+    "imageSource": "https://nv2.fandom.com/wiki/File:94-0.png"
+  },
+  "000472": {
+    "name": "around the world in 80 ways",
+    "image": "images/94-1.webp",
+    "wiki": "https://nv2.fandom.com/wiki/94-1",
+    "imageSource": "https://nv2.fandom.com/wiki/File:94-1.png"
+  },
+  "000473": {
+    "name": "short cutter",
+    "image": "images/94-2.webp",
+    "wiki": "https://nv2.fandom.com/wiki/94-2",
+    "imageSource": "https://nv2.fandom.com/wiki/File:94-2.png"
+  },
+  "000474": {
+    "name": "neural net",
+    "image": "images/94-3.webp",
+    "wiki": "https://nv2.fandom.com/wiki/94-3",
+    "imageSource": "https://nv2.fandom.com/wiki/File:94-3.png"
+  },
+  "000475": {
+    "name": "val-n-tine",
+    "image": "images/94-4.webp",
+    "wiki": "https://nv2.fandom.com/wiki/94-4",
+    "imageSource": "https://nv2.fandom.com/wiki/File:94-4.png"
+  },
+  "000476": {
+    "name": "risk",
+    "image": "images/95-0.webp",
+    "wiki": "https://nv2.fandom.com/wiki/95-0",
+    "imageSource": "https://nv2.fandom.com/wiki/File:95-0.png"
+  },
+  "000477": {
+    "name": "the second-last straw",
+    "image": "images/95-1.webp",
+    "wiki": "https://nv2.fandom.com/wiki/95-1",
+    "imageSource": "https://nv2.fandom.com/wiki/File:95-1.png"
+  },
+  "000478": {
+    "name": "preciser",
+    "image": "images/95-2.webp",
+    "wiki": "https://nv2.fandom.com/wiki/95-2",
+    "imageSource": "https://nv2.fandom.com/wiki/File:95-2.png"
+  },
+  "000479": {
+    "name": "twitch city",
+    "image": "images/95-3.webp",
+    "wiki": "https://nv2.fandom.com/wiki/95-3",
+    "imageSource": "https://nv2.fandom.com/wiki/File:95-3.png"
+  },
+  "000480": {
+    "name": "worm hell",
+    "image": "images/95-4.webp",
+    "wiki": "https://nv2.fandom.com/wiki/95-4",
+    "imageSource": "https://nv2.fandom.com/wiki/File:95-4.png"
+  },
+  "000481": {
+    "name": "phase shifter",
+    "image": "images/96-0.webp",
+    "wiki": "https://nv2.fandom.com/wiki/96-0",
+    "imageSource": "https://nv2.fandom.com/wiki/File:96-0.png"
+  },
+  "000482": {
+    "name": "walljump masterclass",
+    "image": "images/96-1.webp",
+    "wiki": "https://nv2.fandom.com/wiki/96-1",
+    "imageSource": "https://nv2.fandom.com/wiki/File:96-1.png"
+  },
+  "000483": {
+    "name": "elementary nguin",
+    "image": "images/96-2.webp",
+    "wiki": "https://nv2.fandom.com/wiki/96-2",
+    "imageSource": "https://nv2.fandom.com/wiki/File:96-2.png"
+  },
+  "000484": {
+    "name": "pace yourself",
+    "image": "images/96-3.webp",
+    "wiki": "https://nv2.fandom.com/wiki/96-3",
+    "imageSource": "https://nv2.fandom.com/wiki/File:96-3.png"
+  },
+  "000485": {
+    "name": "unsafe at any speed",
+    "image": "images/96-4.webp",
+    "wiki": "https://nv2.fandom.com/wiki/96-4",
+    "imageSource": "https://nv2.fandom.com/wiki/File:96-4.png"
+  },
+  "000486": {
+    "name": "aliased fireball",
+    "image": "images/97-0.webp",
+    "wiki": "https://nv2.fandom.com/wiki/97-0",
+    "imageSource": "https://nv2.fandom.com/wiki/File:97-0.png"
+  },
+  "000487": {
+    "name": "vertizontal",
+    "image": "images/97-1.webp",
+    "wiki": "https://nv2.fandom.com/wiki/97-1",
+    "imageSource": "https://nv2.fandom.com/wiki/File:97-1.png"
+  },
+  "000488": {
+    "name": "crag",
+    "image": "images/97-2.webp",
+    "wiki": "https://nv2.fandom.com/wiki/97-2",
+    "imageSource": "https://nv2.fandom.com/wiki/File:97-2.png"
+  },
+  "000489": {
+    "name": "une pipe",
+    "image": "images/97-3.webp",
+    "wiki": "https://nv2.fandom.com/wiki/97-3",
+    "imageSource": "https://nv2.fandom.com/wiki/File:97-3.png"
+  },
+  "000490": {
+    "name": "t minus 3",
+    "image": "images/97-4.webp",
+    "wiki": "https://nv2.fandom.com/wiki/97-4",
+    "imageSource": "https://nv2.fandom.com/wiki/File:97-4.png"
+  },
+  "000491": {
+    "name": "champloo fortress",
+    "image": "images/98-0.webp",
+    "wiki": "https://nv2.fandom.com/wiki/98-0",
+    "imageSource": "https://nv2.fandom.com/wiki/File:98-0.png"
+  },
+  "000492": {
+    "name": "triple threat",
+    "image": "images/98-1.webp",
+    "wiki": "https://nv2.fandom.com/wiki/98-1",
+    "imageSource": "https://nv2.fandom.com/wiki/File:98-1.png"
+  },
+  "000493": {
+    "name": "n-key kong",
+    "image": "images/98-2.webp",
+    "wiki": "https://nv2.fandom.com/wiki/98-2",
+    "imageSource": "https://nv2.fandom.com/wiki/File:98-2.png"
+  },
+  "000494": {
+    "name": "invert sugar B",
+    "image": "images/98-3.webp",
+    "wiki": "https://nv2.fandom.com/wiki/98-3",
+    "imageSource": "https://nv2.fandom.com/wiki/File:98-3.png"
+  },
+  "000495": {
+    "name": "cubish",
+    "image": "images/98-4.webp",
+    "wiki": "https://nv2.fandom.com/wiki/98-4",
+    "imageSource": "https://nv2.fandom.com/wiki/File:98-4.png"
+  },
+  "000496": {
+    "name": "carbonite",
+    "image": "images/99-0.webp",
+    "wiki": "https://nv2.fandom.com/wiki/99-0",
+    "imageSource": "https://nv2.fandom.com/wiki/File:99-0.png"
+  },
+  "000497": {
+    "name": "a blaffair to rememblack",
+    "image": "images/99-1.webp",
+    "wiki": "https://nv2.fandom.com/wiki/99-1",
+    "imageSource": "https://nv2.fandom.com/wiki/File:99-1.png"
+  },
+  "000498": {
+    "name": "band of gold alt",
+    "image": "images/99-2.webp",
+    "wiki": "https://nv2.fandom.com/wiki/99-2",
+    "imageSource": "https://nv2.fandom.com/wiki/File:99-2.png"
+  },
+  "000499": {
+    "name": "after vous",
+    "image": "images/99-3.webp",
+    "wiki": "https://nv2.fandom.com/wiki/99-3",
+    "imageSource": "https://nv2.fandom.com/wiki/File:99-3.png"
+  },
+  "000500": {
+    "name": "slippery trip hazard",
+    "image": "images/99-4.webp",
+    "wiki": "https://nv2.fandom.com/wiki/99-4",
+    "imageSource": "https://nv2.fandom.com/wiki/File:99-4.png"
+  },
+  "000501": {
+    "name": "Shadow of Khafre",
+    "image": "images/a0-0.webp",
+    "wiki": "https://nv2.fandom.com/wiki/a0-0",
+    "imageSource": "https://nv2.fandom.com/wiki/File:A0-0.png"
+  },
+  "000502": {
+    "name": "Waist Of Time",
+    "image": "images/a0-1.webp",
+    "wiki": "https://nv2.fandom.com/wiki/a0-1",
+    "imageSource": "https://nv2.fandom.com/wiki/File:A0-1.png"
+  },
+  "000503": {
+    "name": "Eloppp",
+    "image": "images/a0-2.webp",
+    "wiki": "https://nv2.fandom.com/wiki/a0-2",
+    "imageSource": "https://nv2.fandom.com/wiki/File:A0-2.png"
+  },
+  "000504": {
+    "name": "Phantom Menace",
+    "image": "images/a0-3.webp",
+    "wiki": "https://nv2.fandom.com/wiki/a0-3",
+    "imageSource": "https://nv2.fandom.com/wiki/File:A0-3.png"
+  },
+  "000505": {
+    "name": "Rattlesnake",
+    "image": "images/a0-4.webp",
+    "wiki": "https://nv2.fandom.com/wiki/a0-4",
+    "imageSource": "https://nv2.fandom.com/wiki/File:A0-4.png"
+  },
+  "000506": {
+    "name": "Quirkscrew",
+    "image": "images/a1-0.webp",
+    "wiki": "https://nv2.fandom.com/wiki/a1-0",
+    "imageSource": "https://nv2.fandom.com/wiki/File:A1-0.png"
+  },
+  "000507": {
+    "name": "Twilight at Carbon Lake",
+    "image": "images/a1-1.webp",
+    "wiki": "https://nv2.fandom.com/wiki/a1-1",
+    "imageSource": "https://nv2.fandom.com/wiki/File:A1-1.png"
+  },
+  "000508": {
+    "name": "Slacker Versus Hacker",
+    "image": "images/a1-2.webp",
+    "wiki": "https://nv2.fandom.com/wiki/a1-2",
+    "imageSource": "https://nv2.fandom.com/wiki/File:A1-2.png"
+  },
+  "000509": {
+    "name": "matador trajectory",
+    "image": "images/a1-3.webp",
+    "wiki": "https://nv2.fandom.com/wiki/a1-3",
+    "imageSource": "https://nv2.fandom.com/wiki/File:A1-3.png"
+  },
+  "000510": {
+    "name": "Metanation",
+    "image": "images/a1-4.webp",
+    "wiki": "https://nv2.fandom.com/wiki/a1-4",
+    "imageSource": "https://nv2.fandom.com/wiki/File:A1-4.png"
+  },
+  "000511": {
+    "name": "Exit That's Mine",
+    "image": "images/a2-0.webp",
+    "wiki": "https://nv2.fandom.com/wiki/a2-0",
+    "imageSource": "https://nv2.fandom.com/wiki/File:A2-0.png"
+  },
+  "000512": {
+    "name": "down, down... UP!",
+    "image": "images/a2-1.webp",
+    "wiki": "https://nv2.fandom.com/wiki/a2-1",
+    "imageSource": "https://nv2.fandom.com/wiki/File:A2-1.png"
+  },
+  "000513": {
+    "name": "TACTICS TO PRACTICE",
+    "image": "images/a2-2.webp",
+    "wiki": "https://nv2.fandom.com/wiki/a2-2",
+    "imageSource": "https://nv2.fandom.com/wiki/File:02-2-0.png"
+  },
+  "000514": {
+    "name": "Last True Amateur Series: Ride The Lights",
+    "image": "images/a2-3.webp",
+    "wiki": "https://nv2.fandom.com/wiki/a2-3",
+    "imageSource": "https://nv2.fandom.com/wiki/File:A2-3.png"
+  },
+  "000515": {
+    "name": "Prisoner Exchange",
+    "image": "images/a2-4.webp",
+    "wiki": "https://nv2.fandom.com/wiki/a2-4",
+    "imageSource": "https://nv2.fandom.com/wiki/File:A2-4.png"
+  },
+  "000516": {
+    "name": "Chert",
+    "image": "images/a3-0.webp",
+    "wiki": "https://nv2.fandom.com/wiki/a3-0",
+    "imageSource": "https://nv2.fandom.com/wiki/File:A3-0.png"
+  },
+  "000517": {
+    "name": "drearily",
+    "image": "images/a3-1.webp",
+    "wiki": "https://nv2.fandom.com/wiki/a3-1",
+    "imageSource": "https://nv2.fandom.com/wiki/File:A3-1.png"
+  },
+  "000518": {
+    "name": "In the Palm of a Sewer Spirit.",
+    "image": "images/a3-2.webp",
+    "wiki": "https://nv2.fandom.com/wiki/a3-2",
+    "imageSource": "https://nv2.fandom.com/wiki/File:A3-2.png"
+  },
+  "000519": {
+    "name": "zero potential",
+    "image": "images/a3-3.webp",
+    "wiki": "https://nv2.fandom.com/wiki/a3-3",
+    "imageSource": "https://nv2.fandom.com/wiki/File:A3-3.png"
+  },
+  "000520": {
+    "name": "plue",
+    "image": "images/a3-4.webp",
+    "wiki": "https://nv2.fandom.com/wiki/a3-4",
+    "imageSource": "https://nv2.fandom.com/wiki/File:A3-4.png"
+  },
+  "000521": {
+    "name": "Simplistic III",
+    "image": "images/a4-0.webp",
+    "wiki": "https://nv2.fandom.com/wiki/a4-0",
+    "imageSource": "https://nv2.fandom.com/wiki/File:A4-0.png"
+  },
+  "000522": {
+    "name": "Superliminal 14",
+    "image": "images/a4-1.webp",
+    "wiki": "https://nv2.fandom.com/wiki/a4-1",
+    "imageSource": "https://nv2.fandom.com/wiki/File:A4-1.png"
+  },
+  "000523": {
+    "name": "(Untitled)",
+    "image": "images/a4-2.webp",
+    "wiki": "https://nv2.fandom.com/wiki/a4-2",
+    "imageSource": "https://nv2.fandom.com/wiki/File:A4-2.png"
+  },
+  "000524": {
+    "name": "More Squares",
+    "image": "images/a4-3.webp",
+    "wiki": "https://nv2.fandom.com/wiki/a4-3",
+    "imageSource": "https://nv2.fandom.com/wiki/File:A4-3.png"
+  },
+  "000525": {
+    "name": "Stomach",
+    "image": "images/a4-4.webp",
+    "wiki": "https://nv2.fandom.com/wiki/a4-4",
+    "imageSource": "https://nv2.fandom.com/wiki/File:A4-4.png"
+  },
+  "000526": {
+    "name": "Wake",
+    "image": "images/a5-0.webp",
+    "wiki": "https://nv2.fandom.com/wiki/a5-0",
+    "imageSource": "https://nv2.fandom.com/wiki/File:A5-0.png"
+  },
+  "000527": {
+    "name": "Drone Weddings",
+    "image": "images/a5-1.webp",
+    "wiki": "https://nv2.fandom.com/wiki/a5-1",
+    "imageSource": "https://nv2.fandom.com/wiki/File:A5-1.png"
+  },
+  "000528": {
+    "name": "Shrarhreeat",
+    "image": "images/a5-2.webp",
+    "wiki": "https://nv2.fandom.com/wiki/a5-2",
+    "imageSource": "https://nv2.fandom.com/wiki/File:A5-2.png"
+  },
+  "000529": {
+    "name": "@_@",
+    "image": "images/a5-3.webp",
+    "wiki": "https://nv2.fandom.com/wiki/a5-3",
+    "imageSource": "https://nv2.fandom.com/wiki/File:A5-3.png"
+  },
+  "000530": {
+    "name": "Pillars of Heaven",
+    "image": "images/a5-4.webp",
+    "wiki": "https://nv2.fandom.com/wiki/a5-4",
+    "imageSource": "https://nv2.fandom.com/wiki/File:A5-4.png"
+  },
+  "000531": {
+    "name": "The Yellow Brickroad TO HELL!",
+    "image": "images/a6-0.webp",
+    "wiki": "https://nv2.fandom.com/wiki/a6-0",
+    "imageSource": "https://nv2.fandom.com/wiki/File:A6-0.png"
+  },
+  "000532": {
+    "name": "Hexagigantes",
+    "image": "images/a6-1.webp",
+    "wiki": "https://nv2.fandom.com/wiki/a6-1",
+    "imageSource": "https://nv2.fandom.com/wiki/File:A6-1.png"
+  },
+  "000533": {
+    "name": "Grandiloquency",
+    "image": "images/a6-2.webp",
+    "wiki": "https://nv2.fandom.com/wiki/a6-2",
+    "imageSource": "https://nv2.fandom.com/wiki/File:A6-2.png"
+  },
+  "000534": {
+    "name": "Ape Awes Mom",
+    "image": "images/a6-3.webp",
+    "wiki": "https://nv2.fandom.com/wiki/a6-3",
+    "imageSource": "https://nv2.fandom.com/wiki/File:A6-3.png"
+  },
+  "000535": {
+    "name": "Speak",
+    "image": "images/a6-4.webp",
+    "wiki": "https://nv2.fandom.com/wiki/a6-4",
+    "imageSource": "https://nv2.fandom.com/wiki/File:A6-4.png"
+  },
+  "000536": {
+    "name": "Ex Nihilo",
+    "image": "images/a7-0.webp",
+    "wiki": "https://nv2.fandom.com/wiki/a7-0",
+    "imageSource": "https://nv2.fandom.com/wiki/File:A7-0.png"
+  },
+  "000537": {
+    "name": "In a Foreign Cave",
+    "image": "images/a7-1.webp",
+    "wiki": "https://nv2.fandom.com/wiki/a7-1",
+    "imageSource": "https://nv2.fandom.com/wiki/File:A7-1.png"
+  },
+  "000538": {
+    "name": "snakewire",
+    "image": "images/a7-2.webp",
+    "wiki": "https://nv2.fandom.com/wiki/a7-2",
+    "imageSource": "https://nv2.fandom.com/wiki/File:A7-2.png"
+  },
+  "000539": {
+    "name": "Power",
+    "image": "images/a7-3.webp",
+    "wiki": "https://nv2.fandom.com/wiki/a7-3",
+    "imageSource": "https://nv2.fandom.com/wiki/File:A7-3.png"
+  },
+  "000540": {
+    "name": "Façade Away",
+    "image": "images/a7-4.webp",
+    "wiki": "https://nv2.fandom.com/wiki/a7-4",
+    "imageSource": "https://nv2.fandom.com/wiki/File:A7-4.png"
+  },
+  "000541": {
+    "name": "Lionheart",
+    "image": "images/a8-0.webp",
+    "wiki": "https://nv2.fandom.com/wiki/a8-0",
+    "imageSource": "https://nv2.fandom.com/wiki/File:A8-0.png"
+  },
+  "000542": {
+    "name": "Cheaters Always Prosper",
+    "image": "images/a8-1.webp",
+    "wiki": "https://nv2.fandom.com/wiki/a8-1",
+    "imageSource": "https://nv2.fandom.com/wiki/File:A8-1.png"
+  },
+  "000543": {
+    "name": "Pirates, Knights and Vikings",
+    "image": "images/a8-2.webp",
+    "wiki": "https://nv2.fandom.com/wiki/a8-2",
+    "imageSource": "https://nv2.fandom.com/wiki/File:A8-2.png"
+  },
+  "000544": {
+    "name": "Templ 505",
+    "image": "images/a8-3.webp",
+    "wiki": "https://nv2.fandom.com/wiki/a8-3",
+    "imageSource": "https://nv2.fandom.com/wiki/File:A8-3.png"
+  },
+  "000545": {
+    "name": "Psychotic Mined Games",
+    "image": "images/a8-4.webp",
+    "wiki": "https://nv2.fandom.com/wiki/a8-4",
+    "imageSource": "https://nv2.fandom.com/wiki/File:A8-4.png"
+  },
+  "000546": {
+    "name": "Wicker City",
+    "image": "images/a9-0.webp",
+    "wiki": "https://nv2.fandom.com/wiki/a9-0",
+    "imageSource": "https://nv2.fandom.com/wiki/File:A9-0.png"
+  },
+  "000547": {
+    "name": "Pirate Pete",
+    "image": "images/a9-1.webp",
+    "wiki": "https://nv2.fandom.com/wiki/a9-1",
+    "imageSource": "https://nv2.fandom.com/wiki/File:A9-1.png"
+  },
+  "000548": {
+    "name": "ultimate enema",
+    "image": "images/a9-2.webp",
+    "wiki": "https://nv2.fandom.com/wiki/a9-2",
+    "imageSource": "https://nv2.fandom.com/wiki/File:A9-2.png"
+  },
+  "000549": {
+    "name": "Misdirection",
+    "image": "images/a9-3.webp",
+    "wiki": "https://nv2.fandom.com/wiki/a9-3",
+    "imageSource": "https://nv2.fandom.com/wiki/File:A9-3.png"
+  },
+  "000550": {
+    "name": "Tantamount to Paramountcy",
+    "image": "images/a9-4.webp",
+    "wiki": "https://nv2.fandom.com/wiki/a9-4",
+    "imageSource": "https://nv2.fandom.com/wiki/File:A9-4.png"
+  },
+  "000551": {
+    "name": "Diamond",
+    "image": "images/b0-0.webp",
+    "wiki": "https://nv2.fandom.com/wiki/b0-0",
+    "imageSource": "https://nv2.fandom.com/wiki/File:B0-0.png"
+  },
+  "000552": {
+    "name": "Revolution 9 And A Half",
+    "image": "images/b0-1.webp",
+    "wiki": "https://nv2.fandom.com/wiki/b0-1",
+    "imageSource": "https://nv2.fandom.com/wiki/File:B0-1.png"
+  },
+  "000553": {
+    "name": "Pipes",
+    "image": "images/b0-2.webp",
+    "wiki": "https://nv2.fandom.com/wiki/b0-2",
+    "imageSource": "https://nv2.fandom.com/wiki/File:B0-2.png"
+  },
+  "000554": {
+    "name": "Loose",
+    "image": "images/b0-3.webp",
+    "wiki": "https://nv2.fandom.com/wiki/b0-3",
+    "imageSource": "https://nv2.fandom.com/wiki/File:B0-3.png"
+  },
+  "000555": {
+    "name": "White Noise/Black Silence",
+    "image": "images/b0-4.webp",
+    "wiki": "https://nv2.fandom.com/wiki/b0-4",
+    "imageSource": "https://nv2.fandom.com/wiki/File:B0-4.png"
+  },
+  "000556": {
+    "name": "krystallos eis (2-0)",
+    "image": "images/b1-0.webp",
+    "wiki": "https://nv2.fandom.com/wiki/b1-0",
+    "imageSource": "https://nv2.fandom.com/wiki/File:B1-0.png"
+  },
+  "000557": {
+    "name": "Shard Planet",
+    "image": "images/b1-1.webp",
+    "wiki": "https://nv2.fandom.com/wiki/b1-1",
+    "imageSource": "https://nv2.fandom.com/wiki/File:B1-1.png"
+  },
+  "000558": {
+    "name": "Metro",
+    "image": "images/b1-2.webp",
+    "wiki": "https://nv2.fandom.com/wiki/b1-2",
+    "imageSource": "https://nv2.fandom.com/wiki/File:B1-2.png"
+  },
+  "000559": {
+    "name": "Run The Red Light.",
+    "image": "images/b1-3.webp",
+    "wiki": "https://nv2.fandom.com/wiki/b1-3",
+    "imageSource": "https://nv2.fandom.com/wiki/File:B1-3.png"
+  },
+  "000560": {
+    "name": "Tethered",
+    "image": "images/b1-4.webp",
+    "wiki": "https://nv2.fandom.com/wiki/b1-4",
+    "imageSource": "https://nv2.fandom.com/wiki/File:B1-4.png"
+  },
+  "000561": {
+    "name": "A Wonder of Whether Anything is Perfect; What Happens Next.",
+    "image": "images/b2-0.webp",
+    "wiki": "https://nv2.fandom.com/wiki/b2-0",
+    "imageSource": "https://nv2.fandom.com/wiki/File:B2-0.png"
+  },
+  "000562": {
+    "name": "Slow Night, So Long",
+    "image": "images/b2-1.webp",
+    "wiki": "https://nv2.fandom.com/wiki/b2-1",
+    "imageSource": "https://nv2.fandom.com/wiki/File:B2-1.png"
+  },
+  "000563": {
+    "name": "The Keys Forgotten",
+    "image": "images/b2-2.webp",
+    "wiki": "https://nv2.fandom.com/wiki/b2-2",
+    "imageSource": "https://nv2.fandom.com/wiki/File:B2-2.png"
+  },
+  "000564": {
+    "name": "The Contender",
+    "image": "images/b2-3.webp",
+    "wiki": "https://nv2.fandom.com/wiki/b2-3",
+    "imageSource": "https://nv2.fandom.com/wiki/File:B2-3.png"
+  },
+  "000565": {
+    "name": "Stupid Questions",
+    "image": "images/b2-4.webp",
+    "wiki": "https://nv2.fandom.com/wiki/b2-4",
+    "imageSource": "https://nv2.fandom.com/wiki/File:B2-4.png"
+  },
+  "000566": {
+    "name": "Please Help Me",
+    "image": "images/b3-0.webp",
+    "wiki": "https://nv2.fandom.com/wiki/b3-0",
+    "imageSource": "https://nv2.fandom.com/wiki/File:B3-0.png"
+  },
+  "000567": {
+    "name": "Idle Contrast",
+    "image": "images/b3-1.webp",
+    "wiki": "https://nv2.fandom.com/wiki/b3-1",
+    "imageSource": "https://nv2.fandom.com/wiki/File:B3-1.png"
+  },
+  "000568": {
+    "name": "Cosette",
+    "image": "images/b3-2.webp",
+    "wiki": "https://nv2.fandom.com/wiki/b3-2",
+    "imageSource": "https://nv2.fandom.com/wiki/File:B3-2.png"
+  },
+  "000569": {
+    "name": "Splooge",
+    "image": "images/b3-3.webp",
+    "wiki": "https://nv2.fandom.com/wiki/b3-3",
+    "imageSource": "https://nv2.fandom.com/wiki/File:B3-3.png"
+  },
+  "000570": {
+    "name": "Dr Jotangles",
+    "image": "images/b3-4.webp",
+    "wiki": "https://nv2.fandom.com/wiki/b3-4",
+    "imageSource": "https://nv2.fandom.com/wiki/File:B3-4.png"
+  },
+  "000571": {
+    "name": "Glazz cave",
+    "image": "images/b4-0.webp",
+    "wiki": "https://nv2.fandom.com/wiki/b4-0",
+    "imageSource": "https://nv2.fandom.com/wiki/File:B4-0.png"
+  },
+  "000572": {
+    "name": "Maori Shrine / Where their Elder Spirits Rest",
+    "image": "images/b4-1.webp",
+    "wiki": "https://nv2.fandom.com/wiki/b4-1",
+    "imageSource": "https://nv2.fandom.com/wiki/File:B4-1.png"
+  },
+  "000573": {
+    "name": "Forgive Us Our Tresspassing",
+    "image": "images/b4-2.webp",
+    "wiki": "https://nv2.fandom.com/wiki/b4-2",
+    "imageSource": "https://nv2.fandom.com/wiki/File:B4-2.png"
+  },
+  "000574": {
+    "name": "VIII - Mental atmosphere",
+    "image": "images/b4-3.webp",
+    "wiki": "https://nv2.fandom.com/wiki/b4-3",
+    "imageSource": "https://nv2.fandom.com/wiki/File:B4-3.png"
+  },
+  "000575": {
+    "name": "Desperado",
+    "image": "images/b4-4.webp",
+    "wiki": "https://nv2.fandom.com/wiki/b4-4",
+    "imageSource": "https://nv2.fandom.com/wiki/File:B4-4.png"
+  },
+  "000576": {
+    "name": "You find yourself in an N level.",
+    "image": "images/b5-0.webp",
+    "wiki": "https://nv2.fandom.com/wiki/b5-0",
+    "imageSource": "https://nv2.fandom.com/wiki/File:B5-0.png"
+  },
+  "000577": {
+    "name": "lemonade",
+    "image": "images/b5-1.webp",
+    "wiki": "https://nv2.fandom.com/wiki/b5-1",
+    "imageSource": "https://nv2.fandom.com/wiki/File:B5-1.png"
+  },
+  "000578": {
+    "name": "Polar Bear Years",
+    "image": "images/b5-2.webp",
+    "wiki": "https://nv2.fandom.com/wiki/b5-2",
+    "imageSource": "https://nv2.fandom.com/wiki/File:B5-2.png"
+  },
+  "000579": {
+    "name": "Web",
+    "image": "images/b5-3.webp",
+    "wiki": "https://nv2.fandom.com/wiki/b5-3",
+    "imageSource": "https://nv2.fandom.com/wiki/File:B5-3.png"
+  },
+  "000580": {
+    "name": "Enterprise [Memoirs]",
+    "image": "images/b5-4.webp",
+    "wiki": "https://nv2.fandom.com/wiki/b5-4",
+    "imageSource": "https://nv2.fandom.com/wiki/File:B5-4.png"
+  },
+  "000581": {
+    "name": "The Trek Up",
+    "image": "images/b6-0.webp",
+    "wiki": "https://nv2.fandom.com/wiki/b6-0",
+    "imageSource": "https://nv2.fandom.com/wiki/File:B6-0.png"
+  },
+  "000582": {
+    "name": "Into Your Hideout",
+    "image": "images/b6-1.webp",
+    "wiki": "https://nv2.fandom.com/wiki/b6-1",
+    "imageSource": "https://nv2.fandom.com/wiki/File:B6-1.png"
+  },
+  "000583": {
+    "name": "Deadly Strand",
+    "image": "images/b6-2.webp",
+    "wiki": "https://nv2.fandom.com/wiki/b6-2",
+    "imageSource": "https://nv2.fandom.com/wiki/File:B6-2.png"
+  },
+  "000584": {
+    "name": "Why Does It Always Rain On Me!?",
+    "image": "images/b6-3.webp",
+    "wiki": "https://nv2.fandom.com/wiki/b6-3",
+    "imageSource": "https://nv2.fandom.com/wiki/File:B6-3.png"
+  },
+  "000585": {
+    "name": "Adventure Pipes",
+    "image": "images/b6-4.webp",
+    "wiki": "https://nv2.fandom.com/wiki/b6-4",
+    "imageSource": "https://nv2.fandom.com/wiki/File:B6-4.png"
+  },
+  "000586": {
+    "name": "Square Beach",
+    "image": "images/b7-0.webp",
+    "wiki": "https://nv2.fandom.com/wiki/b7-0",
+    "imageSource": "https://nv2.fandom.com/wiki/File:B7-0.png"
+  },
+  "000587": {
+    "name": "Falling To",
+    "image": "images/b7-1.webp",
+    "wiki": "https://nv2.fandom.com/wiki/b7-1",
+    "imageSource": "https://nv2.fandom.com/wiki/File:B7-1.png"
+  },
+  "000588": {
+    "name": "Message In The Motion",
+    "image": "images/b7-2.webp",
+    "wiki": "https://nv2.fandom.com/wiki/b7-2",
+    "imageSource": "https://nv2.fandom.com/wiki/File:B7-2.png"
+  },
+  "000589": {
+    "name": "blowing smoke",
+    "image": "images/b7-3.webp",
+    "wiki": "https://nv2.fandom.com/wiki/b7-3",
+    "imageSource": "https://nv2.fandom.com/wiki/File:B7-3.png"
+  },
+  "000590": {
+    "name": "I'm Antoni Gaudi, I'm Dead",
+    "image": "images/b7-4.webp",
+    "wiki": "https://nv2.fandom.com/wiki/b7-4",
+    "imageSource": "https://nv2.fandom.com/wiki/File:B7-4.png"
+  },
+  "000591": {
+    "name": "Like an ocean",
+    "image": "images/b8-0.webp",
+    "wiki": "https://nv2.fandom.com/wiki/b8-0",
+    "imageSource": "https://nv2.fandom.com/wiki/File:B8-0.png"
+  },
+  "000592": {
+    "name": "Inzaders",
+    "image": "images/b8-1.webp",
+    "wiki": "https://nv2.fandom.com/wiki/b8-1",
+    "imageSource": "https://nv2.fandom.com/wiki/File:B8-1.png"
+  },
+  "000593": {
+    "name": "pyramid, east face",
+    "image": "images/b8-2.webp",
+    "wiki": "https://nv2.fandom.com/wiki/b8-2",
+    "imageSource": "https://nv2.fandom.com/wiki/File:B8-2.png"
+  },
+  "000594": {
+    "name": "The Hotel Denouement",
+    "image": "images/b8-3.webp",
+    "wiki": "https://nv2.fandom.com/wiki/b8-3",
+    "imageSource": "https://nv2.fandom.com/wiki/File:B8-3.png"
+  },
+  "000595": {
+    "name": "Autumn In Silico",
+    "image": "images/b8-4.webp",
+    "wiki": "https://nv2.fandom.com/wiki/b8-4",
+    "imageSource": "https://nv2.fandom.com/wiki/File:B8-4.png"
+  },
+  "000596": {
+    "name": "At Peace in My Castle",
+    "image": "images/b9-0.webp",
+    "wiki": "https://nv2.fandom.com/wiki/b9-0",
+    "imageSource": "https://nv2.fandom.com/wiki/File:B9-0.png"
+  },
+  "000597": {
+    "name": "Deathstalker",
+    "image": "images/b9-1.webp",
+    "wiki": "https://nv2.fandom.com/wiki/b9-1",
+    "imageSource": "https://nv2.fandom.com/wiki/File:B9-1.png"
+  },
+  "000598": {
+    "name": "Consider Phlebas",
+    "image": "images/b9-2.webp",
+    "wiki": "https://nv2.fandom.com/wiki/b9-2",
+    "imageSource": "https://nv2.fandom.com/wiki/File:B9-2.png"
+  },
+  "000599": {
+    "name": "Thwumped Up",
+    "image": "images/b9-3.webp",
+    "wiki": "https://nv2.fandom.com/wiki/b9-3",
+    "imageSource": "https://nv2.fandom.com/wiki/File:B9-3.png"
+  },
+  "000600": {
+    "name": "Blue_Tetris Revival Series: 6311",
+    "image": "images/b9-4.webp",
+    "wiki": "https://nv2.fandom.com/wiki/b9-4",
+    "imageSource": "https://nv2.fandom.com/wiki/File:B9-4.png"
   }
 }

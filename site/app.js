@@ -92,11 +92,17 @@ function buildMetanetDataset(rows) {
     const entries = [...player.levels.values()];
     const zeroes = entries.filter((entry) => entry.place === 0).length;
     const points = entries.reduce((total, entry) => total + (entry.place >= 0 && entry.place <= 9 ? 10 - entry.place : 0), 0);
+    const placeCounts = Array(10).fill(0);
+    entries.forEach((entry) => {
+      if (Number.isInteger(entry.place) && entry.place >= 0 && entry.place < placeCounts.length) {
+        placeCounts[entry.place] += 1;
+      }
+    });
     const averagePlace = entries.length
       ? entries.reduce((total, entry) => total + entry.place, 0) / entries.length
       : null;
 
-    return { ...player, name, entries, boards: entries.length, zeroes, points, averagePlace };
+    return { ...player, name, entries, placeCounts, boards: entries.length, zeroes, points, averagePlace };
   });
 
   return { profiles, levelRecords };
@@ -354,7 +360,7 @@ function renderPlayer() {
     }
     return `<div class="profile-stat">${body}</div>`;
   };
-  const placeCounts = state.levelset === "user" ? renderPlaceHistogram(player.placeCounts) : "";
+  const placeCounts = renderPlaceHistogram(player.placeCounts);
 
   root.hidden = false;
   document.title = `${player.name} — Nv2 Leaderboards`;
