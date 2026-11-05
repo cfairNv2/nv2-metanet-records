@@ -6,8 +6,8 @@
   <meta name="theme-color" content="#aaaaaa">
   <meta name="description" content="NV2 player level records.">
   <title>Player Levels — Nv2 Leaderboards</title>
-  <link rel="stylesheet" href="styles.css?v=average-filter-switch">
-  <script src="app.js?v=average-filter-switch" defer></script>
+  <link rel="stylesheet" href="styles.css?v=user-leaderboards">
+  <script src="app.js?v=user-leaderboards" defer></script>
 </head>
 <body data-page="player-levels">
   <div class="page-shell">
@@ -18,6 +18,15 @@
         <button type="button" data-levelset="user" aria-pressed="false">User levels</button>
       </div>
     </header>
+    <form id="player-search-form" class="player-search" role="search">
+      <label class="visually-hidden" for="player-search-input">Search usernames</label>
+      <div class="player-search-box">
+        <input id="player-search-input" type="search" placeholder="Search username" autocomplete="off" aria-controls="player-search-results">
+        <button type="submit">Search</button>
+        <div id="player-search-results" class="player-search-results" role="listbox" hidden></div>
+      </div>
+      <span id="player-search-status" class="player-search-status" role="status" aria-live="polite"></span>
+    </form>
     <main id="player-levels-view" hidden></main>
   </div>
 </body>

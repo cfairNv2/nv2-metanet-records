@@ -1,11 +1,19 @@
-const CSV_PATH = "metanet_leaderboards.csv";
+const METANET_CSV_PATH = "metanet_leaderboards.csv";
+const USER_DATA_PATH = "user_leaderboards.json";
 const numberFormat = new Intl.NumberFormat("en-US");
 const averageFormat = new Intl.NumberFormat("en-US", { minimumFractionDigits: 3, maximumFractionDigits: 3 });
+const averageMinimumBoards = 100;
 const boards = {
   zeroes: { label: "0ths", metric: "zeroes" },
   boards: { label: "Total Boards", metric: "boards" },
   points: { label: "Points", metric: "points" },
   average: { label: "Average Place", metric: "averagePlace" },
+  elite: { label: "Elite Levels", metric: "eliteLevels" },
+  loneWolfs: { label: "Lone Wolfs", metric: "loneWolfs" },
+};
+const availableBoards = {
+  metanet: ["zeroes", "boards", "points", "average"],
+  user: ["zeroes", "boards", "points", "average", "elite", "loneWolfs"],
 };
 
 function parseCsv(text) {
@@ -49,9 +57,9 @@ function parseCsv(text) {
   return rows.map((values) => Object.fromEntries(headers.map((header, index) => [header, values[index] ?? ""])));
 }
 
-function buildDataset(rows) {
+function buildMetanetDataset(rows) {
   const players = new Map();
-  levelRecords = new Map();
+  const levelRecords = new Map();
 
   for (const row of rows) {
     if (row.fetch_status !== "ok" || !row.player.trim()) continue;
@@ -82,10 +90,7 @@ function buildDataset(rows) {
     const name = [...player.names.entries()].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))[0]?.[0] || "Unknown player";
     const entries = [...player.levels.values()];
     const zeroes = entries.filter((entry) => entry.place === 0).length;
-    const points = entries.reduce((total, entry) => {
-      if (entry.place < 0 || entry.place > 9) return total;
-      return total + 10 - entry.place;
-    }, 0);
+    const points = entries.reduce((total, entry) => total + (entry.place >= 0 && entry.place <= 9 ? 10 - entry.place : 0), 0);
     const averagePlace = entries.length
       ? entries.reduce((total, entry) => total + entry.place, 0) / entries.length
       : null;
@@ -93,7 +98,7 @@ function buildDataset(rows) {
     return { ...player, name, entries, boards: entries.length, zeroes, points, averagePlace };
   });
 
-  return profiles;
+  return { profiles, levelRecords };
 }
 
 function escapeHtml(value) {
@@ -129,40 +134,47 @@ function formatSignedFrames(value) {
 
 function currentState() {
   const params = new URLSearchParams(window.location.search);
+  const levelset = params.get("levels") === "user" ? "user" : "metanet";
+  const requestedBoard = Object.hasOwn(boards, params.get("board")) ? params.get("board") : "zeroes";
   return {
-    levelset: params.get("levels") === "user" ? "user" : "metanet",
-    board: Object.hasOwn(boards, params.get("board")) ? params.get("board") : "zeroes",
-    averageFilter: params.get("average") === "unfiltered" ? "unfiltered" : "filtered",
+    levelset,
+    board: availableBoards[levelset].includes(requestedBoard) ? requestedBoard : "zeroes",
   };
 }
 
 let state = currentState();
-let dataset = [];
+let datasets = { metanet: [], user: [] };
 let levelRecords = new Map();
 
-function stateUrl(nextState) {
+function stateQuery(nextState, extra = {}) {
   const params = new URLSearchParams();
   if (nextState.levelset !== "metanet") params.set("levels", nextState.levelset);
   if (nextState.board !== "zeroes") params.set("board", nextState.board);
-  if (nextState.board === "average" && nextState.averageFilter === "unfiltered") params.set("average", "unfiltered");
+  if (extra.id) params.set("id", extra.id);
+  if (extra.list) params.set("list", extra.list);
   const query = params.toString();
-  return `${window.location.pathname}${query ? `?${query}` : ""}`;
+  return query ? `?${query}` : "";
 }
 
 function indexUrl(nextState) {
-  const pageState = stateUrl(nextState);
-  const query = pageState.includes("?") ? pageState.slice(pageState.indexOf("?")) : "";
-  return `index.html${query}`;
+  return `index.html${stateQuery(nextState)}`;
 }
 
-function selectState(nextState) {
-  state = nextState;
-  if (document.body.dataset.page !== "leaderboard") {
-    window.location.href = indexUrl(nextState);
-    return;
+function playerUrl(player, nextState = state) {
+  return `player.html${stateQuery(nextState, { id: player.key })}`;
+}
+
+function activeDataset() {
+  return datasets[state.levelset];
+}
+
+function eligiblePlayers(profiles, board) {
+  const metric = boards[board].metric;
+  if (board === "zeroes" || board === "elite" || board === "loneWolfs") {
+    return profiles.filter((player) => player[metric] > 0);
   }
-  window.history.pushState({}, "", stateUrl(state));
-  render();
+  if (board === "average") return profiles.filter((player) => player.boards >= averageMinimumBoards);
+  return profiles;
 }
 
 function sortPlayers(profiles, board) {
@@ -182,10 +194,12 @@ function formatMetric(player, board) {
 }
 
 function playerMetricRank(player, board) {
-  const rankedPlayers = board === "zeroes"
-    ? dataset.filter((item) => item.zeroes > 0)
-    : dataset;
-  const position = sortPlayers(rankedPlayers, board).findIndex((item) => item.key === player.key);
+  if (board === "zeroes" && player.zeroes === 0) return "—";
+  if (board === "elite" && player.eliteLevels === 0) return "—";
+  if (board === "loneWolfs" && player.loneWolfs === 0) return "—";
+  if (board === "average" && player.boards < averageMinimumBoards) return "—";
+  const rankedPlayers = sortPlayers(eligiblePlayers(activeDataset(), board), board);
+  const position = rankedPlayers.findIndex((item) => item.key === player.key);
   return position < 0 ? "—" : placeLabel(position);
 }
 
@@ -194,93 +208,99 @@ function syncControls() {
     button.setAttribute("aria-pressed", String(button.dataset.levelset === state.levelset));
   });
   document.querySelectorAll("[data-board]").forEach((button) => {
+    const available = availableBoards[state.levelset].includes(button.dataset.board);
+    button.hidden = !available;
     button.setAttribute("aria-selected", String(button.dataset.board === state.board));
   });
-  const averageControl = document.getElementById("average-filter-control");
-  if (averageControl) averageControl.hidden = state.board !== "average";
-  document.querySelectorAll("[data-average-filter]").forEach((button) => {
-    button.setAttribute("aria-pressed", String(button.dataset.averageFilter === state.averageFilter));
-  });
+  const nav = document.querySelector(".leaderboard-nav");
+  if (nav) nav.dataset.levelset = state.levelset;
   const averageNote = document.getElementById("average-filter-note");
-  if (averageNote) averageNote.hidden = state.averageFilter !== "filtered";
+  if (averageNote) averageNote.hidden = state.board !== "average";
 }
 
-function render() {
-  syncControls();
+function renderLeaderboard() {
   const main = document.getElementById("leaderboard-view");
-  const emptyForUserLevels = state.levelset === "user";
-  main.hidden = emptyForUserLevels;
-  if (emptyForUserLevels) return;
+  const root = document.getElementById("player-view");
+  const levelsRoot = document.getElementById("player-levels-view");
+  if (main) main.hidden = false;
+  if (root) root.hidden = true;
+  if (levelsRoot) levelsRoot.hidden = true;
 
   const body = document.getElementById("leaderboard-body");
-  const leaderboardPlayers = state.board === "zeroes"
-    ? dataset.filter((player) => player.zeroes > 0)
-    : state.board === "average" && state.averageFilter === "filtered"
-      ? dataset.filter((player) => player.boards >= 20)
-      : dataset;
-  const sorted = sortPlayers(leaderboardPlayers, state.board);
+  const candidates = eligiblePlayers(activeDataset(), state.board);
+  const sorted = sortPlayers(candidates, state.board).slice(0, 1000);
   document.getElementById("metric-heading").textContent = boards[state.board].label;
   document.getElementById("boards-heading").hidden = state.board !== "average";
   body.innerHTML = sorted.map((player, index) => `
     <tr>
       <td class="place-cell">${placeLabel(index)}</td>
-      <td class="player-cell"><a href="player.html?id=${encodeURIComponent(player.key)}&board=${encodeURIComponent(state.board)}">${escapeHtml(player.name)}</a></td>
+      <td class="player-cell"><a href="${playerUrl(player)}">${escapeHtml(player.name)}</a></td>
       <td class="numeric-cell">${formatMetric(player, state.board)}</td>
       ${state.board === "average" ? `<td class="numeric-cell">${numberFormat.format(player.boards)}</td>` : ""}
     </tr>`).join("");
 }
 
 function renderPlayer() {
-  syncControls();
-  const params = new URLSearchParams(window.location.search);
-  const requestedId = params.get("id") || "";
-  const player = dataset.find((item) => item.key === requestedId);
   const root = document.getElementById("player-view");
   const main = document.getElementById("leaderboard-view");
-  main.hidden = true;
+  if (main) main.hidden = true;
+  const levelsRoot = document.getElementById("player-levels-view");
+  if (levelsRoot) levelsRoot.hidden = true;
 
-  if (!player || state.levelset === "user") {
-    root.hidden = true;
+  const params = new URLSearchParams(window.location.search);
+  const requestedId = (params.get("id") || "").toLocaleLowerCase();
+  const player = activeDataset().find((item) => item.key === requestedId);
+  if (!player) {
+    root.hidden = false;
+    root.innerHTML = '<p class="table-state">Player not found in this level set.</p>';
+    document.title = "Player — Nv2 Leaderboards";
     return;
   }
+
+  const metricKeys = state.levelset === "user"
+    ? ["zeroes", "boards", "points", "average", "elite", "loneWolfs"]
+    : ["zeroes", "boards", "points", "average"];
+  const statCard = (board) => {
+    const metric = boards[board].metric;
+    const body = `<span class="stat-heading"><span>${boards[board].label}</span><span class="metric-rank">${playerMetricRank(player, board)}</span></span><strong>${formatMetric(player, board)}</strong>`;
+    if (state.levelset === "metanet" && (board === "zeroes" || board === "boards")) {
+      const list = board === "zeroes" ? "zeroes" : "boards";
+      return `<a class="profile-stat" href="player-levels.html${stateQuery(state, { id: player.key, list })}">${body}</a>`;
+    }
+    return `<div class="profile-stat">${body}</div>`;
+  };
 
   root.hidden = false;
   document.title = `${player.name} — Nv2 Leaderboards`;
   root.innerHTML = `
-    <a class="back-link" href="${indexUrl({ ...state, board: params.get("board") || "zeroes" })}">← Leaderboards</a>
+    <a class="back-link" href="${indexUrl(state)}">← Leaderboards</a>
     <h2 class="player-name">${escapeHtml(player.name)}</h2>
-    <section class="profile-stats" aria-label="Player statistics">
-      <a class="profile-stat" href="player-levels.html?id=${encodeURIComponent(player.key)}&list=zeroes">
-        <span class="stat-heading"><span>0ths</span><span class="metric-rank">${playerMetricRank(player, "zeroes")}</span></span>
-        <strong>${numberFormat.format(player.zeroes)}</strong>
-      </a>
-      <a class="profile-stat" href="player-levels.html?id=${encodeURIComponent(player.key)}&list=boards">
-        <span class="stat-heading"><span>Total Boards</span><span class="metric-rank">${playerMetricRank(player, "boards")}</span></span>
-        <strong>${numberFormat.format(player.boards)}</strong>
-      </a>
-      <div class="profile-stat">
-        <span class="stat-heading"><span>Points</span><span class="metric-rank">${playerMetricRank(player, "points")}</span></span>
-        <strong>${numberFormat.format(player.points)}</strong>
-      </div>
-      <div class="profile-stat">
-        <span class="stat-heading"><span>Average Place</span><span class="metric-rank">${playerMetricRank(player, "average")}</span></span>
-        <strong>${averageFormat.format(player.averagePlace)}</strong>
-      </div>
+    <section class="profile-stats profile-stats-${metricKeys.length}" aria-label="Player statistics">
+      ${metricKeys.map(statCard).join("")}
     </section>`;
 }
 
 function renderPlayerLevels() {
-  syncControls();
   const params = new URLSearchParams(window.location.search);
-  const player = dataset.find((item) => item.key === (params.get("id") || ""));
-  const listType = params.get("list") === "zeroes" ? "zeroes" : "boards";
-  const root = document.getElementById("player-levels-view");
-
-  if (!player || state.levelset === "user") {
-    root.hidden = true;
+  if (state.levelset === "user") {
+    window.location.replace(playerUrl({ key: params.get("id") || "" }, state));
     return;
   }
 
+  const player = datasets.metanet.find((item) => item.key === (params.get("id") || ""));
+  const root = document.getElementById("player-levels-view");
+  const main = document.getElementById("leaderboard-view");
+  const playerRoot = document.getElementById("player-view");
+  if (main) main.hidden = true;
+  if (playerRoot) playerRoot.hidden = true;
+
+  if (!player) {
+    root.hidden = false;
+    root.innerHTML = '<p class="table-state">Player not found in this level set.</p>';
+    return;
+  }
+
+  const listType = params.get("list") === "zeroes" ? "zeroes" : "boards";
   const isZeroes = listType === "zeroes";
   const title = `${player.name} ${isZeroes ? "0th Levels" : "Leaderboards"}`;
   const entries = player.entries
@@ -299,7 +319,7 @@ function renderPlayerLevels() {
   root.hidden = false;
   document.title = `${title} — Nv2 Leaderboards`;
   root.innerHTML = `
-    <a class="back-link" href="player.html?id=${encodeURIComponent(player.key)}&board=${encodeURIComponent(state.board)}">← ${escapeHtml(player.name)}</a>
+    <a class="back-link" href="player.html${stateQuery(state, { id: player.key })}">← ${escapeHtml(player.name)}</a>
     <h2 class="player-name">${escapeHtml(title)}</h2>
     <div class="table-scroll">
       <table class="level-list">
@@ -320,40 +340,138 @@ function renderPlayerLevels() {
     </div>`;
 }
 
+function renderCurrentPage() {
+  syncControls();
+  if (document.body.dataset.page === "player") renderPlayer();
+  else if (document.body.dataset.page === "player-levels") renderPlayerLevels();
+  else renderLeaderboard();
+}
+
+function changeLevelset(levelset) {
+  if (levelset === state.levelset) return;
+  const nextState = { ...state, levelset };
+  if (!availableBoards[levelset].includes(nextState.board)) nextState.board = "zeroes";
+
+  if (document.body.dataset.page === "player-levels") {
+    const params = new URLSearchParams(window.location.search);
+    window.location.href = playerUrl({ key: params.get("id") || "" }, nextState);
+    return;
+  }
+
+  state = nextState;
+  const extra = document.body.dataset.page === "player"
+    ? { id: new URLSearchParams(window.location.search).get("id") || "" }
+    : {};
+  const pagePath = document.body.dataset.page === "player" ? "player.html" : "index.html";
+  window.history.pushState({}, "", `${pagePath}${stateQuery(state, extra)}`);
+  renderCurrentPage();
+}
+
+function changeBoard(board) {
+  const nextState = { ...state, board };
+  if (document.body.dataset.page !== "leaderboard") {
+    window.location.href = indexUrl(nextState);
+    return;
+  }
+  state = nextState;
+  window.history.pushState({}, "", indexUrl(state));
+  renderCurrentPage();
+}
+
+function searchMatches(query) {
+  const normalized = query.toLocaleLowerCase();
+  return [...activeDataset()]
+    .filter((player) => player.name.toLocaleLowerCase().includes(normalized))
+    .sort((a, b) => Number(b.key === normalized) - Number(a.key === normalized)
+      || Number(b.name.toLocaleLowerCase().startsWith(normalized)) - Number(a.name.toLocaleLowerCase().startsWith(normalized))
+      || a.name.localeCompare(b.name, undefined, { sensitivity: "base" }))
+    .slice(0, 8);
+}
+
+function attachSearch() {
+  const form = document.getElementById("player-search-form");
+  const input = document.getElementById("player-search-input");
+  const results = document.getElementById("player-search-results");
+  const status = document.getElementById("player-search-status");
+  if (!form || !input || !results || !status) return;
+
+  const update = () => {
+    const query = input.value.trim();
+    status.textContent = "";
+    if (query.length < 2) {
+      results.hidden = true;
+      results.innerHTML = "";
+      return [];
+    }
+    const matches = searchMatches(query);
+    results.innerHTML = matches.map((player) => `
+      <a role="option" href="${playerUrl(player)}">${escapeHtml(player.name)}</a>`).join("");
+    results.hidden = matches.length === 0;
+    return matches;
+  };
+
+  input.addEventListener("input", update);
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const query = input.value.trim();
+    if (!query) return;
+    const matches = update();
+    const exact = activeDataset().find((player) => player.key === query.toLocaleLowerCase());
+    if (exact) {
+      window.location.href = playerUrl(exact);
+    } else if (matches.length === 1) {
+      window.location.href = playerUrl(matches[0]);
+    } else if (matches.length > 1) {
+      status.textContent = "Choose a player from the matches.";
+    } else {
+      status.textContent = "No player found.";
+    }
+  });
+  input.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      results.hidden = true;
+      status.textContent = "";
+    }
+  });
+}
+
 function attachControls() {
   document.querySelectorAll("[data-levelset]").forEach((button) => {
-    button.addEventListener("click", () => selectState({ ...state, levelset: button.dataset.levelset }));
+    button.addEventListener("click", () => changeLevelset(button.dataset.levelset));
   });
   document.querySelectorAll("[data-board]").forEach((button) => {
-    button.addEventListener("click", () => selectState({ ...state, board: button.dataset.board }));
-  });
-  document.querySelectorAll("[data-average-filter]").forEach((button) => {
-    button.addEventListener("click", () => {
-      if (button.dataset.averageFilter === state.averageFilter) return;
-      state = { ...state, averageFilter: button.dataset.averageFilter };
-      window.history.pushState({}, "", stateUrl(state));
-      render();
-    });
+    button.addEventListener("click", () => changeBoard(button.dataset.board));
   });
   window.addEventListener("popstate", () => {
     state = currentState();
-    if (document.body.dataset.page !== "leaderboard") window.location.reload();
-    else render();
+    renderCurrentPage();
   });
 }
 
 async function start() {
   attachControls();
+  attachSearch();
   try {
-    const response = await fetch(CSV_PATH, { cache: "no-store" });
-    if (!response.ok) throw new Error(`The leaderboard CSV returned ${response.status}.`);
-    dataset = buildDataset(parseCsv(await response.text()));
-    if (document.body.dataset.page === "player") renderPlayer();
-    else if (document.body.dataset.page === "player-levels") renderPlayerLevels();
-    else render();
+    const [metanetResponse, userResponse] = await Promise.all([
+      fetch(METANET_CSV_PATH, { cache: "no-store" }),
+      fetch(USER_DATA_PATH, { cache: "no-store" }),
+    ]);
+    if (!metanetResponse.ok) throw new Error(`The Metanet CSV returned ${metanetResponse.status}.`);
+    if (!userResponse.ok) throw new Error(`The user-level data returned ${userResponse.status}.`);
+    const [metanetText, userPayload] = await Promise.all([metanetResponse.text(), userResponse.json()]);
+    const metanetData = buildMetanetDataset(parseCsv(metanetText));
+    datasets.metanet = metanetData.profiles;
+    levelRecords = metanetData.levelRecords;
+    datasets.user = Array.isArray(userPayload.players) ? userPayload.players : [];
+    renderCurrentPage();
   } catch (error) {
     const body = document.getElementById("leaderboard-body");
-    if (body) body.innerHTML = '<tr><td colspan="3" class="table-state">Data unavailable.</td></tr>';
+    if (body) body.innerHTML = '<tr><td colspan="4" class="table-state">Data unavailable.</td></tr>';
+    const root = document.getElementById("player-view") || document.getElementById("player-levels-view");
+    if (root) {
+      root.hidden = false;
+      root.innerHTML = '<p class="table-state">Data unavailable.</p>';
+    }
     console.error(error);
   }
 }

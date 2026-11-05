@@ -6,8 +6,8 @@
   <meta name="theme-color" content="#aaaaaa">
   <meta name="description" content="NV2 player leaderboard stats.">
   <title>Player — Nv2 Leaderboards</title>
-  <link rel="stylesheet" href="styles.css?v=average-filter-switch">
-  <script src="app.js?v=average-filter-switch" defer></script>
+  <link rel="stylesheet" href="styles.css?v=user-leaderboards">
+  <script src="app.js?v=user-leaderboards" defer></script>
 </head>
 <body data-page="player">
   <div class="page-shell">
@@ -19,11 +19,23 @@
       </div>
     </header>
 
+    <form id="player-search-form" class="player-search" role="search">
+      <label class="visually-hidden" for="player-search-input">Search usernames</label>
+      <div class="player-search-box">
+        <input id="player-search-input" type="search" placeholder="Search username" autocomplete="off" aria-controls="player-search-results">
+        <button type="submit">Search</button>
+        <div id="player-search-results" class="player-search-results" role="listbox" hidden></div>
+      </div>
+      <span id="player-search-status" class="player-search-status" role="status" aria-live="polite"></span>
+    </form>
+
     <nav class="leaderboard-nav" aria-label="Leaderboards" role="tablist">
       <button type="button" role="tab" data-board="zeroes" aria-selected="true">0ths</button>
       <button type="button" role="tab" data-board="boards" aria-selected="false">Total Boards</button>
       <button type="button" role="tab" data-board="points" aria-selected="false">Points</button>
       <button type="button" role="tab" data-board="average" aria-selected="false">Average Place</button>
+      <button type="button" role="tab" data-board="elite" aria-selected="false" hidden>Elite Levels</button>
+      <button type="button" role="tab" data-board="loneWolfs" aria-selected="false" hidden>Lone Wolfs</button>
     </nav>
 
     <main id="leaderboard-view" hidden></main>
