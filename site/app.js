@@ -1,7 +1,8 @@
 const METANET_CSV_PATH = "metanet_leaderboards.csv";
 const USER_DATA_PATH = "user_leaderboards.json";
-const numberFormat = new Intl.NumberFormat("en-US");
-const averageFormat = new Intl.NumberFormat("en-US", { minimumFractionDigits: 3, maximumFractionDigits: 3 });
+const numberFormat = new Intl.NumberFormat("en-US", { useGrouping: false });
+const averageFormat = new Intl.NumberFormat("en-US", { minimumFractionDigits: 3, maximumFractionDigits: 3, useGrouping: false });
+const timeFormat = new Intl.NumberFormat("en-US", { minimumFractionDigits: 3, maximumFractionDigits: 3, useGrouping: false });
 const metanetAverageMinimumBoards = 20;
 const userAverageMinimumBoards = 100;
 const boards = {
@@ -139,6 +140,10 @@ function formatSignedFrames(value) {
   return numberFormat.format(value);
 }
 
+function formatTime(frames) {
+  return Number.isFinite(frames) ? timeFormat.format(frames / 60) : "—";
+}
+
 function currentState() {
   const params = new URLSearchParams(window.location.search);
   const levelset = params.get("levels") === "user" ? "user" : "metanet";
@@ -156,6 +161,7 @@ let levelRecords = new Map();
 let userLevelDetails = {};
 let metanetLevelMetadata = {};
 let metanetLevelCatalog = [];
+let metanetLevelById = new Map();
 
 function stateQuery(nextState, extra = {}) {
   const params = new URLSearchParams();
@@ -301,6 +307,10 @@ function syncControls() {
   if (averageNote) averageNote.hidden = state.board !== "average" || state.averageFilter !== "filtered";
   const userAverageNote = document.getElementById("user-average-filter-note");
   if (userAverageNote) userAverageNote.hidden = state.board !== "average" || state.levelset !== "user";
+  const eliteLevelNote = document.getElementById("elite-level-note");
+  if (eliteLevelNote) eliteLevelNote.hidden = state.board !== "elite" || state.levelset !== "user";
+  const loneWolfNote = document.getElementById("lone-wolf-note");
+  if (loneWolfNote) loneWolfNote.hidden = state.board !== "loneWolfs" || state.levelset !== "user";
 }
 
 function renderLeaderboard() {
@@ -451,19 +461,28 @@ function renderPlayerLevels() {
     <a class="back-link" href="player.html${stateQuery(state, { id: player.key })}">← ${escapeHtml(player.name)}</a>
     <h2 class="player-name">${escapeHtml(title)}</h2>
     <div class="table-scroll">
-      <table class="level-list">
+      <table class="level-list ${isZeroes ? "level-list-metanet-zeroes" : "level-list-metanet-boards"}">
         <thead><tr>
           <th scope="col">Level</th>
+          <th scope="col">Name</th>
+          <th scope="col" class="numeric-column">Time</th>
+          <th scope="col" class="numeric-column">Frames</th>
           ${isZeroes ? '<th scope="col" class="numeric-column">Frames ahead</th>' : '<th scope="col" class="numeric-column">Place</th><th scope="col" class="numeric-column">Frames behind 0th</th>'}
         </tr></thead>
         <tbody>
-          ${entries.map((entry) => `
-            <tr>
-              <td><a href="${levelUrl(entry.levelId)}">Level ${escapeHtml(displayLevelId(entry.levelId))}</a></td>
+          ${entries.map((entry) => {
+            const displayId = displayLevelId(entry.levelId);
+            const level = metanetLevelById.get(String(entry.levelId).padStart(6, "0"));
+            return `<tr>
+              <td class="level-id-cell"><a href="${levelUrl(entry.levelId)}">${escapeHtml(displayId)}</a></td>
+              <td class="level-name-cell">${escapeHtml(level?.name || "—")}</td>
+              <td class="numeric-cell">${formatTime(entry.frames)}</td>
+              <td class="numeric-cell">${Number.isFinite(entry.frames) ? numberFormat.format(entry.frames) : "—"}</td>
               ${isZeroes
                 ? `<td class="numeric-cell">${formatSignedFrames(frameDifference(entry))}</td>`
                 : `<td class="numeric-cell">${placeLabel(entry.place)}</td><td class="numeric-cell">${formatSignedFrames(frameDifference(entry))}</td>`}
-            </tr>`).join("")}
+            </tr>`;
+          }).join("")}
         </tbody>
       </table>
     </div>`;
@@ -694,6 +713,7 @@ async function start() {
     datasets.user = Array.isArray(userPayload.players) ? userPayload.players : [];
     if (metadataResponse.ok) metanetLevelMetadata = await metadataResponse.json();
     metanetLevelCatalog = buildMetanetLevelCatalog(metanetLevelMetadata);
+    metanetLevelById = new Map(metanetLevelCatalog.map((level) => [level.id, level]));
     if (siteMetadataResponse.ok) {
       const siteMetadata = await siteMetadataResponse.json();
       const dateNote = document.getElementById("last-updated");

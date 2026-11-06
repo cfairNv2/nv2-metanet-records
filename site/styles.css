@@ -98,6 +98,11 @@ tbody tr:hover { background: rgba(255, 255, 255, .35); }
 .metric-rank { flex: 0 0 auto; font-size: 12px; }
 .profile-stat strong { display: block; margin-top: 8px; font-size: 24px; font-weight: 400; }
 .level-list { min-width: 460px; border-top: 1px solid var(--line); }
+.level-list-metanet-zeroes { min-width: 760px; }
+.level-list-metanet-boards { min-width: 900px; }
+.level-list-metanet-zeroes .numeric-column, .level-list-metanet-zeroes .numeric-cell,
+.level-list-metanet-boards .numeric-column, .level-list-metanet-boards .numeric-cell { width: auto; white-space: nowrap; }
+.level-list-metanet-zeroes .level-id-cell, .level-list-metanet-boards .level-id-cell { white-space: nowrap; }
 .place-histogram { margin-top: 24px; }
 .place-histogram h3 { margin: 0 0 8px; color: var(--muted); font-size: 18px; font-weight: 400; }
 .place-histogram-scroll { overflow-x: auto; border-bottom: 1px solid var(--line); }
