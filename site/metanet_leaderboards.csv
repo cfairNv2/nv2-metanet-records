@@ -383,10 +383,10 @@
 000039,1,spertox81,8192,false,ok
 000039,2,EddyMataGallos,8190,false,ok
 000039,3,xela,8189,false,ok
-000039,4,Gnarcissist,8183,false,ok
-000039,5,jp27ace,8178,false,ok
-000039,6,V3L0C1T4,8178,false,ok
-000039,7,Cfair,8176,false,ok
+000039,4,Cfair,8184,false,ok
+000039,5,Gnarcissist,8183,false,ok
+000039,6,jp27ace,8178,false,ok
+000039,7,V3L0C1T4,8178,false,ok
 000039,8,shomman,8175,false,ok
 000039,9,VitruVianNinja,8165,false,ok
 000040,0,spertox81,8191,true,ok
@@ -422,7 +422,7 @@
 000043,0,oxymoron93,5824,true,ok
 000043,1,White Whale,5823,false,ok
 000043,2,shomman,5818,false,ok
-000043,3,spertox81,5816,false,ok
+000043,3,spertox81,5817,false,ok
 000043,4,EddyMataGallos,5812,false,ok
 000043,5,golfkid,5811,false,ok
 000043,6,Thisguy248,5808,false,ok
@@ -2011,14 +2011,14 @@
 000201,9,KoopaTroopa,5647,false,ok
 000202,0,V3L0C1T4,6748,true,ok
 000202,1,EddyMataGallos,6746,false,ok
-000202,2,getpucht,6745,false,ok
-000202,3,Kind25,6744,false,ok
-000202,4,Dimness,6744,false,ok
-000202,5,danielr,6743,false,ok
-000202,6,oxymoron93,6743,false,ok
-000202,7,Oleary15,6743,false,ok
-000202,8,mohit_ghune,6743,false,ok
-000202,9,Yoke300,6743,false,ok
+000202,2,Viper N,6746,false,ok
+000202,3,getpucht,6745,false,ok
+000202,4,Kind25,6744,false,ok
+000202,5,Dimness,6744,false,ok
+000202,6,danielr,6743,false,ok
+000202,7,oxymoron93,6743,false,ok
+000202,8,Oleary15,6743,false,ok
+000202,9,mohit_ghune,6743,false,ok
 000203,0,danielr,6404,true,ok
 000203,1,EddyMataGallos,6404,false,ok
 000203,2,shomman,6402,false,ok
@@ -3094,11 +3094,11 @@
 000310,2,EddyMataGallos,6064,false,ok
 000310,3,V3L0C1T4,6040,false,ok
 000310,4,mohit_ghune,6033,false,ok
-000310,5,Eyon,6028,false,ok
-000310,6,remm,6024,false,ok
-000310,7,kkstrong,6001,false,ok
-000310,8,getpucht,5987,false,ok
-000310,9,Tekeur,5984,false,ok
+000310,5,swaqbtzg,6030,false,ok
+000310,6,Eyon,6028,false,ok
+000310,7,remm,6024,false,ok
+000310,8,kkstrong,6001,false,ok
+000310,9,getpucht,5987,false,ok
 000311,0,oxymoron93,22346,true,ok
 000311,1,jp27ace,22332,false,ok
 000311,2,Thisguy248,22252,false,ok
@@ -3741,8 +3741,8 @@
 000374,9,White Whale,5034,false,ok
 000375,0,Thisguy248,10422,true,ok
 000375,1,oxymoron93,10408,false,ok
-000375,2,natakial2,10393,false,ok
-000375,3,Cfair,10393,false,ok
+000375,2,Cfair,10403,false,ok
+000375,3,natakial2,10393,false,ok
 000375,4,shomman,10375,false,ok
 000375,5,EddyMataGallos,10374,false,ok
 000375,6,Gnarcissist,10367,false,ok
@@ -3792,7 +3792,7 @@
 000380,0,V3L0C1T4,7506,true,ok
 000380,1,Gnarcissist,7492,false,ok
 000380,2,oxymoron93,7462,false,ok
-000380,3,Cfair,7440,false,ok
+000380,3,Cfair,7449,false,ok
 000380,4,shomman,7424,false,ok
 000380,5,EddyMataGallos,7414,false,ok
 000380,6,kkstrong,7385,false,ok
@@ -4889,16 +4889,16 @@
 000489,7,jp27ace,5706,false,ok
 000489,8,Cfair,5704,false,ok
 000489,9,Zapmeister,5645,false,ok
-000490,0,Giant Joe,6077,true,ok
-000490,1,l8_Rabbit,6076,false,ok
-000490,2,shomman,6076,false,ok
-000490,3,oxymoron93,6076,false,ok
+000490,0,Giant Joe,6081,true,ok
+000490,1,oxymoron93,6078,false,ok
+000490,2,l8_Rabbit,6076,false,ok
+000490,3,shomman,6076,false,ok
 000490,4,kkstrong,6075,false,ok
-000490,5,Cfair,6071,false,ok
-000490,6,MucsBryh,6069,false,ok
-000490,7,EddyMataGallos,6066,false,ok
-000490,8,swaqbtzg,6065,false,ok
-000490,9,Neitsch1,5964,false,ok
+000490,5,MucsBryh,6073,false,ok
+000490,6,swaqbtzg,6072,false,ok
+000490,7,vector7,6072,false,ok
+000490,8,Cfair,6071,false,ok
+000490,9,EddyMataGallos,6066,false,ok
 000491,0,shomman,6902,true,ok
 000491,1,oxymoron93,6892,false,ok
 000491,2,EddyMataGallos,6885,false,ok
