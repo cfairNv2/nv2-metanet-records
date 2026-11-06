@@ -412,8 +412,8 @@ function renderPlayerLevels() {
     const details = userLevelDetails[player.key] || {};
     const entries = isElite ? (details.elite || []) : (details.wolves || []);
     const rows = isElite
-      ? entries.map(([levelId, place, framesBehindZero]) => `<tr><td>Level ${String(levelId)}</td><td class="numeric-cell">${placeLabel(place)}</td><td class="numeric-cell">${formatSignedFrames(framesBehindZero)}</td></tr>`).join("")
-      : entries.map((levelId) => `<tr><td>Level ${String(levelId)}</td></tr>`).join("");
+      ? entries.map(([levelId, place, framesBehindZero]) => `<tr><td>${String(levelId)}</td><td class="numeric-cell">${placeLabel(place)}</td><td class="numeric-cell">${formatSignedFrames(framesBehindZero)}</td></tr>`).join("")
+      : entries.map((levelId) => `<tr><td>${String(levelId)}</td></tr>`).join("");
 
     root.hidden = false;
     document.title = `${title} — Nv2 Leaderboards`;
