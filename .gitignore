@@ -1,3 +1,8 @@
 Scrape3.py
 __pycache__/
 *.py[cod]
+/private-updater/
+/Nv2 Stats.xlsx
+/.~lock.*
+/user_leaderboards.csv
+/export_user_leaderboards.py
