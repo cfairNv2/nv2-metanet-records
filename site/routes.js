@@ -65,6 +65,9 @@
     if (state.board === "average" && state.levelset !== "user" && state.averageFilter === "unfiltered") {
       params.set("average", "unfiltered");
     }
+    if (state.levelset !== "user" && state.zeroesMode === "ties" && page !== "level") {
+      params.set("zeroes", "ties");
+    }
     return path + (params.size ? `?${params}` : "");
   }
 

@@ -92,6 +92,12 @@ function buildMetanetDataset(rows) {
     const name = [...player.names.entries()].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))[0]?.[0] || "Unknown player";
     const entries = [...player.levels.values()];
     const zeroes = entries.filter((entry) => entry.place === 0).length;
+    entries.forEach((entry) => {
+      const topFrames = levelRecords.get(entry.levelId)?.find((record) => record.place === 0)?.frames;
+      entry.isZeroWithTies = entry.place === 0
+        || (Number.isFinite(entry.frames) && Number.isFinite(topFrames) && entry.frames === topFrames);
+    });
+    const zeroesWithTies = entries.filter((entry) => entry.isZeroWithTies).length;
     const points = entries.reduce((total, entry) => total + (entry.place >= 0 && entry.place <= 9 ? 10 - entry.place : 0), 0);
     const placeCounts = Array(10).fill(0);
     entries.forEach((entry) => {
@@ -103,7 +109,7 @@ function buildMetanetDataset(rows) {
       ? entries.reduce((total, entry) => total + entry.place, 0) / entries.length
       : null;
 
-    return { ...player, name, entries, placeCounts, boards: entries.length, zeroes, points, averagePlace };
+    return { ...player, name, entries, placeCounts, boards: entries.length, zeroes, zeroesWithTies, points, averagePlace };
   });
 
   return { profiles, levelRecords };
@@ -156,6 +162,7 @@ function currentState() {
     levelset,
     board: availableBoards[levelset].includes(requestedBoard) ? requestedBoard : "zeroes",
     averageFilter: levelset === "metanet" && params.get("average") === "unfiltered" ? "unfiltered" : "filtered",
+    zeroesMode: levelset === "metanet" && params.get("zeroes") === "ties" ? "ties" : "pures",
   };
 }
 
@@ -202,20 +209,25 @@ function activeDataset() {
   return datasets[state.levelset];
 }
 
-function eligiblePlayers(profiles, board) {
-  const metric = boards[board].metric;
+function metricKey(board, viewState = state) {
+  return board === "zeroes" && viewState.levelset === "metanet" && viewState.zeroesMode === "ties"
+    ? "zeroesWithTies" : boards[board].metric;
+}
+
+function eligiblePlayers(profiles, board, viewState = state) {
+  const metric = metricKey(board, viewState);
   if (board === "zeroes" || board === "elite" || board === "loneWolfs") {
     return profiles.filter((player) => player[metric] > 0);
   }
   if (board === "average") {
-    if (state.levelset === "user") return profiles.filter((player) => player.boards >= userAverageMinimumBoards);
-    if (state.averageFilter === "filtered") return profiles.filter((player) => player.boards >= metanetAverageMinimumBoards);
+    if (viewState.levelset === "user") return profiles.filter((player) => player.boards >= userAverageMinimumBoards);
+    if (viewState.averageFilter === "filtered") return profiles.filter((player) => player.boards >= metanetAverageMinimumBoards);
   }
   return profiles;
 }
 
-function sortPlayers(profiles, board) {
-  const metric = boards[board].metric;
+function sortPlayers(profiles, board, viewState = state) {
+  const metric = metricKey(board, viewState);
   const direction = board === "average" ? 1 : -1;
   return [...profiles].sort((a, b) =>
     direction * ((a[metric] ?? Number.POSITIVE_INFINITY) - (b[metric] ?? Number.POSITIVE_INFINITY))
@@ -224,18 +236,18 @@ function sortPlayers(profiles, board) {
   );
 }
 
-function formatMetric(player, board) {
-  const value = player[boards[board].metric];
+function formatMetric(player, board, viewState = state) {
+  const value = player[metricKey(board, viewState)];
   if (board === "average" && value === null) return "—";
   return board === "average" ? averageFormat.format(value) : numberFormat.format(value);
 }
 
-function playerMetricRank(player, board) {
-  if (board === "zeroes" && player.zeroes === 0) return "—";
+function playerMetricRank(player, board, viewState = state) {
+  if (board === "zeroes" && player[metricKey(board, viewState)] === 0) return "—";
   if (board === "elite" && player.eliteLevels === 0) return "—";
   if (board === "loneWolfs" && player.loneWolfs === 0) return "—";
-  if (board === "average" && !eligiblePlayers([player], board).length) return "—";
-  const rankedPlayers = sortPlayers(eligiblePlayers(activeDataset(), board), board);
+  if (board === "average" && !eligiblePlayers([player], board, viewState).length) return "—";
+  const rankedPlayers = sortPlayers(eligiblePlayers(activeDataset(), board, viewState), board, viewState);
   const position = rankedPlayers.findIndex((item) => item.key === player.key);
   return position < 0 ? "—" : placeLabel(position);
 }
@@ -282,6 +294,16 @@ function renderPlaceHistogram(counts) {
   </section>`;
 }
 
+function zeroesToggle() {
+  return `<div class="average-filter-control zeroes-control">
+    <div class="average-filter-toggle" role="group" aria-label="0ths counting">
+      <button type="button" data-zeroes-mode="pures" aria-pressed="${state.zeroesMode === "pures"}">Pures</button>
+      <button type="button" data-zeroes-mode="ties" aria-pressed="${state.zeroesMode === "ties"}">Ties</button>
+    </div>
+    <p class="average-filter-note">${state.zeroesMode === "ties" ? "Ties count as 0ths" : "Pure 0ths only"}</p>
+  </div>`;
+}
+
 function syncControls() {
   document.querySelectorAll("[data-levelset]").forEach((button) => {
     button.setAttribute("aria-pressed", String(button.dataset.levelset === state.levelset));
@@ -308,6 +330,16 @@ function syncControls() {
   if (loneWolfNote) loneWolfNote.hidden = state.board !== "loneWolfs" || state.levelset !== "user";
   let pointsNote = document.getElementById("points-note");
   const toolbar = document.querySelector(".leaderboard-toolbar");
+  let zeroesControl = document.getElementById("zeroes-control");
+  if (!zeroesControl && toolbar) {
+    zeroesControl = document.createElement("div");
+    zeroesControl.id = "zeroes-control";
+    toolbar.append(zeroesControl);
+  }
+  if (zeroesControl) {
+    zeroesControl.hidden = state.levelset !== "metanet" || state.board !== "zeroes";
+    zeroesControl.innerHTML = zeroesControl.hidden ? "" : zeroesToggle();
+  }
   if (!pointsNote && toolbar) {
     pointsNote = document.createElement("p");
     pointsNote.id = "points-note";
@@ -365,6 +397,17 @@ function renderPlayer() {
     ? ["zeroes", "boards", "points", "elite", "loneWolfs", "average"]
     : ["zeroes", "boards", "points", "average"];
   const statCard = (board) => {
+    if (state.levelset === "metanet" && board === "zeroes") {
+      const pureState = { ...state, zeroesMode: "pures" };
+      const tiesState = { ...state, zeroesMode: "ties" };
+      return `<div class="profile-stat profile-stat-zeroes">
+        <span class="stat-heading"><span>0ths</span><span class="metric-rank" title="Pure 0ths rank">${playerMetricRank(player, board, pureState)}</span></span>
+        <div class="zeroes-counts">
+          <a href="${playerLevelsUrl(player, "zeroes", pureState)}"><span class="zeroes-count-label">Pure</span><strong>${formatMetric(player, board, pureState)}</strong></a>
+          <a href="${playerLevelsUrl(player, "zeroes", tiesState)}"><span class="zeroes-count-label">Ties</span><strong>${formatMetric(player, board, tiesState)}</strong></a>
+        </div>
+      </div>`;
+    }
     const body = `<span class="stat-heading"><span>${boards[board].label}</span><span class="metric-rank">${playerMetricRank(player, board)}</span></span><strong>${formatMetric(player, board)}</strong>`;
     if (state.levelset === "metanet" && (board === "zeroes" || board === "boards")) {
       const list = board === "zeroes" ? "zeroes" : "boards";
@@ -448,7 +491,7 @@ function renderPlayerLevels() {
   const isZeroes = listType === "zeroes";
   const title = `${player.name} ${isZeroes ? "0th Levels" : "Leaderboards"}`;
   const entries = player.entries
-    .filter((entry) => !isZeroes || entry.place === 0)
+    .filter((entry) => !isZeroes || (state.zeroesMode === "ties" ? entry.isZeroWithTies : entry.place === 0))
     .sort((a, b) => Number(a.levelId) - Number(b.levelId));
   const frameDifference = (entry) => {
     const records = levelRecords.get(entry.levelId) || [];
@@ -464,7 +507,10 @@ function renderPlayerLevels() {
   document.title = `${title} — Nv2 Leaderboards`;
   root.innerHTML = `
     <a class="back-link" href="${playerUrl(player)}">← ${escapeHtml(player.name)}</a>
-    <h2 class="player-name">${escapeHtml(title)}</h2>
+    <div class="player-levels-heading">
+      <h2 class="player-name">${escapeHtml(title)}</h2>
+      ${isZeroes ? zeroesToggle() : ""}
+    </div>
     <div class="table-scroll">
       <table class="level-list ${isZeroes ? "level-list-metanet-zeroes" : "level-list-metanet-boards"}">
         <thead><tr>
@@ -580,7 +626,7 @@ function renderLevel() {
 
 function changeLevelset(levelset) {
   if (levelset === state.levelset) return;
-  const nextState = { ...state, levelset };
+  const nextState = { ...state, levelset, zeroesMode: "pures" };
   if (!availableBoards[levelset].includes(nextState.board)) nextState.board = "zeroes";
   const page = document.body.dataset.page;
   if (page === "player-levels" || page === "level") {
@@ -612,6 +658,18 @@ function changeAverageFilter(averageFilter) {
   if (state.levelset !== "metanet" || state.board !== "average" || averageFilter === state.averageFilter) return;
   state = { ...state, averageFilter };
   window.history.pushState({}, "", indexUrl(state));
+  renderCurrentPage();
+}
+
+function changeZeroesMode(zeroesMode) {
+  if (state.levelset !== "metanet" || !["pures", "ties"].includes(zeroesMode) || zeroesMode === state.zeroesMode) return;
+  const route = window.Nv2Routes.read();
+  const isZeroesList = route.page === "player-levels" && route.params.get("list") === "zeroes";
+  if (!isZeroesList && (route.page !== "leaderboard" || state.board !== "zeroes")) return;
+  state = { ...state, zeroesMode };
+  const destination = isZeroesList
+    ? playerLevelsUrl({ key: route.params.get("id") || "" }, "zeroes") : indexUrl();
+  window.history.pushState({}, "", destination);
   renderCurrentPage();
 }
 
@@ -699,6 +757,10 @@ function attachSearch() {
 }
 
 function attachControls() {
+  document.addEventListener("click", (event) => {
+    const button = event.target.closest("[data-zeroes-mode]");
+    if (button) changeZeroesMode(button.dataset.zeroesMode);
+  });
   document.querySelectorAll("[data-levelset]").forEach((button) => {
     button.addEventListener("click", () => changeLevelset(button.dataset.levelset));
   });

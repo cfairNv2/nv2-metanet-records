@@ -116,6 +116,13 @@ tbody tr:hover { background: rgba(255, 255, 255, .35); }
 .stat-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; color: var(--muted); }
 .metric-rank { flex: 0 0 auto; font-size: 12px; }
 .profile-stat strong { display: block; margin-top: 8px; font-size: 24px; font-weight: 400; }
+.zeroes-counts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 8px; }
+.zeroes-count-label { display: block; color: var(--muted); font-size: 12px; }
+.zeroes-counts strong { margin-top: 2px; }
+.zeroes-counts a:hover { text-decoration: underline; text-underline-offset: 3px; }
+.player-levels-heading { display: flex; align-items: flex-start; justify-content: space-between; flex-wrap: wrap; gap: 12px 24px; margin-bottom: 24px; }
+.player-levels-heading .player-name { flex: 1 1 260px; margin-bottom: 0; }
+.player-levels-heading .zeroes-control { flex: 0 0 auto; margin-left: auto; }
 .level-list { min-width: 460px; border-top: 1px solid var(--line); }
 .level-list-metanet-zeroes { min-width: 760px; }
 .level-list-metanet-boards { min-width: 900px; }
