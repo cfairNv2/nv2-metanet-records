@@ -26,7 +26,7 @@ html { min-width: 320px; background: var(--background); }
 body { margin: 0; min-height: 100vh; background: var(--background); color: var(--ink); font: 16px/1.5 "uni0553", monospace; }
 button, a { color: inherit; font: inherit; }
 button { cursor: pointer; }
-a { text-decoration: none; }
+a[href], button { text-decoration: underline; text-underline-offset: 3px; }
 [hidden] { display: none !important; }
 
 .page-shell { width: min(1180px, calc(100% - 48px)); margin: 0 auto; }

@@ -526,7 +526,7 @@ function renderPlayerLevels() {
             const level = metanetLevelById.get(String(entry.levelId).padStart(6, "0"));
             return `<tr>
               <td class="level-id-cell"><a href="${levelUrl(entry.levelId)}">${escapeHtml(displayId)}</a></td>
-              <td class="level-name-cell">${escapeHtml(level?.name || "—")}</td>
+              <td class="level-name-cell"><a href="${levelUrl(entry.levelId)}">${escapeHtml(level?.name || "—")}</a></td>
               <td class="numeric-cell">${formatTime(entry.frames)}</td>
               <td class="numeric-cell">${Number.isFinite(entry.frames) ? numberFormat.format(entry.frames) : "—"}</td>
               ${isZeroes
