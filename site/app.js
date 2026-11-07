@@ -312,7 +312,7 @@ function syncControls() {
     pointsNote = document.createElement("p");
     pointsNote.id = "points-note";
     pointsNote.className = "average-filter-note";
-    pointsNote.textContent = "Points = 10 * 0ths + 9 * 1sts ... + 2 * 8ths + 1 * 9ths";
+    pointsNote.textContent = "Points = 10 * 0ths + 9 * 1sts ... + 1 * 9ths";
     toolbar.append(pointsNote);
   }
   if (pointsNote) pointsNote.hidden = state.board !== "points";
