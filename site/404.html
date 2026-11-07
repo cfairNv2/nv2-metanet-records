@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nv2 Leaderboards</title>
+  <script>
+    const base = location.pathname.startsWith("/nv2-metanet-records/") ? "/nv2-metanet-records/" : "/";
+    location.replace(base + "?__route=" + encodeURIComponent(location.pathname + location.search + location.hash));
+  </script>
+</head>
+<body><p><a href="/home">Nv2 Leaderboards</a></p></body>
+</html>

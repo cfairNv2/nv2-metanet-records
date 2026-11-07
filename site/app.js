@@ -144,8 +144,12 @@ function formatTime(frames) {
   return Number.isFinite(frames) ? timeFormat.format(frames / 60) : "—";
 }
 
+function currentParams() {
+  return window.Nv2Routes.read().params;
+}
+
 function currentState() {
-  const params = new URLSearchParams(window.location.search);
+  const params = currentParams();
   const levelset = params.get("levels") === "user" ? "user" : "metanet";
   const requestedBoard = Object.hasOwn(boards, params.get("board")) ? params.get("board") : "zeroes";
   return {
@@ -163,29 +167,20 @@ let metanetLevelMetadata = {};
 let metanetLevelCatalog = [];
 let metanetLevelById = new Map();
 
-function stateQuery(nextState, extra = {}) {
-  const params = new URLSearchParams();
-  if (nextState.levelset !== "metanet") params.set("levels", nextState.levelset);
-  if (nextState.board !== "zeroes") params.set("board", nextState.board);
-  if (nextState.levelset === "metanet" && nextState.board === "average" && nextState.averageFilter === "unfiltered") {
-    params.set("average", "unfiltered");
-  }
-  if (extra.id) params.set("id", extra.id);
-  if (extra.list) params.set("list", extra.list);
-  const query = params.toString();
-  return query ? `?${query}` : "";
-}
-
-function indexUrl(nextState) {
-  return `index.html${stateQuery(nextState)}`;
+function indexUrl(nextState = state) {
+  return window.Nv2Routes.url("leaderboard", nextState);
 }
 
 function playerUrl(player, nextState = state) {
-  return `player.html${stateQuery(nextState, { id: player.key })}`;
+  return window.Nv2Routes.url("player", nextState, { id: player.name || player.key });
+}
+
+function playerLevelsUrl(player, list, nextState = state) {
+  return window.Nv2Routes.url("player-levels", nextState, { id: player.name || player.key, list });
 }
 
 function levelUrl(levelId) {
-  return `level.html?id=${encodeURIComponent(String(levelId).padStart(6, "0"))}`;
+  return window.Nv2Routes.url("level", { levelset: "metanet" }, { id: displayLevelId(levelId) });
 }
 
 function buildMetanetLevelCatalog(metadata) {
@@ -346,7 +341,7 @@ function renderPlayer() {
   const levelRoot = document.getElementById("level-view");
   if (levelRoot) levelRoot.hidden = true;
 
-  const params = new URLSearchParams(window.location.search);
+  const params = currentParams();
   const requestedId = (params.get("id") || "").toLocaleLowerCase();
   const player = activeDataset().find((item) => item.key === requestedId);
   if (!player) {
@@ -363,10 +358,10 @@ function renderPlayer() {
     const body = `<span class="stat-heading"><span>${boards[board].label}</span><span class="metric-rank">${playerMetricRank(player, board)}</span></span><strong>${formatMetric(player, board)}</strong>`;
     if (state.levelset === "metanet" && (board === "zeroes" || board === "boards")) {
       const list = board === "zeroes" ? "zeroes" : "boards";
-      return `<a class="profile-stat" href="player-levels.html${stateQuery(state, { id: player.key, list })}">${body}</a>`;
+      return `<a class="profile-stat" href="${playerLevelsUrl(player, list)}">${body}</a>`;
     }
     if (state.levelset === "user" && (board === "elite" || board === "loneWolfs") && player[boards[board].metric] > 0) {
-      return `<a class="profile-stat" href="player-levels.html${stateQuery(state, { id: player.key, list: board })}">${body}</a>`;
+      return `<a class="profile-stat" href="${playerLevelsUrl(player, board)}">${body}</a>`;
     }
     return `<div class="profile-stat">${body}</div>`;
   };
@@ -384,7 +379,7 @@ function renderPlayer() {
 }
 
 function renderPlayerLevels() {
-  const params = new URLSearchParams(window.location.search);
+  const params = currentParams();
   const root = document.getElementById("player-levels-view");
   const main = document.getElementById("leaderboard-view");
   const playerRoot = document.getElementById("player-view");
@@ -418,7 +413,7 @@ function renderPlayerLevels() {
     root.hidden = false;
     document.title = `${title} — Nv2 Leaderboards`;
     root.innerHTML = `
-      <a class="back-link" href="player.html${stateQuery(state, { id: player.key })}">← ${escapeHtml(player.name)}</a>
+      <a class="back-link" href="${playerUrl(player)}">← ${escapeHtml(player.name)}</a>
       <h2 class="player-name">${escapeHtml(title)}</h2>
       <div class="table-scroll">
         <table class="level-list">
@@ -432,7 +427,7 @@ function renderPlayerLevels() {
     return;
   }
 
-  const player = datasets.metanet.find((item) => item.key === (params.get("id") || ""));
+  const player = datasets.metanet.find((item) => item.key === (params.get("id") || "").toLocaleLowerCase());
   if (!player) {
     root.hidden = false;
     root.innerHTML = '<p class="table-state">Player not found in this level set.</p>';
@@ -458,7 +453,7 @@ function renderPlayerLevels() {
   root.hidden = false;
   document.title = `${title} — Nv2 Leaderboards`;
   root.innerHTML = `
-    <a class="back-link" href="player.html${stateQuery(state, { id: player.key })}">← ${escapeHtml(player.name)}</a>
+    <a class="back-link" href="${playerUrl(player)}">← ${escapeHtml(player.name)}</a>
     <h2 class="player-name">${escapeHtml(title)}</h2>
     <div class="table-scroll">
       <table class="level-list ${isZeroes ? "level-list-metanet-zeroes" : "level-list-metanet-boards"}">
@@ -489,10 +484,26 @@ function renderPlayerLevels() {
 }
 
 function renderCurrentPage() {
+  const page = window.Nv2Routes.read().page;
+  document.body.dataset.page = page;
+  document.querySelector(".site-header").hidden = page === "home";
+  document.querySelector(".player-search").hidden = page === "home";
+  document.querySelector(".leaderboard-nav").hidden = !["leaderboard", "player"].includes(page);
+  document.querySelector(".site-title a").href = window.Nv2Routes.url("home");
+  document.querySelectorAll("[data-home-levelset]").forEach((link) => {
+    link.href = indexUrl({ levelset: link.dataset.homeLevelset, board: "zeroes", averageFilter: "filtered" });
+  });
+  ["home", "leaderboard", "player", "player-levels", "level"].forEach((view) => {
+    document.getElementById(`${view}-view`).hidden = view !== page;
+  });
+  if (page === "home") {
+    document.title = "Nv2 Leaderboards";
+    return;
+  }
   syncControls();
-  if (document.body.dataset.page === "player") renderPlayer();
-  else if (document.body.dataset.page === "player-levels") renderPlayerLevels();
-  else if (document.body.dataset.page === "level") renderLevel();
+  if (page === "player") renderPlayer();
+  else if (page === "player-levels") renderPlayerLevels();
+  else if (page === "level") renderLevel();
   else renderLeaderboard();
 }
 
@@ -505,7 +516,7 @@ function renderLevel() {
   if (playerRoot) playerRoot.hidden = true;
   if (levelsRoot) levelsRoot.hidden = true;
 
-  const params = new URLSearchParams(window.location.search);
+  const params = currentParams();
   const requestedId = params.get("id") || "";
   const level = metanetLevelCatalog.find((item) => item.id === requestedId.padStart(6, "0"));
   if (!level) {
@@ -542,7 +553,7 @@ function renderLevel() {
   root.hidden = false;
   document.title = `${title} — Nv2 Leaderboards`;
   root.innerHTML = `
-    <a class="back-link" href="index.html">← Leaderboards</a>
+    <a class="back-link" href="${indexUrl({ ...state, levelset: "metanet" })}">← Leaderboards</a>
     <h2 class="level-page-title">${escapeHtml(title)}</h2>
     <div class="level-page-grid${imagePanel ? " has-image" : ""}">
       <section class="level-page-leaderboard" aria-label="${escapeHtml(title)} leaderboard">
@@ -561,19 +572,18 @@ function changeLevelset(levelset) {
   if (levelset === state.levelset) return;
   const nextState = { ...state, levelset };
   if (!availableBoards[levelset].includes(nextState.board)) nextState.board = "zeroes";
-
-  if (document.body.dataset.page === "player-levels") {
-    const params = new URLSearchParams(window.location.search);
-    window.location.href = playerUrl({ key: params.get("id") || "" }, nextState);
+  const page = document.body.dataset.page;
+  if (page === "player-levels" || page === "level") {
+    window.location.href = page === "player-levels"
+      ? playerUrl({ key: currentParams().get("id") || "" }, nextState)
+      : indexUrl(nextState);
     return;
   }
-
+  const destination = page === "player"
+    ? playerUrl({ key: currentParams().get("id") || "" }, nextState)
+    : indexUrl(nextState);
   state = nextState;
-  const extra = document.body.dataset.page === "player"
-    ? { id: new URLSearchParams(window.location.search).get("id") || "" }
-    : {};
-  const pagePath = document.body.dataset.page === "player" ? "player.html" : "index.html";
-  window.history.pushState({}, "", `${pagePath}${stateQuery(state, extra)}`);
+  window.history.pushState({}, "", destination);
   renderCurrentPage();
 }
 
@@ -695,6 +705,14 @@ function attachControls() {
 }
 
 async function start() {
+  const route = window.Nv2Routes.read();
+  document.body.dataset.page = route.page;
+  const canonical = window.Nv2Routes.url(route.page, state, {
+    id: route.page === "level" ? displayLevelId(route.params.get("id")) : route.params.get("id"),
+    list: route.params.get("list"),
+  });
+  window.history.replaceState({}, "", canonical);
+  if (route.page === "home") { renderCurrentPage(); return; }
   attachControls();
   attachSearch();
   try {
@@ -719,7 +737,7 @@ async function start() {
       const dateNote = document.getElementById("last-updated");
       if (dateNote && typeof siteMetadata.lastUpdated === "string") dateNote.textContent = `Last Updated: ${siteMetadata.lastUpdated}`;
     }
-    const listType = new URLSearchParams(window.location.search).get("list");
+    const listType = currentParams().get("list");
     if (document.body.dataset.page === "player-levels" && state.levelset === "user"
       && (listType === "elite" || listType === "loneWolfs")) {
       const detailsResponse = await fetch("user_level_details.json", { cache: "no-store" });

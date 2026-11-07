@@ -29,10 +29,10 @@ The builder reads only the `Level Data` sheet and writes player summaries to `si
 Because the pages fetch the CSV, serve the `site` folder over HTTP instead of opening an HTML file directly:
 
 ```powershell
-python -m http.server 8000 --directory site
+python preview_site.py
 ```
 
-Then open `http://localhost:8000`.
+Then open `http://localhost:8000/home`. The preview server supports the same direct paths and fallback as Pages.
 
 ## Publish with GitHub Pages
 
@@ -41,3 +41,24 @@ The workflow in `.github/workflows/deploy-pages.yml` publishes the `site` folder
 ## Typeface
 
 The site uses Uni 05_53 by Craig Kroeger / Miniml as a self-hosted webfont. Use on the public GitHub Pages site is authorized by the font license holder. Attribution is included in `site/fonts/ATTRIBUTION.txt`.
+
+## Page addresses
+
+The account site at `https://cfairnv2.github.io/home` provides the short addresses.
+Its HTML entry points use the shared app, styles, images, and live static data
+from this repository's Pages deployment. The private updater continues to
+publish its existing four data files here; both addresses read those files.
+The root site's HTML mirrors `site/index.html` and its fallback mirrors
+`site/404.html`; update those entry points when changing shared HTML markup.
+
+- `/home`: home page
+- `/metanet` and `/userlevel`: leaderboards
+- `/metanet/user/Cfair` and `/userlevel/user/Cfair`: player statistics
+- `/metanet/user/Cfair/0ths`: a player's Metanet 0th list
+- `/metanet/level/00-0`: a Metanet level leaderboard
+
+Other metrics use readable suffixes such as `/metanet/average-place` and
+`/userlevel/elite-levels`. Existing `.html` links and query parameters still
+open the same views. Player names are case insensitive and URL encoded.
+GitHub Pages' custom 404 redirects direct path requests through the entry page,
+then restores the clean URL before the app renders.

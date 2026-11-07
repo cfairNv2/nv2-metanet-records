@@ -6,13 +6,22 @@
   <meta name="theme-color" content="#aaaaaa">
   <meta name="description" content="NV2 level leaderboards.">
   <title>Nv2 Leaderboards</title>
-  <link rel="stylesheet" href="styles.css?v=20261105b">
-  <script src="app.js?v=20261105b" defer></script>
+  <script>
+    const returnPath = new URLSearchParams(location.search).get("__route");
+    if (returnPath && returnPath.startsWith("/") && !returnPath.startsWith("//")) {
+      const target = new URL(returnPath, location.origin);
+      if (target.origin === location.origin) history.replaceState(null, "", target.pathname + target.search + target.hash);
+    }
+  </script>
+  <base href="/nv2-metanet-records/">
+  <link rel="stylesheet" href="styles.css?v=20261106-home">
+  <script src="routes.js?v=20261106-home" defer></script>
+  <script src="app.js?v=20261106-home" defer></script>
 </head>
-<body data-page="leaderboard">
+<body data-page="loading">
   <div class="page-shell">
     <header class="site-header">
-      <h1 class="site-title"><a href="/nv2-metanet-records/" aria-label="Nv2 Leaderboards home">Nv2 Leaderboards</a></h1>
+      <h1 class="site-title"><a href="/home" aria-label="Nv2 Leaderboards home">Nv2 Leaderboards</a></h1>
       <div class="site-header-tools">
         <span id="last-updated" class="last-updated">Last Updated: 11/03/26</span>
         <div class="level-toggle" role="group" aria-label="Level type">
@@ -41,7 +50,31 @@
       <button type="button" role="tab" data-board="average" aria-selected="false">Average Place</button>
     </nav>
 
-    <main id="leaderboard-view">
+    <main id="home-view" class="home-view" hidden>
+      <div class="home-title-block">
+        <h1>Nv2 Leaderboards</h1>
+        <p class="home-credit">Created by Cfair</p>
+      </div>
+      <div class="home-choices">
+        <a class="home-choice" data-home-levelset="metanet" href="/metanet">Metanet levels <span aria-hidden="true">→</span></a>
+        <a class="home-choice" data-home-levelset="user" href="/userlevel">User levels <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="home-updates">
+        <section aria-labelledby="metanet-updates-title">
+          <h2 id="metanet-updates-title">Metanet updates</h2>
+          <p>All 600 level leaderboards are updated daily.</p>
+        </section>
+        <section aria-labelledby="user-updates-title">
+          <h2 id="user-updates-title">User level updates</h2>
+          <p>The latest 1000 level IDs and the next 100 IDs are checked daily. All user levels are refreshed monthly.</p>
+        </section>
+      </div>
+      <p class="home-update-time">Daily updates start at 09:00 UTC, or 08:00 UTC during Chicago daylight saving time.</p>
+    </main>
+    <main id="player-view" hidden></main>
+    <main id="player-levels-view" hidden></main>
+    <main id="level-view" hidden></main>
+    <main id="leaderboard-view" hidden>
       <div class="leaderboard-toolbar">
         <div id="average-filter-control" class="average-filter-control" hidden>
           <div class="average-filter-toggle" role="group" aria-label="Average Place filter">

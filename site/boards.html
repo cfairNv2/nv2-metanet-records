@@ -2,11 +2,105 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="refresh" content="0; url=index.html?board=boards">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Total Boards — Nv2 Leaderboards</title>
+  <meta name="theme-color" content="#aaaaaa">
+  <meta name="description" content="NV2 level leaderboards.">
+  <title>Nv2 Leaderboards</title>
+  <script>
+    const returnPath = new URLSearchParams(location.search).get("__route");
+    if (returnPath && returnPath.startsWith("/") && !returnPath.startsWith("//")) {
+      const target = new URL(returnPath, location.origin);
+      if (target.origin === location.origin) history.replaceState(null, "", target.pathname + target.search + target.hash);
+    }
+  </script>
+  <base href="/nv2-metanet-records/">
+  <link rel="stylesheet" href="styles.css?v=20261106-home">
+  <script src="routes.js?v=20261106-home" defer></script>
+  <script src="app.js?v=20261106-home" defer></script>
 </head>
-<body>
-  <p><a href="index.html?board=boards">Total Boards</a></p>
+<body data-page="loading">
+  <div class="page-shell">
+    <header class="site-header">
+      <h1 class="site-title"><a href="/home" aria-label="Nv2 Leaderboards home">Nv2 Leaderboards</a></h1>
+      <div class="site-header-tools">
+        <span id="last-updated" class="last-updated">Last Updated: 11/03/26</span>
+        <div class="level-toggle" role="group" aria-label="Level type">
+          <button type="button" data-levelset="metanet" aria-pressed="true">Metanet levels</button>
+          <button type="button" data-levelset="user" aria-pressed="false">User levels</button>
+        </div>
+      </div>
+    </header>
+
+    <form id="player-search-form" class="player-search" role="search">
+      <label class="visually-hidden" for="player-search-input">Search players or levels</label>
+      <div class="player-search-box">
+        <input id="player-search-input" type="search" placeholder="Search players or levels" autocomplete="off" aria-controls="player-search-results">
+        <button type="submit">Search</button>
+        <div id="player-search-results" class="player-search-results" role="listbox" hidden></div>
+      </div>
+      <span id="player-search-status" class="player-search-status" role="status" aria-live="polite"></span>
+    </form>
+
+    <nav class="leaderboard-nav" aria-label="Leaderboards" role="tablist">
+      <button type="button" role="tab" data-board="zeroes" aria-selected="true">0ths</button>
+      <button type="button" role="tab" data-board="boards" aria-selected="false">Total Boards</button>
+      <button type="button" role="tab" data-board="points" aria-selected="false">Points</button>
+      <button type="button" role="tab" data-board="elite" aria-selected="false" hidden>Elite Levels</button>
+      <button type="button" role="tab" data-board="loneWolfs" aria-selected="false" hidden>Lone Wolfs</button>
+      <button type="button" role="tab" data-board="average" aria-selected="false">Average Place</button>
+    </nav>
+
+    <main id="home-view" class="home-view" hidden>
+      <div class="home-title-block">
+        <h1>Nv2 Leaderboards</h1>
+        <p class="home-credit">Created by Cfair</p>
+      </div>
+      <div class="home-choices">
+        <a class="home-choice" data-home-levelset="metanet" href="/metanet">Metanet levels <span aria-hidden="true">→</span></a>
+        <a class="home-choice" data-home-levelset="user" href="/userlevel">User levels <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="home-updates">
+        <section aria-labelledby="metanet-updates-title">
+          <h2 id="metanet-updates-title">Metanet updates</h2>
+          <p>All 600 level leaderboards are updated daily.</p>
+        </section>
+        <section aria-labelledby="user-updates-title">
+          <h2 id="user-updates-title">User level updates</h2>
+          <p>The latest 1000 level IDs and the next 100 IDs are checked daily. All user levels are refreshed monthly.</p>
+        </section>
+      </div>
+      <p class="home-update-time">Daily updates start at 09:00 UTC, or 08:00 UTC during Chicago daylight saving time.</p>
+    </main>
+    <main id="player-view" hidden></main>
+    <main id="player-levels-view" hidden></main>
+    <main id="level-view" hidden></main>
+    <main id="leaderboard-view" hidden>
+      <div class="leaderboard-toolbar">
+        <div id="average-filter-control" class="average-filter-control" hidden>
+          <div class="average-filter-toggle" role="group" aria-label="Average Place filter">
+            <button type="button" data-average-filter="filtered" aria-pressed="true">Filtered</button>
+            <button type="button" data-average-filter="unfiltered" aria-pressed="false">Unfiltered</button>
+          </div>
+          <p id="average-filter-note" class="average-filter-note" hidden>Players with fewer than 20 boards filtered out</p>
+        </div>
+        <p id="user-average-filter-note" class="average-filter-note" hidden>Players with fewer than 100 boards filtered out</p>
+        <p id="elite-level-note" class="average-filter-note" hidden>Elite Level: A player makes it onto an incomplete leaderboard.</p>
+        <p id="lone-wolf-note" class="average-filter-note" hidden>Lone Wolf: A player earns 0th on a level no other player has completed.</p>
+      </div>
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col" class="place-column">Place</th>
+              <th scope="col">Player</th>
+              <th scope="col" class="numeric-column" id="metric-heading">0ths</th>
+              <th scope="col" class="numeric-column" id="boards-heading" hidden>Total Boards</th>
+            </tr>
+          </thead>
+          <tbody id="leaderboard-body"></tbody>
+        </table>
+      </div>
+    </main>
+  </div>
 </body>
 </html>
