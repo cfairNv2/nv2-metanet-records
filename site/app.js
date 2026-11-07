@@ -306,6 +306,16 @@ function syncControls() {
   if (eliteLevelNote) eliteLevelNote.hidden = state.board !== "elite" || state.levelset !== "user";
   const loneWolfNote = document.getElementById("lone-wolf-note");
   if (loneWolfNote) loneWolfNote.hidden = state.board !== "loneWolfs" || state.levelset !== "user";
+  let pointsNote = document.getElementById("points-note");
+  const toolbar = document.querySelector(".leaderboard-toolbar");
+  if (!pointsNote && toolbar) {
+    pointsNote = document.createElement("p");
+    pointsNote.id = "points-note";
+    pointsNote.className = "average-filter-note";
+    pointsNote.textContent = "Points = 10 * 0ths + 9 * 1sts ... + 2 * 8ths + 1 * 9ths";
+    toolbar.append(pointsNote);
+  }
+  if (pointsNote) pointsNote.hidden = state.board !== "points";
 }
 
 function renderLeaderboard() {
