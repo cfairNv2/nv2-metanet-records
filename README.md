@@ -38,6 +38,16 @@ Then open `http://localhost:8000/home`. The preview server supports the same dir
 
 The workflow in `.github/workflows/deploy-pages.yml` publishes the `site` folder on pushes to `main`. After adding this project to a GitHub repository, set **Settings → Pages → Source** to **GitHub Actions**. Pushing the site files and updated CSV will then publish the refreshed leaderboards.
 
+## Metanet level import data
+
+Every Metanet level page shows its wiki import string below the leaderboard
+and image, with horizontal scrolling and a copy button. The 600 static files
+in `site/level-data/` are fetched individually when a level page is opened.
+They reproduce the **Level data** text from the corresponding
+[Nv2 Wiki](https://nv2.fandom.com/wiki/00-0) pages, preserving the wiki's formats.
+Run `python fetch_metanet_level_data.py` to refresh all 600 strings from the wiki.
+The automatic leaderboard updater does not change these files.
+
 ## Typeface
 
 The site uses Uni 05_53 by Craig Kroeger / Miniml as a self-hosted webfont. Use on the public GitHub Pages site is authorized by the font license holder. Attribution is included in `site/fonts/ATTRIBUTION.txt`.

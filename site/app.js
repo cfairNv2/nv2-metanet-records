@@ -173,6 +173,7 @@ let userLevelDetails = {};
 let metanetLevelMetadata = {};
 let metanetLevelCatalog = [];
 let metanetLevelById = new Map();
+const metanetLevelData = new Map();
 
 function indexUrl(nextState = state) {
   return window.Nv2Routes.url("leaderboard", nextState);
@@ -621,7 +622,59 @@ function renderLevel() {
         </div>
       </section>
       ${imagePanel}
-    </div>`;
+    </div>
+    <section class="level-data-section" aria-labelledby="level-data-heading">
+      <div class="level-data-header">
+        <h3 id="level-data-heading">Level data</h3>
+        <button type="button" class="copy-level-data" aria-label="Copy level data" title="Copy level data" disabled>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="8" y="3" width="12" height="15" rx="2"/><path d="M16 18v2a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h3"/></svg>
+        </button>
+      </div>
+      <textarea class="level-data-text" aria-label="${escapeHtml(level.displayId)} level data" readonly wrap="off" spellcheck="false" rows="2" placeholder="Loading level data…" aria-busy="true"></textarea>
+      <span class="visually-hidden level-data-status" role="status" aria-live="polite"></span>
+    </section>`;
+  loadLevelData(level, root.querySelector(".level-data-section"));
+}
+
+async function loadLevelData(level, section) {
+  const text = section.querySelector(".level-data-text");
+  const button = section.querySelector(".copy-level-data");
+  const status = section.querySelector(".level-data-status");
+  try {
+    if (!metanetLevelData.has(level.id)) {
+      const response = await fetch(`level-data/${level.id}.txt`);
+      if (!response.ok) throw new Error("Level data unavailable.");
+      metanetLevelData.set(level.id, await response.text());
+    }
+    if (!section.isConnected) return;
+    text.value = metanetLevelData.get(level.id);
+    text.setAttribute("aria-busy", "false");
+    button.disabled = false;
+    const copyIcon = button.innerHTML;
+    button.addEventListener("click", async () => {
+      try {
+        await navigator.clipboard.writeText(text.value);
+        status.textContent = "Level data copied.";
+        button.setAttribute("aria-label", "Level data copied");
+        button.title = "Copied";
+        button.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg>';
+        window.setTimeout(() => {
+          button.innerHTML = copyIcon;
+          button.setAttribute("aria-label", "Copy level data");
+          button.title = "Copy level data";
+          status.textContent = "";
+        }, 2000);
+      } catch {
+        text.focus();
+        text.select();
+        status.textContent = "Copy unavailable. The level data is selected; use your copy shortcut.";
+      }
+    });
+  } catch {
+    text.placeholder = "Level data unavailable.";
+    text.setAttribute("aria-busy", "false");
+    status.textContent = "Level data unavailable.";
+  }
 }
 
 function changeLevelset(levelset) {
