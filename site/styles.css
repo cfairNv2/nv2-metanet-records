@@ -149,10 +149,9 @@ tbody tr:hover { background: rgba(255, 255, 255, .35); }
 .level-image-credit { margin: 8px 0 0; color: var(--muted); font-size: 12px; }
 .level-image-credit a { text-decoration: underline; text-underline-offset: 2px; }
 .level-data-section { min-width: 0; margin-top: 28px; }
-.level-data-header { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-bottom: 8px; border-bottom: 1px solid var(--line); }
+.level-data-header { display: flex; align-items: center; justify-content: flex-start; gap: 12px; padding-bottom: 8px; border-bottom: 1px solid var(--line); }
 .level-data-header h3 { margin: 0; font: inherit; font-size: 20px; }
-.copy-level-data { display: inline-flex; align-items: center; justify-content: center; flex: 0 0 auto; width: 34px; height: 30px; padding: 5px; border: 1px solid #485965; border-radius: 4px; background: #162029; color: #70a9bd; font: 14px/1 system-ui, sans-serif; text-decoration: none; }
-.copy-level-data:hover { background: #253441; }
+.copy-level-data { display: inline-flex; align-items: center; justify-content: center; flex: 0 0 auto; width: 34px; height: 30px; padding: 5px; border: 1px solid #000; border-radius: 4px; background: #fff; color: #000; font: 14px/1 system-ui, sans-serif; text-decoration: none; }
 .copy-level-data:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
 .copy-level-data:disabled { opacity: .5; cursor: default; }
 .level-data-text { display: block; box-sizing: border-box; width: 100%; height: 70px; margin-top: 8px; padding: 10px 12px; resize: none; overflow-x: scroll; overflow-y: hidden; border: 1px solid #ccc; border-radius: 0; background: #fff; color: #111; font: 13px/1.4 Consolas, "Courier New", monospace; white-space: pre; }
