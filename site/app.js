@@ -299,9 +299,9 @@ function zeroesToggle() {
   return `<div class="average-filter-control zeroes-control">
     <div class="average-filter-toggle" role="group" aria-label="0ths counting">
       <button type="button" data-zeroes-mode="pures" aria-pressed="${state.zeroesMode === "pures"}">Pures</button>
-      <button type="button" data-zeroes-mode="ties" aria-pressed="${state.zeroesMode === "ties"}">Ties</button>
+      <button type="button" data-zeroes-mode="ties" aria-pressed="${state.zeroesMode === "ties"}">w/ Ties</button>
     </div>
-    <p class="average-filter-note">${state.zeroesMode === "ties" ? "Ties count as 0ths" : "Pure 0ths only"}</p>
+    <p class="average-filter-note">${state.zeroesMode === "ties" ? "0ths w/ Ties" : "Pure 0ths only"}</p>
   </div>`;
 }
 
@@ -405,7 +405,7 @@ function renderPlayer() {
         <span class="stat-heading"><span>0ths</span><span class="metric-rank" title="Pure 0ths rank">${playerMetricRank(player, board, pureState)}</span></span>
         <div class="zeroes-counts">
           <a href="${playerLevelsUrl(player, "zeroes", pureState)}"><span class="zeroes-count-label">Pure</span><strong>${formatMetric(player, board, pureState)}</strong></a>
-          <a href="${playerLevelsUrl(player, "zeroes", tiesState)}"><span class="zeroes-count-label">Ties</span><strong>${formatMetric(player, board, tiesState)}</strong></a>
+          <a href="${playerLevelsUrl(player, "zeroes", tiesState)}"><span class="zeroes-count-label">w/ Ties</span><strong>${formatMetric(player, board, tiesState)}</strong></a>
         </div>
       </div>`;
     }
