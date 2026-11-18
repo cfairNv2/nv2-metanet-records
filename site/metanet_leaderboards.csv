@@ -499,9 +499,9 @@
 000050,7,TBOLT,16707,false,ok
 000050,8,Rhino,16620,false,ok
 000050,9,paulheisemberg12,16431,false,ok
-000051,0,EddyMataGallos,13623,true,ok
-000051,1,V3L0C1T4,13612,false,ok
-000051,2,oxymoron93,13611,false,ok
+000051,0,oxymoron93,13627,true,ok
+000051,1,EddyMataGallos,13623,false,ok
+000051,2,V3L0C1T4,13612,false,ok
 000051,3,SimonPL,13610,false,ok
 000051,4,shomman,13609,false,ok
 000051,5,golfkid,13601,false,ok
@@ -550,8 +550,8 @@
 000055,8,kkstrong,10757,false,ok
 000055,9,feesler,10642,false,ok
 000056,0,Giant Joe,5897,true,ok
-000056,1,spertox81,5893,false,ok
-000056,2,oxymoron93,5891,false,ok
+000056,1,oxymoron93,5894,false,ok
+000056,2,spertox81,5893,false,ok
 000056,3,EddyMataGallos,5890,false,ok
 000056,4,mohit_ghune,5889,false,ok
 000056,5,xela,5887,false,ok
@@ -623,12 +623,12 @@
 000063,1,getpucht,7329,false,ok
 000063,2,V3L0C1T4,7329,false,ok
 000063,3,oxymoron93,7328,false,ok
-000063,4,EddyMataGallos,7327,false,ok
-000063,5,jp27ace,7327,false,ok
-000063,6,Oleary15,7327,false,ok
-000063,7,Meta_Ing,7327,false,ok
-000063,8,dotone,7327,false,ok
-000063,9,Threat,7327,false,ok
+000063,4,Giant Joe,7328,false,ok
+000063,5,EddyMataGallos,7327,false,ok
+000063,6,jp27ace,7327,false,ok
+000063,7,Oleary15,7327,false,ok
+000063,8,Meta_Ing,7327,false,ok
+000063,9,dotone,7327,false,ok
 000064,0,Giant Joe,6433,true,ok
 000064,1,EddyMataGallos,6429,false,ok
 000064,2,oxymoron93,6428,false,ok
@@ -2012,11 +2012,11 @@
 000202,0,V3L0C1T4,6748,true,ok
 000202,1,Viper N,6747,false,ok
 000202,2,EddyMataGallos,6746,false,ok
-000202,3,getpucht,6745,false,ok
-000202,4,Kind25,6744,false,ok
-000202,5,Dimness,6744,false,ok
-000202,6,danielr,6743,false,ok
-000202,7,oxymoron93,6743,false,ok
+000202,3,oxymoron93,6746,false,ok
+000202,4,getpucht,6745,false,ok
+000202,5,Kind25,6744,false,ok
+000202,6,Dimness,6744,false,ok
+000202,7,danielr,6743,false,ok
 000202,8,Oleary15,6743,false,ok
 000202,9,mohit_ghune,6743,false,ok
 000203,0,danielr,6404,true,ok
@@ -2133,8 +2133,8 @@
 000214,1,Thisguy248,7255,false,ok
 000214,2,shomman,7251,false,ok
 000214,3,V3L0C1T4,7246,false,ok
-000214,4,jp27ace,7233,false,ok
-000214,5,Cfair,7232,false,ok
+000214,4,Cfair,7246,false,ok
+000214,5,jp27ace,7233,false,ok
 000214,6,EddyMataGallos,7230,false,ok
 000214,7,BtoasterBoy,7227,false,ok
 000214,8,Gnarcissist,7201,false,ok
