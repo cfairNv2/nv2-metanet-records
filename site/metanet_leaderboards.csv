@@ -132,13 +132,13 @@
 000014,0,EddyMataGallos,6601,true,ok
 000014,1,spertox81,6600,false,ok
 000014,2,Thisguy248,6599,false,ok
-000014,3,jp27ace,6598,false,ok
-000014,4,xela,6598,false,ok
-000014,5,Kool,6598,false,ok
-000014,6,Zapmeister,6598,false,ok
-000014,7,Wolfos,6598,false,ok
-000014,8,Ben Schultz,6598,false,ok
-000014,9,danielr,6598,false,ok
+000014,3,Giant Joe,6599,false,ok
+000014,4,jp27ace,6598,false,ok
+000014,5,xela,6598,false,ok
+000014,6,Kool,6598,false,ok
+000014,7,Zapmeister,6598,false,ok
+000014,8,Wolfos,6598,false,ok
+000014,9,Ben Schultz,6598,false,ok
 000015,0,oxymoron93,6986,true,ok
 000015,1,EddyMataGallos,6985,false,ok
 000015,2,shomman,6985,false,ok
@@ -507,8 +507,8 @@
 000051,5,golfkid,13601,false,ok
 000051,6,spertox81,13593,false,ok
 000051,7,dotone,13590,false,ok
-000051,8,danielr,13588,false,ok
-000051,9,swaqbtzg,13587,false,ok
+000051,8,swaqbtzg,13590,false,ok
+000051,9,danielr,13588,false,ok
 000052,0,spertox81,4655,true,ok
 000052,1,EddyMataGallos,4654,false,ok
 000052,2,jp27ace,4654,false,ok
@@ -1015,10 +1015,10 @@
 000102,3,Giant Joe,5918,false,ok
 000102,4,MucsBryh,5918,false,ok
 000102,5,EddyMataGallos,5917,false,ok
-000102,6,Jamza15,5916,false,ok
-000102,7,White Whale,5915,false,ok
-000102,8,OutrightOJ,5915,false,ok
-000102,9,H3LLF1RE,5915,false,ok
+000102,6,Viper N,5917,false,ok
+000102,7,Jamza15,5916,false,ok
+000102,8,White Whale,5915,false,ok
+000102,9,OutrightOJ,5915,false,ok
 000103,0,Giant Joe,5881,true,ok
 000103,1,golfkid,5878,false,ok
 000103,2,EddyMataGallos,5877,false,ok
@@ -1099,9 +1099,9 @@
 000110,7,shomman,4898,false,ok
 000110,8,golfkid,4897,false,ok
 000110,9,MucsBryh,4893,false,ok
-000111,0,oxymoron93,6443,true,ok
-000111,1,kkstrong,6442,false,ok
-000111,2,Viper N,6430,false,ok
+000111,0,Viper N,6444,true,ok
+000111,1,oxymoron93,6443,false,ok
+000111,2,kkstrong,6442,false,ok
 000111,3,V3L0C1T4,6429,false,ok
 000111,4,Zapmeister,6427,false,ok
 000111,5,EddyMataGallos,6424,false,ok
@@ -1251,7 +1251,7 @@
 000125,9,Oleary15,6330,false,ok
 000126,0,EddyMataGallos,8461,true,ok
 000126,1,V3L0C1T4,8461,false,ok
-000126,2,Viper N,8460,false,ok
+000126,2,Viper N,8461,false,ok
 000126,3,Oleary15,8459,false,ok
 000126,4,shomman,8459,false,ok
 000126,5,danielr,8458,false,ok
@@ -4096,9 +4096,9 @@
 000410,4,SimonPL,9622,false,ok
 000410,5,Gnarcissist,9612,false,ok
 000410,6,natakial2,9591,false,ok
-000410,7,xela,9545,false,ok
-000410,8,Zapmeister,9544,false,ok
-000410,9,Oleary15,9541,false,ok
+000410,7,Pan,9577,false,ok
+000410,8,xela,9545,false,ok
+000410,9,Zapmeister,9544,false,ok
 000411,0,V3L0C1T4,8581,true,ok
 000411,1,oxymoron93,8535,false,ok
 000411,2,shomman,8513,false,ok
@@ -4566,9 +4566,9 @@
 000457,4,Oleary15,6356,false,ok
 000457,5,danielr,6353,false,ok
 000457,6,getpucht,6352,false,ok
-000457,7,White Whale,6349,false,ok
-000457,8,dotone,6347,false,ok
-000457,9,Gnarcissist,6347,false,ok
+000457,7,Viper N,6351,false,ok
+000457,8,White Whale,6349,false,ok
+000457,9,dotone,6347,false,ok
 000458,0,oxymoron93,9948,true,ok
 000458,1,shomman,9946,false,ok
 000458,2,V3L0C1T4,9943,false,ok
@@ -5167,8 +5167,8 @@
 000517,5,Oleary15,6091,false,ok
 000517,6,xela,6089,false,ok
 000517,7,swaqbtzg,6085,false,ok
-000517,8,jp27ace,6083,false,ok
-000517,9,BtoasterBoy,6080,false,ok
+000517,8,NyanCat_Polska,6084,false,ok
+000517,9,jp27ace,6083,false,ok
 000518,0,oxymoron93,6546,true,ok
 000518,1,shomman,6541,false,ok
 000518,2,EddyMataGallos,6537,false,ok
