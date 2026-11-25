@@ -38,6 +38,12 @@ Then open `http://localhost:8000/home`. The preview server supports the same dir
 
 The workflow in `.github/workflows/deploy-pages.yml` publishes the `site` folder on pushes to `main`. After adding this project to a GitHub repository, set **Settings → Pages → Source** to **GitHub Actions**. Pushing the site files and updated CSV will then publish the refreshed leaderboards.
 
+The workflow uses the Node 24 Pages actions and waits up to twelve checks for
+the exact uploaded artifact to appear in GitHub's API before deploying it.
+This handles the upload-to-publication delay that previously caused intermittent
+"No artifacts named github-pages" failures. If visibility never catches up,
+the workflow fails instead of deploying a different or expired artifact.
+
 ## Metanet level import data
 
 Every Metanet level page shows its wiki import string below the leaderboard

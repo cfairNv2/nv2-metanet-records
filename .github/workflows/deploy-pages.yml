@@ -9,6 +9,7 @@ on:
   workflow_dispatch:
 
 permissions:
+  actions: read
   contents: read
   pages: write
   id-token: write
@@ -29,9 +30,41 @@ jobs:
       - name: Set up GitHub Pages
         uses: actions/configure-pages@v5
       - name: Upload the static site
-        uses: actions/upload-pages-artifact@v4
+        id: upload
+        uses: actions/upload-pages-artifact@v5
         with:
           path: ./site
+      - name: Wait for the uploaded Pages artifact
+        uses: actions/github-script@v8
+        env:
+          PAGES_ARTIFACT_ID: ${{ steps.upload.outputs.artifact_id }}
+        with:
+          retries: 3
+          script: |
+            const artifactId = Number(process.env.PAGES_ARTIFACT_ID);
+            if (!Number.isSafeInteger(artifactId) || artifactId <= 0) {
+              throw new Error('The upload did not return a valid Pages artifact ID.');
+            }
+            // Upload completion can precede visibility in GitHub's artifacts API.
+            for (let attempt = 1; attempt <= 12; attempt++) {
+              const { data } = await github.rest.actions.listWorkflowRunArtifacts({
+                ...context.repo,
+                run_id: context.runId,
+                name: 'github-pages',
+                per_page: 100,
+              });
+              const artifact = data.artifacts.find(item =>
+                item.id === artifactId && item.name === 'github-pages' && !item.expired);
+              if (artifact) {
+                core.info(`Pages artifact ${artifactId} is available for deployment.`);
+                return;
+              }
+              if (attempt < 12) {
+                core.info(`Waiting for Pages artifact ${artifactId} (${attempt}/12).`);
+                await new Promise(resolve => setTimeout(resolve, 5000));
+              }
+            }
+            throw new Error('The uploaded Pages artifact did not become visible; deployment was not started.');
       - name: Publish the site
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
